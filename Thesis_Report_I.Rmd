@@ -1,0 +1,514 @@
+---
+title: "Masters Thesis"
+subtitle: "STRATUM CORNEUM NANO TEXTURE BASED SKIN CONDITION"
+author: "Author: Miss Oriade Latifah Simpson (s172084)"
+date: "The Technical University of Denmark"
+output: 
+  pdf_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Master of Engineering 
+
+Masters Thesis in Bioinformatics and Systems Biology 
+
+
+
+
+DTU Department of Health Technology
+
+Thesis Title gives information on the main problem.
+
+
+```{r echo=FALSE, fig.align='center', out.width='5%'}
+# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
+knitr::include_graphics(c("Images/Whitespace.png"))
+```
+
+Submitted as one of the requirements to complete the Master’s Program at the Department of Health Technology at the Technical University of Denmark. 
+
+Degree Programme: Master of Engineering Degree Programme in Bioinformatics
+
+Date of Submission: Friday 27th June 2025  
+
+Thesis: 30 ECTS 
+
+Signature: 
+
+```{r echo=FALSE, fig.align='center', out.width='15%'}
+# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
+knitr::include_graphics(c("Images/Whitespace.png"))
+```
+
+```{r echo=FALSE, fig.align='right', out.width='17%'}
+# Include images and pictures..
+
+knitr::include_graphics(c('Images/logo.png'))
+```
+
+\newpage
+
+# APPROVAL OF THESIS 
+
+Author Name: Miss Oriade Latifah Simpson 
+
+Student Identification number: s172084 
+
+```{r echo=FALSE, fig.align='center', out.width='5%'}
+# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
+knitr::include_graphics(c("Images/Whitespace.png"))
+```
+
+Title of Thesis Research Proposal: 
+
+Thesis Approval Date: Friday 27th June 2025 
+
+**Responsible Supervisor(s)**: Professor Edwin En Te Hwu
+
+Supervisor signature: 
+
+```{r echo=FALSE, fig.align='center', out.width='10%'}
+# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
+knitr::include_graphics(c("Images/Whitespace.png"))
+```
+
+```{r echo=FALSE, fig.align='left', out.width='80%'}
+# Include images and pictures..
+
+knitr::include_graphics(c('Images/math.png'))
+```
+**Technical University of Denmark**
+
+**DTU Health Tech**
+
+**Department of Health Technology**
+
+**Building 210**
+
+**Kongens Lyngby 2800 DK**
+
+**Denmark**
+
+\newpage
+
+# STATEMENT OF THESIS ORIGINALITY 
+
+This thesis is submitted is the student’s work and does not constitute plagiarism and has never been submitted for an academic degree at any institution.
+
+Miss Oriade Latifah Simpson declares that the masters thesis entitled: (Thesis Title), is the
+result of my writing. I  declare that I alone wrote this masters thesis
+and developed the ideas, opinions and thoughts. I acknowledge the original author when referencing  any ideas that are not my own. 
+
+9 June 2025 
+Signed… 
+
+
+\newpage
+
+# Abstract
+
+This section provides a concise summary of the research, including the central research question, the methodology employed,  key findings and the main conclusions drawn from the analysis. The abstract does not exceed 500 words. It consists of 3 paragraphs each of which contains research problems and objectives research method and research results. The abstract is typed italicized. 
+
+The keywords related to the thesis are listed. 
+
+# Foreword & Acknowledgements
+
+This section is dedicated to expressing gratitude to the individuals and institutions that have provided support, guidance, and assistance during the research and thesis writing of this thesis. This page contains acknowledgments to those who have contributed, either directly or indirectly, to the writing of this bachelor thesis. In addition, this page contains everything that is the author's thoughts, feelings, and expectations related to the process and results of writing.
+
+\newpage
+
+# List of Tables 
+
+# List of Figures
+
+\newpage
+
+```{=latex}
+\setcounter{tocdepth}{4}
+\tableofcontents
+```
+
+A detailed outline of all major sections and subsections, accompanied by page numbers for ease of  navigation throughout the thesis.
+
+\newpage
+
+# Chapter I 
+
+# INTRODUCTION 
+
+
+### 1.1 Background of the Problem 
+
+
+The rationale facts and observations that are important. The research problem and why the research problem is important and needs to be researched. 
+Apply new knowledge from the program and present a piece of work that involves thinking.  The subject should relate to the program and specific specialisation. 
+
+Set the scene and motivate the problem being studied. It describes a domain and indicates a problem in general terms. 
+
+
+What is the general area being addressed?
+What is the motivation for studying a particular problem?
+
+What makes it worth the effort?
+
+Is it a real problem in everyday life?
+
+Is it a theoretical problem that is worth solving?
+
+Would anyone care if I solved this?
+
+
+### 1.2 Formulation of the problem
+
+The situation or phenomenon that needs to be solved and requires an answer through thorough research and in depth thinking using scientific tools. 
+
+The research has a sense of clarity and authenticity and it is in line with the research objectives it is an important matter and worthy of research and it provides implications for empirical studies. It is supported by primary or secondary data. Based on the research problem research questions can be formulated. 
+
+### 1.3 Objective and Benefits of the Research 
+
+The research objectives reveals the results to be achieve through the research process. The research objective answers the research problem and reflects the scope of the research, the methods used and the expected results. 
+
+
+### 1.4 Systematics of Writing 
+
+A brief description of the things in each chapter. 
+
+This thesis is submitted in fulfilment of the requirements for a master’s degree in bioinformatics  and serves as a demonstration of advanced research competences. It aims to exhibit the ability to define a clear research question, conduct a comprehensive review of the literature and apply appropriate research methodologies. 
+
+The objective of this study is to critically evaluate existing academic work in the field and to contribute new insights or perspectives that may advance scholarly understanding or have practical relevance.
+
+The thesis presents an opportunity to dive deeply into a specific topic and enhance my expertise and understanding of that area. This process has also provided an opportunity for the development of academic communication skills, both written and oral, as a part of preparing, presenting and defending the thesis findings. 
+
+Through the formulation of a coherent research narrative and the integration of evidence based conclusions, this thesis seeks to generate original contributions with the chosen area of inquiry. 
+
+The master’s thesis contributes original knowledge or insights to a specific discipline which can be beneficial for academic and practical applications. 
+
+
+# Chapter II 
+
+# LITERATURE REVIEW 
+
+Reviews existing research related to the topic, highlighting gaps that your study aims to address. 
+
+The literature review contains the theoretical basis and discussion of the results of previous similar studies. A framework of thought and hypothesis can also be put forward. 
+
+# 2.1 Theoretical Foundations and Previous Research 
+
+The theories supporting the hypothesis are said. The research problem has not been answered or solved satisfactorily. 
+
+What is the research context and discipline the thesis fiits within? 
+
+Who has looked at this area before?
+
+What is the state of the art of methods and solution to the problem?
+
+What other work complements this research ?
+
+
+
+## 2.2 Framework 
+
+The problems to be studied are explained. There is a research hypothesis. This explanation is included in the form of a schematic to clarify the purpose of the study. This is a series of thought arrangements about what should happen so the intended hypothesis arises. 
+
+## 2.4 Hypotheses | Problem Statement | Research Question 
+
+The hypothesis is a short statement that is concluded from the literature review and it is a temporary answer to the problem under study. The hypothesis is supported by theories or references from previous studies. 
+
+This is a statement of the hypothesis and problems. 
+
+The hypothesis is the highest level problem or goal you are going to to address. 
+
+The problems should be unambiguous. 
+
+The importance of the problem should be mentioned if it was not already done so. 
+
+You can develop a new approach for solving a well known problem or replicate a method in the literature. 
+
+
+Data Collection Method of Analysis
+
+
+Chapter X : The Skin 
+
+This chapter provides an overview of the structure and function of the skin, with particular emphasis on its anatomical components and physiological roles. 
+
+The skin is comprised of two primary layers;  the epidermis and the dermis. The epidermis contains several specialised cell types including keratinocytes , Merkel cells, Melanocytes and Langerhans cells.  It is further stratified into distinct layers or strata, with the Stratum corneum forming the outermost layer of the epidermis, serving as the primary interface with the external environment. 
+
+One of the key functions of the skin is to act as a barrier and minimise trans-epidermal water loss as well as to provide protection against external pathogens. 
+
+Chapter X : Corneocyte Morphometry 
+
+Corneocyte morphometry refers to the quantitative and qualitative analysis of dead skin cells called corneocytes. Corneocytes are the enucleated cells found in the outermost layer of the epidermis. These cells pay a critical role in maintaining the integrity of the skin barrier and overall epidermal homeostasis. 
+
+Corneocytes are commonly obtained through tape stripping , a minimally -invasive procedure that is used to sequentially removal layers of the stratum corneum. This technique facilitates the collection of corneocytes in a manner that is suitable for microscopic and biochemical analysis [2].
+
+The morphological characteristics of corneocytes such as the size , shape and surface reflects the status and the functional integrity of the skin barrier. In particular , the Natural Moisturising Factor (NMF ) within the corneocytes is directly associated with the hydration and maintenance of the function of the skin as a barrier. 
+
+A notable microscopic feature is the presence of Circular Nano-Objects (CNOs) , which are subcellular protrusions that are found at a high frequency in individuals with atopic dermatitis. The density of CNOs is quantified as the Dermal Texture Index (DTI), which has been shown to correlate with the severity of the atopic dermatitis [2].
+
+Moreover, corneocyte morphometry has proven valuable in clinical dermatological research, particularly for evaluating therapeutic efficacy.  It enables the monitoring of the therapeutic treatment response to topical agents such as corticosteroids and can aid in distinguishing between irritant and allergic contact dermatitis [2].
+
+
+Atomic Force Microscopy in the Assessment of Skin Barrier Function 
+
+Atomic Force Microscopy (AFM) has emerged as a valuable tool in dermatological research, particularly in the assessment of the skin as a barrier. This technique allows for high resolution, three-dimensional imaging of biological surfaces at the nanoscale, including the detailed topographical analysis of corneocytes obtained via tape stripping [1] . 
+
+Atopic dermatitis (AD) is associated with loss of function mutations in the filaggrin gene (FLG), contributing to impaired skin barrier integrity, immune dysregulation and reduced levels of  Natural Moisturising Factor [1]. 
+
+Atomic Force Microscopy enables precise visualisation of the corneocyte surface morphology, including the identification of Circular Nano Objects (CNOs) from tape-stripped skin samples.  
+
+The quantification of Circular Nano Objects is expressed the Dermal Texture index (DTI), a parameter that correlates with both the clinical severity of atopic dermatitis and the Natural Moisturising Factor concentration in the stratum corneum [1]. 
+
+By providing nanoscale morphological data, Atomic Force Microscopy serves as a quantitative biomarker tool to monitor disease progression and therapeutic response. Its application contributes to a deeper understanding of skin barrier pathophysiology and enhances the evaluation of interventions aimed at restoring barrier function. 
+
+
+Optical Pickup Units in Atomic Force Microscopy 
+
+The core components of many low-cost atomic force microscopy (AFM) systems are derived from  optical pickup units (OPUs) developed for  CD and DVD players. These units are compact, inexpensive and easy to repurpose, making them promising candidates for use as point-of-care diagnostic technologies [5].
+
+The Atomic Force Microscope is a non-invasive and highly sensitive tool used for quantitative assessment of the skin barrier function [5] . It enables nanometer-scale imaging of biological samples, including corneocytes, by detecting minute surface topographies [5]. 
+
+An optical pickup unit from a DVD player is a miniature optical system that employs a laser to scan the surface of a data disc and detect the reflected signal to interpret the stored digital information. The reflected light is captured by a photodetector, which converts the optical signal into a binary digital signal output (0 or 1), corresponding to the stored information [ 5]. In the context of the AFM, the laser and photodetector components of the optical pickup unit are repurposed to detect sub-nanometer defections of a cantilever probe as it interacts with a sample surface.
+
+A tiny cantilever with a sharp tip , typically only a few nanometers wide, that feels the surface of the sample (skin cells). As the tip traverses over the surface of the skin cells, it is subjected to intermolecular forces such as van der Waals interactions and electrostatic forces,  which cause the cantilever to bend or deflect [5].
+
+These deflections  of the cantilever tip are detected by the optical pickup unit’s laser and photodetector system, enabling high resolution surface profiling and nanometer scale imaging of corneocytes and other biological structures [5] . 
+
+The optical pickup unit laser and detector are crucial components that allow the system to detect incredibly small deflections of the cantilever tip. These deflections occur as the tip interacts with the surface of the skin cells and this is how Atomic Force Microscope achieves nanometer - scale imaging and probing [5]. 
+
+The adaptation of optical pickup units from consumer electronic for scientific instrumentation demonstrates an innovative and cost-effective approach to biomedical imaging, particularly for applications requiring accessible and portable solutions [5] . 
+
+
+
+Deflection Detection via Optical Pickup Systems in Atomic Force Microscopy
+
+In atomic force microscopy (AFM) , the optical pickup system plays a central role in detecting cantilever deflections with high precision. A low-power laser beam is directed onto the rear surface of the reflective cantilever, which is typically coated with gold or aluminium to enhance reflectivity and signal accuracy [6].
+
+As the AFM tip interacts with the skin sample surface, the cantilever bends in response to intermolecular forces. These deflections alter the angle of the reflected laser beam which is then projected onto a position-sensitive photodetector, commonly configured as a four-quadrant photodiode [6].
+
+Sub-nanometer deflections of the cantilever result in measurable displacement of the laser spot on the detector. The change in position on the photodiode can be accurately measured. These positional changes are converted into voltage signals, which correspond to the vertical displacement (deflection) of the cantilever tip [6].
+
+A feedback control loop continuously adjusts the vertical position of the cantilever to maintain a constant interaction force between the tip and the sample. These vertical adjustments are recorded and subsequently used to reconstruct a topographical map of the sample surface, achieving a nanometer-scale resolution [6]. 
+
+Beyond imaging,  Atomic Force Microscopy is capable of assessing the mechanical properties of biological samples such as  stiffness and elasticity, without the need for staining or vacuum environments. or vacuum. This capacity makes it particularly suitable for investigating the surface morphology, skin cell structure, cell-membrane architecture and mechano-biological behaviour of skin cells in both health and pathological conditions [6]. By leveraging the optical pickup system, the Atomic Force Microscope acts like an ultra-sensitive eye and enables detailed visualisation and characterisation of the skin barrier structures at the nanoscale. This contributes significantly to scientific understanding of dermatological physiology and disease. 
+
+\newpage
+
+# Chapter III
+
+# RESEARCH METHODS 
+
+3.1 Types and Sources of Data 
+
+3.2 Methods of Collecting Data 
+
+3.3 Methods of Analysis
+This section describes the techniques of analysis and the mechanism for using tools in research. 
+
+The job is to translate the problems into research goals and briefly indicate how you will solve the problem and which method you will use to solve it. 
+
+It is important to have clear goals. 
+
+You have to accomplish your goals in the thesis. 
+
+
+\newpage
+
+# Chapter IV 
+
+# RESULTS AND ANALYSIS 
+
+Presents the findings of the research often with charts and graphs to illustrate data. The GUI created look like this, but I have to get it to scan the image properly, and also take in the real time data correctly. 
+
+
+## 4.1 Data Analysis 
+
+This is the results of the data processing according to the analytical tools and techniques. 
+
+Where do you get your data?
+
+Where do you analyse it?
+
+Can you do this yourself?
+
+##  4.2 Interpretations 
+
+## 4.3 Implications or Perspectives 4.4 Impact - Innovation and Application 
+
+
+You should summarise what you expect to be the most important find is or contributions. What to you do about the problem you have identified. 
+
+
+
+\newpage
+
+# CHAPTER V 
+
+# CONCLUSION 
+
+## 4.1 Conclusion 
+
+The conclusion is a brief presentation of what has been obtained from the discussion.
+Summarises the key findings and their importance offering final thoughts on the research. 
+
+
+## 4.2 Limitations 
+The limitations of the study describe the weaknesses and shortcomings found after analysis and interpretations of the results. 
+
+
+## 4.3 Suggestion 
+
+Suggestions for future research. 
+
+Describes the research design, methods used for data collection and analysis and justifies the chosen approach. 
+
+Arduino Programming Language 
+
+I have been given DIY AFM control Firmware baud 9600 written by Jen-Hung Wang.
+I have been given DIY AFM control Firmware baud 115200 written by Jen-Hung Wang. 
+The firmware code is written in Arduino’s programming language, which is a simplified version of 
+C++ but with Arduino specific functions and Arduino specific libraries. The file extension .ino indicates it is an Arduino sketch program.
+
+The firmware code is used to control the Atomic Force Microscope (AFM) system. 
+
+There are key components
+
+The Hardware Control : 
+It uses digital pins 41-49 (PORTL) for X-axis control. 
+It uses digital pins 30-37 (PORTC) for Y axis control. 
+It uses analog pin A0 for reading sensor data. 
+It communicates with a computer via Serial at 9600 baud rate. 
+
+The Main Functionality of the code: 
+The firmware code implements a scanning system that can move in a raster pattern. 
+It can read sensor data from the Atomic Force Microscope cantilever and send it back to a computer. 
+
+It supports various command through the serial communication: 
+
+‘p’: Sets the delay time which affects scanning speed.
+‘x’: Sets X starting position 
+‘y’: sets Y starting position 
+‘g’: sets the gap between scan lines 
+‘u’: starts scanning 
+‘e’: stops scanning 
+
+During the scanning process, when the scanning is active (direc = 0), it moves the X-axis from 0 to 255 and reads sensor data at each point.  It moves the Y-axis by the specified gap and repeats the process.
+
+The Arduino firmware is uploaded to the Arduino Mega microcontroller. The microcontroller is a small computer chip that can be programmed to control hardware. 
+
+The code is compiled using the Arduino IDE (Integrated Development Environment) and the compiled code is then transferred to the Arduino via USB using a bootloader. The bootloader is a small program that allows the Arduino to receive new code. 
+
+The code is uploaded to the Arduino board, and the Arduino needs instructions to know how to control the hardware. 
+
+Without firmware, the Arduino is just a blank chip. 
+The firmware provides the specific instructions for:
+How to control the X and Y movement
+How to read the sensor data.
+How to communicate with the computer.
+How to execute the scanning pattern.
+
+This particular firmware is designed for a DIY Atomic Force Microscope, which is a scientific instrument used to image surfaces at the atomic level. The firmware controls the scanning mechanism and data acquisition process, which are essential for creating images of the sample surface.
+
+The code is part of a larger system where a computer program written in Python, based on the workspace path, communicates with this Arduino firmware to control the AFM and collect data for imaging.
+
+
+Python Code
+
+As part of this thesis project, I was provided with a legacy Python-based control script, originally authored by Christian Werner, Eli Bendersky and Mike Killian. The codebase was initially undocumented, necessitating a thorough reverse-engineering process to determine its functionality, internal logic and its role in coordinating communication between the Atomic Force Microscope (AFM), the Arduino firmware, and the microcontroller board.
+
+The primary objective defined for this thesis was to optimise the scanning process, specifically to increase the data acquisition and image rendering speed of the AFM system. 
+
+The required in depth analysis of the existing Python script to identify performance bottlenecks, communication delays and compatibility issues. 
+
+Furthermore, the original software was designed for Windows based serial communication protocols, which presented compatibility challenges when operating on macOS platforms, particularly on an Apple MacBook Pro. As a result, the Python code had to be significantly modified to ensure proper interfacing with macOS serial port architecture, while maintaining functional parity with the original implementation. 
+
+These adaptations involved reconfiguring serial port access, adjusting hardware specific parameters and ensuring reliable data transmission across platforms, all of which are essential for achieving the intended performance improvements. 
+
+The critical components of an Atomic Force Microscope (AFM) system. 
+
+The Piezo Actuator Control 
+
+The Piezo actuators are devices that move in response to electrical signals. In an Atomic Force Microscope then control the scanning motion of the probe ( X and Y axes) and The vertical position of the probe (Z axis). 
+
+
+The Firmware
+The Firmware controls the voltage signals sent to the piezo as well as the scanning speed and the scanning pattern. The movement resolution is typically in the nanometer scale. The firmware also controls the calibration of movement, 
+
+
+The Force Feedback Loop
+This is a critical control ststem that maintains constant force between the probe and the sameple. The deflection sensor measures the probe bending, the feedback controller adjusts the Z position and the Setpoint is the desired force level. The loop measures the current force and compares it to a set point. It adjusts the Z position and repeats this continuously to prevent probe damage or sample data or loss of contact. 
+
+The Data Aqcuuisition 
+The data acuisition is the collection of measurement data from hte various sensors. The topogyaphy (height) , the deflection and phase and amplitude ar e the types of data collected. The parameters are the sampling rate, the resolution, the data format and the storage method. 
+
+
+The function in the control interface controls the scanning speed of the piezo actuators. 
+
+
+The firmware .hex file contains the low-level implementation of these features while the Pthon software provides the uer interface and the high level control. Together they create a complete AFM control system that safely operatres the microscope, maintains precise control. Acquires accurate data, provides real time feedbaack and ensures reliable operation. This is why the firmware is so critical it is the foundation that enables all the interactions to work togeter properly. 
+
+
+The .HEX file. 
+
+The .hex file is created through a compilation process from source code. The original code is written in C++ using the Arduino IDE and it controls the logic for the AFM. The source code Is compiled using the Arduino IDE and thee compiler converts the C++ code into machine code. The machine code is then converted into the .hex format. 
+
+The Python code is designed to work with specific firmware commands. The python code assumes the firmware understands these specific commands and parameters. 
+The firmware must be stable before software development., The software must be designed around the firmware’s capabilities. Both must be maintained together. Updates to wither may require updates to the other. The Python code in the AFM software is specifically written to work with the firmware that is loaded onto the microcontroller. The firmware documentation guides the software development. and both must be kept in sync. 
+
+
+Arduino Language Reference - Detailed documentation of the Arduino programming language
+
+https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/
+
+Analog Input pins https://docs.arduino.cc/learn/microcontrollers/analog-input/
+
+https://docs.arduino.cc/language-reference/
+
+How to write a master’s thesis: This link 
+
+How to write a phD degree : This link 
+
+
+Discussion 
+
+Interprets the results, linking them back to the research questions and existing literature, discussing implications, limitations and future research directions. 
+
+\newpage 
+
+# Bibliography 
+
+Lists all the sources cited in the thesis in a consistent format. 
+
+Anatomy and Physiology 
+
+Riethmüller, Christoph. ‘Assessing the Skin Barrier via Corneocyte Morphometry’. Experimental Dermatology, vol. 27, no. 8, Aug. 2018, pp. 923–30. DOI.org , https://doi.org/10.1111/exd.13741.
+
+131476@au.dk. Guidelines for Writing Your Thesis Report. https://studerende.au.dk/en/studies/subject-portals/agroecology-food-and-environment/bachelors-project-masters-thesis-and-other-projects/masters-thesis/thesis-projects-at-agricultural-and-food-science/guidelines-for-writing-your-thesis-report. Accessed 13 May 2025 
+
+ZoteroBib: Fast, Free Bibliography Generator - MLA, APA, Chicago, Harvard Citations. https://zbib.org/. Accessed 13 May 2025.
+
+Pereda, Jorge, et al. ‘A Review of Atomic-Force Microscopy in Skin Barrier Function Assessment’. Journal of Investigative Dermatology, vol. 144, no. 10, Oct. 2024, pp. 2136–44. DOI.org (Crossref), https://doi.org/10.1016/j.jid.2024.04.005.
+
+Alsteens, David. ‘Microbial Cells Analysis by Atomic Force Microscopy’. Methods in Enzymology, vol. 506, Elsevier, 2012, pp. 3–17. DOI.org, https://doi.org/10.1016/B978-0-12-391856-7.00025-1.
+
+Arduino. (n.d.). Getting started with Arduino. Retrieved May 15, 2025, from https://docs.arduino.cc/learn/starting-guide/getting-started-arduino/ 
+
+8.  ‘Stromlinet Nano - Nanoscience Made Easy’. The World’s First Arduino Compatible Atomic Force Microscope , My Site, https://www.stromlinet-nano.org/products. Accessed 17 May 2025
+
+https://www.unyt.edu.al/page/thesis-manuals
+
+chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://students.uu.nl/sites/default/files/Course%20manual%20IS%20Thesis%202022-2023.pdf
+
+https://grad.gatech.edu/theses-dissertations
+
+https://grad.gatech.edu/theses-dissertations
+
+\newpage
+
+# Appendices
+
+Supplementary material, such as raw data, questionnaires or additional charts that are relevant to the thesis but not critical in the main sections. 
