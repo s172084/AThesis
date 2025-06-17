@@ -1,48 +1,71 @@
 ---
 title: "Masters Thesis"
-subtitle: "STRATUM CORNEUM NANO TEXTURE BASED SKIN CONDITION"
+subtitle: "SKIN "
 author: "Author: Miss Oriade Latifah Simpson (s172084)"
-date: "The Technical University of Denmark"
+date: |
+  The Technical University of Denmark  
+  \vspace{0.5em}
+  Department of Health Technology
 output: 
   pdf_document:
     toc: false
+    latex_engine: xelatex
+header-includes:
+  - \usepackage[super]{natbib}
+  - \usepackage{wrapfig}
+  - \usepackage{graphicx}
+  - \usepackage{fontspec}
+  - \setmainfont{Optima}
+  - \setsansfont{Optima}
+  - \setmonofont{Courier New}
+  - \usepackage{sectsty}
+  - \allsectionsfont{\fontspec{Bodoni 72}\selectfont}
+  - \usepackage{url}
+  - \usepackage[hyphens]{url}
+  - \urlstyle{same}
+  - \usepackage{silence}
+  - \WarningFilter{microtype}{Unknown slot number}
+bibliography: references.bib
+csl: custom_style_II.csl
+natbiboptions: "numbers,super,sort&compress"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Master of Engineering 
 
-Masters Thesis in Bioinformatics and Systems Biology 
-
-
-
-
-DTU Department of Health Technology
-
-Thesis Title gives information on the main problem.
-
-
-```{r echo=FALSE, fig.align='center', out.width='5%'}
+```{r echo=FALSE, fig.align='center', out.width='15%'}
 # Include images and pictures using .png files in the Images folder..(only if you want to.. =))
 knitr::include_graphics(c("Images/Whitespace.png"))
 ```
 
-Submitted as one of the requirements to complete the Master’s Program at the Department of Health Technology at the Technical University of Denmark. 
 
-Degree Programme: Master of Engineering Degree Programme in Bioinformatics
+
+
+Thesis Title: information on the main problem.
+
+Time: 16:53 
+
+
+
+```{r echo=FALSE, fig.align='center', out.width='15%'}
+# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
+knitr::include_graphics(c("Images/Whitespace.png"))
+```
+
+```{r echo=FALSE, fig.align='center', out.width='15%'}
+# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
+knitr::include_graphics(c("Images/Whitespace.png"))
+```
+
+Degree Programme: Master of Engineering in Bioinformatics and Systems Biology
 
 Date of Submission: Friday 27th June 2025  
 
 Thesis: 30 ECTS 
 
 Signature: 
-
-```{r echo=FALSE, fig.align='center', out.width='15%'}
-# Include images and pictures using .png files in the Images folder..(only if you want to.. =))
-knitr::include_graphics(c("Images/Whitespace.png"))
-```
 
 ```{r echo=FALSE, fig.align='right', out.width='17%'}
 # Include images and pictures..
@@ -69,7 +92,6 @@ Thesis Approval Date: Friday 27th June 2025
 
 **Responsible Supervisor(s)**: Professor Edwin En Te Hwu
 
-Supervisor signature: 
 
 ```{r echo=FALSE, fig.align='center', out.width='10%'}
 # Include images and pictures using .png files in the Images folder..(only if you want to.. =))
@@ -97,42 +119,70 @@ knitr::include_graphics(c('Images/math.png'))
 
 # STATEMENT OF THESIS ORIGINALITY 
 
-This thesis is submitted is the student’s work and does not constitute plagiarism and has never been submitted for an academic degree at any institution.
+## Declaration of Authorship
 
-Miss Oriade Latifah Simpson declares that the masters thesis entitled: (Thesis Title), is the
-result of my writing. I  declare that I alone wrote this masters thesis
-and developed the ideas, opinions and thoughts. I acknowledge the original author when referencing  any ideas that are not my own. 
+I, Miss Oriade Latifah Simpson, hereby declare that the present master's thesis is my own original work and has been written independently. This thesis has not been submitted, either in whole or in part, for the award of any academic degree or qualification at any other institution.
 
-9 June 2025 
-Signed… 
+All sources of information and ideas that are not my own have been appropriately acknowledged and referenced. I affirm that this work complies with the ethical and academic standards required for submission at the Technical University of Denmark.
+
+This thesis is submitted in partial fulfilment of the requirements for the Master’s Programme at the Department of Health Technology, Technical University of Denmark.
+
 
 
 \newpage
 
 # Abstract
 
-This section provides a concise summary of the research, including the central research question, the methodology employed,  key findings and the main conclusions drawn from the analysis. The abstract does not exceed 500 words. It consists of 3 paragraphs each of which contains research problems and objectives research method and research results. The abstract is typed italicized. 
+This section provides a concise summary of the research, including the central research question, the methodology employed,  key findings and the main conclusions drawn from the analysis. The abstract does not exceed 500 words. It consists of 3 paragraphs each of which contains research problems and objectives research method and research results. The abstract is typed italicised. 
 
-The keywords related to the thesis are listed. 
+The keywords related to the thesis are listed. ( Write this at the end. ) 
 
-# Foreword & Acknowledgements
 
-This section is dedicated to expressing gratitude to the individuals and institutions that have provided support, guidance, and assistance during the research and thesis writing of this thesis. This page contains acknowledgments to those who have contributed, either directly or indirectly, to the writing of this bachelor thesis. In addition, this page contains everything that is the author's thoughts, feelings, and expectations related to the process and results of writing.
+
+
+\newpage
+
+# Acknowledgements
+
+First and foremost, I would like to express my deepest gratitude to my mother, Veronika Quintyne, for her unwavering support and encouragement throughout my academic journey. Her belief in me has been a constant source of strength.
+
+Then, I would like to express my deepest gratitude to my father, Vivian Simpson, for his support and encouragement throughout my academic journey.
+
+I am sincerely grateful to Professor Edwin En-Te Hwu, who generously agreed to be my thesis supervisor. His willingness to guide me during this critical phase of my studies meant more than words can express.
+
+My heartfelt thanks also go to Maria Bergström at the Student Advice and Guidance Organisation, whose insightful advice helped me to ask the right questions, both of myself and of others, at key moments during this process.
+
+I am deeply thankful to my Uncle Tyrell and Julie for their financial support during a difficult period when student funding (SU) was delayed. Their generosity helped me to stay focused on my studies.
+
+I would also like to thank Professor Ole Winther for his thoughtful guidance and generosity in offering valuable insights during the development of my thesis, even in a limited capacity.
+
+I would like to acknowledge *The Danish Education System* at the *Technical University of Denmark*. The experience has equipped me with valuable tools for both academic and personal growth, and the challenges presented throughout the programme helped me step outside of my comfort zone in meaningful ways.
+
+I am immensely thankful for the opportunity to write this thesis and to have learned Danish language skills that enable me to connect with a broader community.
+
+I would also like to express gratitude to Frederik Clausen for hiring me as an Aqua Fitness instructor at Lyngby Swimming Pool, and to Dawn Rafferty for her guidance and mentorship during my Aqua Fitness qualification. Engaging in high intensity exercise and fitness alongside my thesis writing significantly contributed to my overall holistic well-being and deepened my understanding of nutrition, anatomy and physiology.
 
 \newpage
 
 # List of Tables 
-
+```{=latex}
+\listoftables
+```
 # List of Figures
+```{=latex}
+\listoffigures
+```
+
 
 \newpage
 
 ```{=latex}
+\newpage
 \setcounter{tocdepth}{4}
 \tableofcontents
 ```
 
-A detailed outline of all major sections and subsections, accompanied by page numbers for ease of  navigation throughout the thesis.
+A detailed outline of all major sections and subsections, accompanied by page numbers for ease of navigation throughout the thesis.
 
 \newpage
 
@@ -144,11 +194,11 @@ A detailed outline of all major sections and subsections, accompanied by page nu
 ### 1.1 Background of the Problem 
 
 
-The rationale facts and observations that are important. The research problem and why the research problem is important and needs to be researched. 
+The rationale facts and observations that are important. 
+The research problem and why the research problem is important and needs to be researched. 
 Apply new knowledge from the program and present a piece of work that involves thinking.  The subject should relate to the program and specific specialisation. 
 
-Set the scene and motivate the problem being studied. It describes a domain and indicates a problem in general terms. 
-
+Set the scene and motivate the problem being studied. It describes a domain and indicates a problem in general terms.
 
 What is the general area being addressed?
 What is the motivation for studying a particular problem?
@@ -228,19 +278,268 @@ The importance of the problem should be mentioned if it was not already done so.
 
 You can develop a new approach for solving a well known problem or replicate a method in the literature. 
 
-
 Data Collection Method of Analysis
 
+\newpage
 
-Chapter X : The Skin 
+# The Skin 
 
-This chapter provides an overview of the structure and function of the skin, with particular emphasis on its anatomical components and physiological roles. 
+## The Function of the Skin
 
-The skin is comprised of two primary layers;  the epidermis and the dermis. The epidermis contains several specialised cell types including keratinocytes , Merkel cells, Melanocytes and Langerhans cells.  It is further stratified into distinct layers or strata, with the Stratum corneum forming the outermost layer of the epidermis, serving as the primary interface with the external environment. 
+The skin is the largest organ of the human body and is comprised of a diverse array of specialised cells types. It serves as a critical barrier that protects the internal organs from bacteria invasion, environmental pathogens, ultraviolet (UV) radiation and various biochemical agents.In addition to its protective role, the skin plays a fundamental part in thermoregulation by modulating body temperature and enabling adaptation to fluctuating environmental conditions.[@noauthor_integumentary_nodate]
 
-One of the key functions of the skin is to act as a barrier and minimise trans-epidermal water loss as well as to provide protection against external pathogens. 
+  
+Furthermore, the skin facilitates the excretion of sweat, sebum, and metabolic waste products through its glandular structures [@noauthor_integumentary_nodate]. It possesses wound-healing capabilities, allowing for the repair of abrasions, lacerations and other forms of tissue injury [@noauthor_integumentary_nodate]. The subcutaneous fat layer functions as a mechanical cushion, providing shock absorption and an additional line of defence against infection [@noauthor_integumentary_nodate].
 
-Chapter X : Corneocyte Morphometry 
+The skin also contributes to endocrine function through its role in the synthesis of vitamin D upon exposure to UV radiation [@noauthor_integumentary_nodate]. Additionally, it plays a vital sensory role, continuously transmitting information to the central nervous system regarding the external environment [@healthline2018layers]. The skin is integrated with the nervous system to enable the perception of thermal stimuli, tactile sensations, and other sensory inputs essential for survival and interaction with the environment [@healthline2018layers;@noauthor_integumentary_nodate]. 
+
+\newpage
+
+## The Structure of the Skin
+
+The skin is composed of three primary layers: the **epidermis**, the **dermis**, and the **hypodermis** (also known as the subcutaneous fat layer). Each layer performs specific functions essential to maintaining homeostasis, immunity and overall health.
+
+### The Epidermis
+
+The **epidermis** is the outermost layer of the skin and is primarily composed of keratinocytes, which are specialised cells responsible for the synthesis of keratin, cytokines, growth factors and interleukins. This layer provides the first line of defence against environmental pathogegns and is organised into four distinct strata, arranged from superficial to deep. 
+
+ - *The Stratum corneum*
+ - *The Stratum granulosum*
+ - *The Stratum spinosum*
+ - *The Stratum basale* (also referred to as the *stratum germinativum*
+ or the basal cell layer).
+
+An illustrative representation of the epidermis is provided below [@smith2016epidermis].
+
+```{r echo=FALSE, fig.align='center', out.width='90%', fig.cap="Structure of the epidermis with the different strata, resting on the dermis (Source: Shuttershock.com, Jose Luis Calvo, News Medical 2025)"}
+
+knitr::include_graphics("Images/Epidermis.png")
+```
+
+The **stratum corneum** consists of *terminally differentiated* keratinocytes. Terminally differentiated cells exit the cell cycle as they can no longer divide.
+The keratinocytes become corneocytes in the stratum corneum. 
+*Corneocytes* are non-viable, enucleated cells [@caon2020examination].
+
+The corneocytes function to minimise transepidermal water loss and provide protection against mechanical and microbial damage. Keratin produced in the underlying layers accumulates in the corneocytes, which are eventually shed through a natural process known as desquamation. 
+
+The skin surface is interspersed with pores, which serve as conduits for the excretion of sweat and sebum via eccrine and sebaceous glands, respectively [@healthline2018layers]. 
+
+The **stratum spinosum**, or *prickle cell layer*, lies above the stratum basale and consists of keratinocytes connected by desmosomes, which provide structural support. In this layer, keratinocytes begin producing cytokeratins that form tonofibrils. Langerhans cells, involved in immune defence, are also present in this layer. 
+
+The **stratum granulosum** contains flattened keratinocytes that undergo terminal differentiation. Keratinocytes accumulate keratohyalin granules,involved in keratin aggregation, and lamellar bodies, which secrete lipids that form a barrier to water loss. Keratinocytes in this layer begin to lose their nuclei and organelles as they prepare for transformation into dead corneocytes of the uppermost layer ;the stratum corneum.
+
+The **stratum basale** (or stratum germinativum) is the deepest layer of the epidermis and plays a central role in skin regeneration. This layer has mitotically active keratinocytes, which divide to replenish the upper layers. In addition to keratinocytes, several other specialised cells are found within this layer :
+
+- **Melanocytes**, which produce melanin, the pigment responsible for skin colour and protection against ultraviolet (UV) radiation [@caon2020examination]. 
+
+- **Langerhans Cells**, (LCs) a type of dendritic cell (DC) that originate from hematopoietic stem cells in the bone marrow. They have a role in immune surveillance by recognising antigens and initiating T-cell responses [@caon2020examination].
+
+- **Merkel cells**, which are mechanoreceptors involved in the sensation of touch. 
+
+- **Dendritic cells**, which also play a defence role in the immune response as they differentiate into macrophages [@caon2020examination]. 
+
+Within the **stratum basale** UV radiation stimulates the conversion of provitamin $D_{3}$ into pre-vitamin $D_{3}$ that initiates the cutaneous synthesis of vitamin D. Subsequent hydroxylation in the liver and kidneys leads to the production of the active form of vitamin D [@caon2020examination]. 
+
+The epidermis is not only a structural barrier but also a site of pathological relevance. Several dermatological and systemic conditions occur in this layer including **seborrhoeic dermatitis** (dandruff), **psoriasis**, **atopic dermatitis** (eczema), melanoma, **acne vulgaris **, **actinic keratosis** and pressure ulcers (decubitus ulcers) [@healthline2018layers].
+
+\newpage
+
+### The Dermis
+
+The dermis is the middle layer of the skin, situated beneath the epidermis, and serves as the primary site of structural and functional support. It contains many essential components including blood vessels such as capillaries [@caon2020examination], lymphatic vessels, sweat glands , sebaceous glands, hair follicles, nerve endings, and specialised sensory receptors. The dermis is primarily composed of **collagen** and **elastin**, two fibrous proteins that confer tensile strength and elasticity, respectively. 
+
+The dermis is subdivided into two distinct layers:
+
+ - **The papillary dermis**, the superficial layer, which is composed of loose connective tissue and contains capillaries and sensory neurons. 
+ 
+ - **The reticular dermis**, the deeper layer, composed of dense irregular connective tissue rich in collagen and elastin fibres, glands, hair follicles, and larger blood vessels. 
+ 
+The dermis contains sweat glands, sebaceous glands, blood vessels, lymphatic vessels, and other structures critical to skin function. These glands play essential roles in thermoregulation, lubrication, and excretion. The eccrine glands are responsible for sweat production, while the sebaceous glands secrete sebum to maintain skin hydration and barrier function. Both are embedded within the dermal layer and are regulated by hormonal and neural signals.
+
+The dermis contains sweat glands, sebaceous glands, blood vessels, lymphatic vessels, and other structures critical to skin function. These glands play essential roles in thermoregulation, lubrication, and excretion. The eccrine glands are responsible for sweat production, while the sebaceous glands secrete sebum to maintain skin hydration and barrier function. Both are embedded within the dermal layer and are regulated by hormonal and neural signals.
+
+
+Fibroblasts, the predominant cell type in the dermis, are responsible for synthesising collagen proteins, and other components of the extracellular matrix,  which maintains the structural framework of connective tissues. 
+In addition to their structural role, fibroblasts are actively involved in **wound healing** through production of signalling molecules and matrix proteins [@genome2025fibroblast].
+
+Collagen is the most abundant protein in the human body and is found not only in the skin but also in muscles, bones, tendons, ligaments, blood vessels, internal organs and the gastrointestinal lining [@clevelandclinic2025collagen]. The primary amino acids in collagen include glycine, proline and hydroxyproline, which assemble into a characteristic triple-helix structure to form collagen fibrils. The biosynthesis of this structure requires several cofactors, including **vitamin C**, **zinc**, **copper** and **manganese** [@clevelandclinic2025collagen].
+
+
+Among the specialised mechanoreceptors in the dermis are Meissner's corpuscles and Pacinian corpuscles, which detect mechanical stimuli such as touch, pressure, and vibration. These corpuscles are multicellular structures (of multiple cell types) consisting of a sensory nerve ending surrounded by specialised Schwann cells.
+
+ The vascular network within the dermis plays a crucial role in thermoregulation by adjusting blood flow in response to temperature changes [@caon2020examination]. The nerve endings transmit sensory information such as touch, pain, and temperature [@caon2020examination].
+Dermal Immune cells contribute to the inflammatory response following injury or infection. 
+
+The dermis contains a diverse population of cells, including fibroblasts, immune dendritic cells, macrophages, T lymphocytes, mast cells, innate lymphoid cells, neutrophils, eosinophils, and natural killer cells, neuronal cells and endothelial cells [@moon2021invitro]. 
+
+Among the immune cells, T lymphocytes are predominantly located in close proximity to blood vessels, vessels, hair follicles and sweat glands within the dermis. Subsets of T cells perform distinct immunological functions: **Th1 cells ** secrete cytokines that enhance the capacity of other immune cells to target and eliminate pathogens l however, dysregulation of Th1 activity may contribute to the development of autoimmune disorders [@moon2021invitro]. **Th2 cells** are primarily involved in the mediation of allergic responses. **Th17 cells** play a crucial role in defending against bacterial and fungal infections and are implicated in the pathogenesis of inflammatory skin diseases such as eczema and psoriasis.
+
+In contrast, **regulatory T cells (Tregs)** modulate immune responses by suppressing excessive inflammation through the release of inhibitory signals and by eliminating over-active immune cells, thereby maintaining immune homeostasis with the dermis [@moon2021invitro] .
+ 
+Several conditions originate within the dermis, including wrinkles (due to collagen degradation), cellulitis (a bacterial skin infection), dermoid cysts (which may contain hair or teeth), sebaceous cysts, and dermatofibromas.
+
+An illustrative representation of the dermis containing sweat glands, sebaceous glands, blood vessels, lymphatic vessels is shown below[@sweatglands_mayo].
+
+```{r echo=FALSE, fig.align='right', out.width='80%', fig.cap="Eccrine \\& sebaceous glands in the dermis (Source: Mayo Foundation, 2025)"}
+knitr::include_graphics("Images/Glands.png")
+```
+
+### The Hypodermis
+
+The **hypodermis**, also known as the subcutaneous layer of fat, lies beneath the dermis and primarily consists of adipose tissue. This layer is composed of lipocytes that function to insulate the body, maintain thermoregulation, and serve as an energy reserve. The hypodermis also plays a crucial role in absorbing mechanical shock and protecting underlying muscles and organs. 
+
+Structurally, the hypodermis includes the following key components:
+
+ - Fibroblasts: Cells responsible for the production of collagen [@verywell2025hypodermis]. They also regulate the immune response to producing cytokines and chemokines [@moon2021invitro].
+ 
+ - Adipose tissue: Specialised are fatty tissues composed of lipocytes [@verywell2025hypodermis]
+
+ - Connective tissue: A network of collagen and elastin fibres that support and anchors, and gives structure to other tissues[@verywell2025hypodermis].
+
+ - Blood vessels: Including arteries, veins and capillaries that supply the skin with oxygen rich blood and nutrients, while facilitating thermoregulation [@verywell2025hypodermis].
+
+ - Lymphatic vessels: Structures involved in maintaining fluid homeostasis and transporting lymph, a fluid containing immune cells and waste products[@verywell2025hypodermis].
+
+ - Hair follicles: Structures that anchor individual hair shafts and are associated with sebaceous glands and nerve endings.
+
+ - Nerve fibres: Sensory neurons the body's sense of position and movement in space. 
+
+The hypodermis functions as a supportive and protective layer and has important vascular, immune and sensory roles. 
+
+***
+
+# Streptococcus pyogenes
+
+Streptococcus pyogenes is a Gram-positive, anaerobic bacteria [2] . This is part of the skin microbiota.
+Streptococcus pyogenes is known as Group A Streptococcus and because of this is it is subsequently abbreviated as GAS 3,4. 
+
+Streptococcus pyogenes looks like small round cells arranged in chain like structures  [4]. 
+
+It is a bacteria of the Streptococcus genus [4]. 
+
+The Domain is bacteria [4].  
+The kingdom is Bacillati 
+The phylum is Bacillota [4].  
+The Class is Bacilli[4]. 
+The order is Lactobacillales [4]. 
+The Family is Streptococcaceae [4]. 
+The genus is Streptococcus [4]. 
+The species is S. Pyogenes [4]. 
+
+This species is beta hemolytic ( complete destruction of red blood cells)  2.  ( what does that mean?) 
+
+### Infection of human Skin 
+
+Streptococcus pyogenes is found on human skin[2].  Streptococcus pyogenes causes a range of clinical diseases as they are important pathogens that infect humans. Therefore it is important that they are treated after diagnosis. 
+
+These infections involve pneumonia , localised skin infection  the skin infection called  impetigo 4,  can cause pharyngitis, autoimmune disorder called rheumatic fever, scarlet fever, deep layers of skin invasion lead to skin infection necrotising fasciitis , acute  glomerulonephritis and other skin infections 2 . 
+
+They can also cause rheumatic heart disease. 
+
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="Streptococcus pyogenes (Source:, 2025)"}
+knitr::include_graphics("Images/pyogenes.png")
+```
+
+### The Virulence Factors 
+
+A virulence factor is a molecular that is produced by a pathogen that gives it the capabilities to establish infection and cause disease. 
+
+virulence factors are Capsules that are outer layer which protect the pathogen from being engulfed by immune cells.  
+
+Adherence factors help the pathogen to attach to host cells.  This allows them to stick to host cells, tissues or the host environment. Cell surface proteins.  Toxins that damage host cells and tissues. 
+
+Enzymes that degrade the host tissues allowing the pathogen to spread and invade  4. Streptokinase, hyaluronidase and DNase are enzyme that help the bacteria break down down blood clothes enables it to invade the immune system  4. These enzymes are produced by 
+
+Streptococcus pyogenes. Streptokinase activates plasminogen. The most important virulence factor produced by Streptococcus pyogenes is called Streptokinase [4]. 
+
+There is also nutrient acquisition to allow the pathogen to obtain the nutrients it needs to survive and replicate. 
+
+The emm gene family is in all Streptococcus pyogenes strains 3. The emm gene family codes for the M proteins. These M proteins are antigens. The M protein is classified based on its N- terminal sequence. 
+
+What is the structure of the M Protein?
+
+What is the structure of the M Protein?
+
+### The M Proteins
+The surface proteins produced by  Streptococcus pyogenes are M-protein 
+
+The M-protein changes surface antigens to make it harder for the host to recognise the pathogen.
+Streptococcus pyogenes secretes M-family proteins called Enn and Mrp 3. 
+
+The F Proteins
+The surface proteins produced by  Streptococcus pyogenes are :
+Fibrinogen-binding protein 
+Fibronectin binding protein 
+
+Streptococcal pyrogenic exotoxin
+Streprococcus pyogenes also secretes streptococcal pyrogenic exotoxin , which activate T cells to produce an immune response. There are least three unique streptococcal pyrogenic exotoxins   4.  
+
+What is the structure of these? 
+
+There is also streptolysin O is an exotoxin produced by Streptococcus pyogenes and lipoteichoic acid which are targets for vaccine development 4.  
+
+streptolysin is an enzyme the causes the lysis of red blood cells and there are two types. SLO and SLS. 
+
+Hyaluronidase enzyme produced by Streptococcus pyogenes breaks down hyaluronic acid in the connective tissue 4. 
+
+There are antimicrobial genes (lmrP, tetM, tetL and tgfT) in S. pyogenes 1 .  The tetracycline resistance gene is called tetM or tetL 1 . 
+
+# Diagnostic Tests
+
+To obtain a sample a throat swab, skin lesion or blood sample is collected from the patient   4. Then rapid antigen detection tests are done. 
+
+They are treated with antibiotics 4.  The DNA contains 1900 genes that code for several virulence factors4. 
+
+The genomes of different strains were sequenced . The genome size is 1.8–1.9 Mbp),[28] encoding about 1700-1900 proteins (1700 in strain NZ131,[29][30] 1865 in strain MGAS5005[31][32]). 
+
+Complete genome sequences of the type strain of S. pyogenes (NCTC 8198T = CCUG 4207T) are available in DNA Data Bank of Japan, European Nucleotide Archive, and GenBank under the accession numbers LN831034 and CP028841.[33] 
+
+Biofilms are a way for S. pyogenes, as well as other bacterial cells, to communicate with each other. In the biofilm gene expression for multiple purposes (such as defending against the host immune system) is controlled via quorum sensing.[34] One of the biofilm forming pathways in GAS is the Rgg2/3 pathway. It regulates SHP's (short hydrophobic peptides) that are quorum sensing pheromones, a.k.a. autoinducers. The SHP's are translated to an immature form of the pheromone and must undergo processing, first by a metalloprotease enzyme inside the cell and then in the extracellular space, to reach their mature active form. The mode of transportation out of the cell and the extracellular processing factor(s) are still unknown. 
+
+https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP028841.1
+
+https://www.ncbi.nlm.nih.gov/protein/XDR38324.1?report=fasta
+
+XDR38324.1 M-related protein Mrp [Streptococcus pyogenes]
+MSKRNPNKHYSLRKLKTGTASVAVALTVLGTGLANTTDVKADLSTQENPRVTKAREEALEEVLRSWDYGS
+VRAALAGSYRKNLQLENTIKQKDKELSFLSKVLDEAAKKYRESSDKYKQEIGQLKAAAEAEAQKALDALN
+NKNKQISDLTNENAQLKEAIEGYVQTIQNASREIAAKQQELAAAKSQLEAKNAEIEALKQQDASKTEEIA
+KLQSEAETLENLLGSAKRELTDLQAKLDTATAEKAKLESQVTTLENLLGSAKRELTDLQAKLDAANAEKE
+KLQSQAAALEKQLEATKKELADLQAKLAATNQEKEKLEAEAKALKEQLAKQAEELAKLKADKASGAQKPD
+TKPGNKEVPTRPSQTRTNTNKAPMAQTKRQLPSTGEETTNPFFTAAALTVIASAGVLALKRKEEN
+
+***
+
+# MELANOMA 
+
+
+### Neural Crest Cells 
+
+The most important growth factors that regulate the development of melanocytes from neural crest cells (NCCs) include Endothelins, Stem cell factor (SCF), which is the ligand for the c-Kit receptor, and Wnt proteins and Neuregulin-1 (NRG1) which is a key growth factor. 
+
+NRG1 is also important in:
+Nervous system: Promotes development of Schwann cells (which form the myelin sheath), supports neuron growth, and synaptic plasticity.
+Heart: Regulates the development of heart muscle and blood vessels.
+Repair processes: Involved in healing after injury, especially in nerve and heart tissue.
+Neuregulin-1 (NRG1) = A key growth factor. Acts via: ErbB receptors.
+Also important for: Nervous system and heart development.
+
+Other key signaling pathways involved in melanocyte development include:
+The MAPK (mitogen-activated protein kinase) pathway
+
+MAPK stands for Mitogen-Activated Protein Kinase. It's a signalling pathway , a series of protein interactions inside a cell,  that responds to external signals (like growth factors) and tells the cell what to do.
+
+In melanocyte development, the MAPK pathway helps control cell survival (preventing cell death, Proliferation (making more cells), Differentiation (developing into mature melanocytes.
+
+The MAPK pathway is activated when growth factors like Stem Cell Factor (SCF) bind to receptors such as c-Kit on the surface of melanoblasts. This triggers a chain reaction inside the cell that leads to activation of proteins like ERK, which then move to the nucleus and turn on specific genes needed for melanocyte development and melanin production.
+
+\newpage 
+
+
+\newpage 
+
+
+### Corneocyte Morphometry 
 
 Corneocyte morphometry refers to the quantitative and qualitative analysis of dead skin cells called corneocytes. Corneocytes are the enucleated cells found in the outermost layer of the epidermis. These cells pay a critical role in maintaining the integrity of the skin barrier and overall epidermal homeostasis. 
 
@@ -253,7 +552,7 @@ A notable microscopic feature is the presence of Circular Nano-Objects (CNOs) , 
 Moreover, corneocyte morphometry has proven valuable in clinical dermatological research, particularly for evaluating therapeutic efficacy.  It enables the monitoring of the therapeutic treatment response to topical agents such as corticosteroids and can aid in distinguishing between irritant and allergic contact dermatitis [2].
 
 
-Atomic Force Microscopy in the Assessment of Skin Barrier Function 
+### Atomic Force Microscopy 
 
 Atomic Force Microscopy (AFM) has emerged as a valuable tool in dermatological research, particularly in the assessment of the skin as a barrier. This technique allows for high resolution, three-dimensional imaging of biological surfaces at the nanoscale, including the detailed topographical analysis of corneocytes obtained via tape stripping [1] . 
 
@@ -266,7 +565,7 @@ The quantification of Circular Nano Objects is expressed the Dermal Texture inde
 By providing nanoscale morphological data, Atomic Force Microscopy serves as a quantitative biomarker tool to monitor disease progression and therapeutic response. Its application contributes to a deeper understanding of skin barrier pathophysiology and enhances the evaluation of interventions aimed at restoring barrier function. 
 
 
-Optical Pickup Units in Atomic Force Microscopy 
+### Optical Pickup Units in Atomic Force Microscopy 
 
 The core components of many low-cost atomic force microscopy (AFM) systems are derived from  optical pickup units (OPUs) developed for  CD and DVD players. These units are compact, inexpensive and easy to repurpose, making them promising candidates for use as point-of-care diagnostic technologies [5].
 
@@ -284,7 +583,7 @@ The adaptation of optical pickup units from consumer electronic for scientific i
 
 
 
-Deflection Detection via Optical Pickup Systems in Atomic Force Microscopy
+### Deflection Detection via Optical Pickup Systems in Atomic Force Microscopy
 
 In atomic force microscopy (AFM) , the optical pickup system plays a central role in detecting cantilever deflections with high precision. A low-power laser beam is directed onto the rear surface of the reflective cantilever, which is typically coated with gold or aluminium to enhance reflectivity and signal accuracy [6].
 
@@ -324,7 +623,6 @@ You have to accomplish your goals in the thesis.
 
 Presents the findings of the research often with charts and graphs to illustrate data. The GUI created look like this, but I have to get it to scan the image properly, and also take in the real time data correctly. 
 
-
 ## 4.1 Data Analysis 
 
 This is the results of the data processing according to the analytical tools and techniques. 
@@ -339,10 +637,7 @@ Can you do this yourself?
 
 ## 4.3 Implications or Perspectives 4.4 Impact - Innovation and Application 
 
-
 You should summarise what you expect to be the most important find is or contributions. What to you do about the problem you have identified. 
-
-
 
 \newpage
 
@@ -355,10 +650,8 @@ You should summarise what you expect to be the most important find is or contrib
 The conclusion is a brief presentation of what has been obtained from the discussion.
 Summarises the key findings and their importance offering final thoughts on the research. 
 
-
 ## 4.2 Limitations 
 The limitations of the study describe the weaknesses and shortcomings found after analysis and interpretations of the results. 
-
 
 ## 4.3 Suggestion 
 
@@ -366,120 +659,10 @@ Suggestions for future research.
 
 Describes the research design, methods used for data collection and analysis and justifies the chosen approach. 
 
-Arduino Programming Language 
-
-I have been given DIY AFM control Firmware baud 9600 written by Jen-Hung Wang.
-I have been given DIY AFM control Firmware baud 115200 written by Jen-Hung Wang. 
-The firmware code is written in Arduino’s programming language, which is a simplified version of 
-C++ but with Arduino specific functions and Arduino specific libraries. The file extension .ino indicates it is an Arduino sketch program.
-
-The firmware code is used to control the Atomic Force Microscope (AFM) system. 
-
-There are key components
-
-The Hardware Control : 
-It uses digital pins 41-49 (PORTL) for X-axis control. 
-It uses digital pins 30-37 (PORTC) for Y axis control. 
-It uses analog pin A0 for reading sensor data. 
-It communicates with a computer via Serial at 9600 baud rate. 
-
-The Main Functionality of the code: 
-The firmware code implements a scanning system that can move in a raster pattern. 
-It can read sensor data from the Atomic Force Microscope cantilever and send it back to a computer. 
-
-It supports various command through the serial communication: 
-
-‘p’: Sets the delay time which affects scanning speed.
-‘x’: Sets X starting position 
-‘y’: sets Y starting position 
-‘g’: sets the gap between scan lines 
-‘u’: starts scanning 
-‘e’: stops scanning 
-
-During the scanning process, when the scanning is active (direc = 0), it moves the X-axis from 0 to 255 and reads sensor data at each point.  It moves the Y-axis by the specified gap and repeats the process.
-
-The Arduino firmware is uploaded to the Arduino Mega microcontroller. The microcontroller is a small computer chip that can be programmed to control hardware. 
-
-The code is compiled using the Arduino IDE (Integrated Development Environment) and the compiled code is then transferred to the Arduino via USB using a bootloader. The bootloader is a small program that allows the Arduino to receive new code. 
-
-The code is uploaded to the Arduino board, and the Arduino needs instructions to know how to control the hardware. 
-
-Without firmware, the Arduino is just a blank chip. 
-The firmware provides the specific instructions for:
-How to control the X and Y movement
-How to read the sensor data.
-How to communicate with the computer.
-How to execute the scanning pattern.
-
-This particular firmware is designed for a DIY Atomic Force Microscope, which is a scientific instrument used to image surfaces at the atomic level. The firmware controls the scanning mechanism and data acquisition process, which are essential for creating images of the sample surface.
-
-The code is part of a larger system where a computer program written in Python, based on the workspace path, communicates with this Arduino firmware to control the AFM and collect data for imaging.
-
-
-Python Code
-
-As part of this thesis project, I was provided with a legacy Python-based control script, originally authored by Christian Werner, Eli Bendersky and Mike Killian. The codebase was initially undocumented, necessitating a thorough reverse-engineering process to determine its functionality, internal logic and its role in coordinating communication between the Atomic Force Microscope (AFM), the Arduino firmware, and the microcontroller board.
-
-The primary objective defined for this thesis was to optimise the scanning process, specifically to increase the data acquisition and image rendering speed of the AFM system. 
-
-The required in depth analysis of the existing Python script to identify performance bottlenecks, communication delays and compatibility issues. 
-
-Furthermore, the original software was designed for Windows based serial communication protocols, which presented compatibility challenges when operating on macOS platforms, particularly on an Apple MacBook Pro. As a result, the Python code had to be significantly modified to ensure proper interfacing with macOS serial port architecture, while maintaining functional parity with the original implementation. 
-
-These adaptations involved reconfiguring serial port access, adjusting hardware specific parameters and ensuring reliable data transmission across platforms, all of which are essential for achieving the intended performance improvements. 
-
-The critical components of an Atomic Force Microscope (AFM) system. 
-
-The Piezo Actuator Control 
-
-The Piezo actuators are devices that move in response to electrical signals. In an Atomic Force Microscope then control the scanning motion of the probe ( X and Y axes) and The vertical position of the probe (Z axis). 
-
-
-The Firmware
-The Firmware controls the voltage signals sent to the piezo as well as the scanning speed and the scanning pattern. The movement resolution is typically in the nanometer scale. The firmware also controls the calibration of movement, 
-
-
-The Force Feedback Loop
-This is a critical control ststem that maintains constant force between the probe and the sameple. The deflection sensor measures the probe bending, the feedback controller adjusts the Z position and the Setpoint is the desired force level. The loop measures the current force and compares it to a set point. It adjusts the Z position and repeats this continuously to prevent probe damage or sample data or loss of contact. 
-
-The Data Aqcuuisition 
-The data acuisition is the collection of measurement data from hte various sensors. The topogyaphy (height) , the deflection and phase and amplitude ar e the types of data collected. The parameters are the sampling rate, the resolution, the data format and the storage method. 
-
-
-The function in the control interface controls the scanning speed of the piezo actuators. 
-
-
-The firmware .hex file contains the low-level implementation of these features while the Pthon software provides the uer interface and the high level control. Together they create a complete AFM control system that safely operatres the microscope, maintains precise control. Acquires accurate data, provides real time feedbaack and ensures reliable operation. This is why the firmware is so critical it is the foundation that enables all the interactions to work togeter properly. 
-
-
-The .HEX file. 
-
-The .hex file is created through a compilation process from source code. The original code is written in C++ using the Arduino IDE and it controls the logic for the AFM. The source code Is compiled using the Arduino IDE and thee compiler converts the C++ code into machine code. The machine code is then converted into the .hex format. 
-
-The Python code is designed to work with specific firmware commands. The python code assumes the firmware understands these specific commands and parameters. 
-The firmware must be stable before software development., The software must be designed around the firmware’s capabilities. Both must be maintained together. Updates to wither may require updates to the other. The Python code in the AFM software is specifically written to work with the firmware that is loaded onto the microcontroller. The firmware documentation guides the software development. and both must be kept in sync. 
-
-
-Arduino Language Reference - Detailed documentation of the Arduino programming language
-
-https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/
-
-Analog Input pins https://docs.arduino.cc/learn/microcontrollers/analog-input/
-
-https://docs.arduino.cc/language-reference/
-
-How to write a master’s thesis: This link 
-
-How to write a phD degree : This link 
-
-
-Discussion 
-
 Interprets the results, linking them back to the research questions and existing literature, discussing implications, limitations and future research directions. 
 
 \newpage 
 
-# Bibliography 
 
 Lists all the sources cited in the thesis in a consistent format. 
 
@@ -507,8 +690,23 @@ https://grad.gatech.edu/theses-dissertations
 
 https://grad.gatech.edu/theses-dissertations
 
+Arduino Language Reference - Detailed documentation of the Arduino programming language
+
+https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/
+
+Analog Input pins https://docs.arduino.cc/learn/microcontrollers/analog-input/
+
+https://docs.arduino.cc/language-reference/
+
 \newpage
 
 # Appendices
 
 Supplementary material, such as raw data, questionnaires or additional charts that are relevant to the thesis but not critical in the main sections. 
+
+
+# Bibliography 
+
+# References
+
+
