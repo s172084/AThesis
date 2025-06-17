@@ -178,7 +178,7 @@ I would also like to express gratitude to Frederik Clausen for hiring me as an A
 
 ```{=latex}
 \newpage
-\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{3}
 \tableofcontents
 ```
 
@@ -268,17 +268,15 @@ The problems to be studied are explained. There is a research hypothesis. This e
 
 The hypothesis is a short statement that is concluded from the literature review and it is a temporary answer to the problem under study. The hypothesis is supported by theories or references from previous studies. 
 
-This is a statement of the hypothesis and problems. 
+This is a statement of the hypothesis and problems. The hypothesis is the highest level problem or goal you are going to to address. 
 
-The hypothesis is the highest level problem or goal you are going to to address. 
-
-The problems should be unambiguous. 
-
-The importance of the problem should be mentioned if it was not already done so. 
-
-You can develop a new approach for solving a well known problem or replicate a method in the literature. 
+The problems should be unambiguous. The importance of the problem should be mentioned if it was not already done so. You can develop a new approach for solving a well known problem or replicate a method in the literature. 
 
 Data Collection Method of Analysis
+
+**Hypothesis I:** Analysing the genomic sequence of Streptococcus pyogenes (GAS) can reveal key virulence factors and their regulation mechanisms, providing insights into potential targets for vaccine development and therapeutic interventions. 
+
+**Hypothesis II:** Determine the structure of the M Protein?
 
 \newpage
 
@@ -408,110 +406,124 @@ The hypodermis functions as a supportive and protective layer and has important 
 
 ***
 
+\newpage
 # Streptococcus pyogenes
 
-Streptococcus pyogenes is a Gram-positive, anaerobic bacteria [2] . This is part of the skin microbiota.
-Streptococcus pyogenes is known as Group A Streptococcus and because of this is it is subsequently abbreviated as GAS 3,4. 
+## Streptococcus pyogenes:Taxonomy, Morphology & Clinical Relevance
 
-Streptococcus pyogenes looks like small round cells arranged in chain like structures  [4]. 
+*Streptococcus pyogenes* is a Gram-positive, anaerobic bacterium commonly referred to as Group A Streptococcus(GAS) [@proctor2023_fibrinogen,@abusaiba2023_review]. 
 
-It is a bacteria of the Streptococcus genus [4]. 
+The Gram-positive nature is due to a thick peptidoglycan layer in its cell wall, which retains the crystal violet stain.
 
-The Domain is bacteria [4].  
-The kingdom is Bacillati 
-The phylum is Bacillota [4].  
-The Class is Bacilli[4]. 
-The order is Lactobacillales [4]. 
-The Family is Streptococcaceae [4]. 
-The genus is Streptococcus [4]. 
-The species is S. Pyogenes [4]. 
+Structurally, *S.pyogenes* is characterised by its beta-hemolytic activity, meaning it causes complete lysis of red blood cells on blood agar plates.
+Morphologically, the cells are small, spherical, and typically arranged in chains, a feature that distinguishes them from other bacterial species[@abusaiba2023_review].
 
-This species is beta hemolytic ( complete destruction of red blood cells)  2.  ( what does that mean?) 
+Taxonomically, *S.pyogenes* is classified as follows:
 
-### Infection of human Skin 
+ - **Domain**: *Bacteria*
+ 
+ - **Kingdom**: *Bacillati*
+ 
+ - **Phylum**: *Bacillota*
+ 
+ - **Class**: *Bacilli*
+ 
+ - **Order**: *Lactobacillales*
+ 
+ - **Family**: *Streptococcaceae*
+ 
+ - **Genus**: *Streptococcus *
+ 
+ - **Species**: *S.pyogenes* [@abusaiba2023_review]
+ 
+As a highly adaptable pathogen, *S.pyogenes* is capable of causing a wide range of clinical diseases, from mild superficial infections to severe invasive conditions. Its chain-like cellular arrangement and distinct beta-hemolytic properties are key identifiers in both clinical and microbiological contexts. 
 
-Streptococcus pyogenes is found on human skin[2].  Streptococcus pyogenes causes a range of clinical diseases as they are important pathogens that infect humans. Therefore it is important that they are treated after diagnosis. 
+## Infection of Human Skin
 
-These infections involve pneumonia , localised skin infection  the skin infection called  impetigo 4,  can cause pharyngitis, autoimmune disorder called rheumatic fever, scarlet fever, deep layers of skin invasion lead to skin infection necrotising fasciitis , acute  glomerulonephritis and other skin infections 2 . 
+*Streptococcus pyogenes* is a significant pathogen responsible for a wide spectrum of clinical diseases. Prompt diagnosis and treatment of *S.pyogenes* infections are critical due to the organism's capacity to cause both superficial and systemic illnesses. 
 
-They can also cause rheumatic heart disease. 
+Skin infections caused by *S.pyogenes* range from localised conditions such as impetigo to more severe and invasive diseases, including necrotising fasciitis, a life-threatening infection of the deep dermal and subcutaneous tissues [@nci_streptococcus_pyogenes,@abusaiba2023_review].
 
-```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="Streptococcus pyogenes (Source:, 2025)"}
-knitr::include_graphics("Images/pyogenes.png")
+In addition to skin infections, *S.pyogenes* is known to cause pharyngitis, pneumonia, scarlet fever, acute post-streptococcal glomerulonephritis, and the autoimmune condition rheumatic fever. In chronic cases,*S.pyogenes* may also contribute to the development of rheumatic heart disease. 
+
+```{r echo=FALSE, fig.align='center', out.width='90%', fig.cap="Streptococcus pyogenes (Source:National Institute of Allergy and Infectious Diseases (NIAID), Flickr, December 29, 2022)"}
+knitr::include_graphics("Images/pyogenes2.png")
 ```
 
-### The Virulence Factors 
+## Virulence Factors of Streptococcus pyogenes
+Virulence factors are molecules produced by pathogens that facilitate infection, survival and damage within the host. *S.pyogenes* expresses a diverse array of virulence factors that enable its pathogenicity, immune system invasion, and tissue invasion [@abusaiba2023_review]. 
 
-A virulence factor is a molecular that is produced by a pathogen that gives it the capabilities to establish infection and cause disease. 
+**1. Capsules**
+The bacterium produces a capsule that protects it from being engulfed by the host immune cells.  
 
-virulence factors are Capsules that are outer layer which protect the pathogen from being engulfed by immune cells.  
+**2. Adherence Factors**
+Adherence factors (Adhesins), including lipoteichoic acid (LTA) and fibronectin-binding proteins help the bacterium to attach to host epithelial cells and tissues. 
 
-Adherence factors help the pathogen to attach to host cells.  This allows them to stick to host cells, tissues or the host environment. Cell surface proteins.  Toxins that damage host cells and tissues. 
+**3. Surface Proteins**
+Surface proteins such as M protein and related members (e.g. Mrp and Enn) play crucial roles in immune evasion. These proteins have variable antigens which allow the pathogen to avoid recognition by the host immune system. 
 
-Enzymes that degrade the host tissues allowing the pathogen to spread and invade  4. Streptokinase, hyaluronidase and DNase are enzyme that help the bacteria break down down blood clothes enables it to invade the immune system  4. These enzymes are produced by 
+**4. Enzymes**
+*S.pyogenes* secretes several enzymes that degrade host tissues and promote bacterial invasion. These include: 
 
-Streptococcus pyogenes. Streptokinase activates plasminogen. The most important virulence factor produced by Streptococcus pyogenes is called Streptokinase [4]. 
+ - **Streptokinase:** Converts plasminogen to plasmin, aiding in the breakdown of fibrin blood clots.
+ 
+ - **Hyaluronidase:** Degrades hyaluronic acid in connective tissue, facilitating bacterial spread.
+ 
+ - **DNases:** Break down extracellular DNA.
+ 
 
-There is also nutrient acquisition to allow the pathogen to obtain the nutrients it needs to survive and replicate. 
+**5. Toxins**
+*S.pyogenes* produces streptolysins (SLO and SLS), exotoxins that lyse red blood cells and other host cells. Additionally, streptococcal pyrogenic exotoxins (SPEs) are super-antigens that activate T cells and induce a massive immune response. At least three distinct SPEs have been identified [@abusaiba2023_review].
 
-The emm gene family is in all Streptococcus pyogenes strains 3. The emm gene family codes for the M proteins. These M proteins are antigens. The M protein is classified based on its N- terminal sequence. 
+### The M Protein 
 
-What is the structure of the M Protein?
+The M protein is a major virulence factor encoded by the emm gene family, which is present in all *S.pyogenes* strains [@proctor2023_fibrinogen]. These surface-anchored proteins are involved in adherence, immune evasion, and resistance to phagocytosis. 
 
-What is the structure of the M Protein?
+The M protein is considered one of the most important virulence factors. 
 
-### The M Proteins
-The surface proteins produced by  Streptococcus pyogenes are M-protein 
+- **Structure:** The M protein is a coiled-coil molecule anchored in the bacterial membrane, with a highly variable N-terminal region responsible for antigenic diversity. 
 
-The M-protein changes surface antigens to make it harder for the host to recognise the pathogen.
-Streptococcus pyogenes secretes M-family proteins called Enn and Mrp 3. 
+- **Function:** It interferes with opsonisation and complement activation, making it a key player in immune system evasion. The M-protein changes surface antigens to make it harder for the host to recognise the pathogen.
 
-The F Proteins
-The surface proteins produced by  Streptococcus pyogenes are :
-Fibrinogen-binding protein 
-Fibronectin binding protein 
+- **Variants:** M-related proteins such as Mrp and Enn, along with fibronectin-binding proteins, are also expressed and contribute to pathogenicity. 
 
-Streptococcal pyrogenic exotoxin
-Streprococcus pyogenes also secretes streptococcal pyrogenic exotoxin , which activate T cells to produce an immune response. There are least three unique streptococcal pyrogenic exotoxins   4.  
+### F proteins
+F proteins are another group of surface adhesins produced by *S.pyogenes*. These include fibrinogen-binding and fibronectin-binding proteins, which facilitate tight adherence to host tissues and are critical in the early stages of infection. 
 
-What is the structure of these? 
+### Streptolysins and Exotoxins 
+- Streptolysin O (SLO) and Streptolysin S (SLS) are cytolytic toxins that cause hemolysis and contribute to tissue damage during infection. 
 
-There is also streptolysin O is an exotoxin produced by Streptococcus pyogenes and lipoteichoic acid which are targets for vaccine development 4.  
+- Streptococcal pyrogenic exotoxins (SPEs) are potent super-antigens activate T cells and stimulate a massive immune response, often leading to severe systemic symptoms.
 
-streptolysin is an enzyme the causes the lysis of red blood cells and there are two types. SLO and SLS. 
+### Lipoteichoic Acid and Vaccine Targets
 
-Hyaluronidase enzyme produced by Streptococcus pyogenes breaks down hyaluronic acid in the connective tissue 4. 
+Lipoteichoic acid is a key surface molecule involved in adherence and immune activation, and it is under investigation as a potential target for vaccine development [@abusaiba2023_review]. 
 
-There are antimicrobial genes (lmrP, tetM, tetL and tgfT) in S. pyogenes 1 .  The tetracycline resistance gene is called tetM or tetL 1 . 
+## Antimicrobial Resistance 
 
-# Diagnostic Tests
+*S.pyogenes* also harbours genes associated with antimicrobial resistance. Notable among these are:
 
-To obtain a sample a throat swab, skin lesion or blood sample is collected from the patient   4. Then rapid antigen detection tests are done. 
+ - **lmrP:** Encodes a multidrug efflux pump
+ - **tetM and tetL:** Confer resistance to tetracyclines. 
+ - **tgfT:** involved in resistance to specific antimicrobial agents [@boutin2024_genomic].
+ 
+These resistance genes highlight the need for continuous surveillance and prudent use of antibiotics in treating *S.pyogenes* infections.
 
-They are treated with antibiotics 4.  The DNA contains 1900 genes that code for several virulence factors4. 
+## Biofilm Formation and Quorum Sensing in Streptococcus pyogenes
 
-The genomes of different strains were sequenced . The genome size is 1.8–1.9 Mbp),[28] encoding about 1700-1900 proteins (1700 in strain NZ131,[29][30] 1865 in strain MGAS5005[31][32]). 
+Biofilms are structured microbial communities encased within a self-produced extracellular matrix. In *Streptococcus pyogenes*, biofilm formation facilitates communication between cells and contributes to bacterial surviva, particularly under host immune response and exposure to antibiotics. This communication is mediated by a mechanism known as quorum sensing, which regulates gene expression in response to cell density. 
 
-Complete genome sequences of the type strain of S. pyogenes (NCTC 8198T = CCUG 4207T) are available in DNA Data Bank of Japan, European Nucleotide Archive, and GenBank under the accession numbers LN831034 and CP028841.[33] 
+In *S.pyogenes*, one of the key quorum sensing pathways involved in biofilm development is the Rgg2/3 pathway.This pathway controls the expression of genes involved in biofilm formation through the modulation of short hydrophobic peptides, which act as quorum sensing pheromones, also referred to as autoinducers.
 
-Biofilms are a way for S. pyogenes, as well as other bacterial cells, to communicate with each other. In the biofilm gene expression for multiple purposes (such as defending against the host immune system) is controlled via quorum sensing.[34] One of the biofilm forming pathways in GAS is the Rgg2/3 pathway. It regulates SHP's (short hydrophobic peptides) that are quorum sensing pheromones, a.k.a. autoinducers. The SHP's are translated to an immature form of the pheromone and must undergo processing, first by a metalloprotease enzyme inside the cell and then in the extracellular space, to reach their mature active form. The mode of transportation out of the cell and the extracellular processing factor(s) are still unknown. 
+Short hydrophobic peptides are initially synthesised in an immature form within the bacterial cell. To become functionally active, these peptides undergo a two-step processing mechanism. First, an intracellular metalloprotease enzyme processes the SHPS. Subsequently, they undergo further processing in the extracellular environment to reach their mature, biologically active form.
 
-https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP028841.1
+The specific transport mechanism responsible for the SHP export and the identity of the extracellular processing factor(s) remain to be elucidated.
 
-https://www.ncbi.nlm.nih.gov/protein/XDR38324.1?report=fasta
-
-XDR38324.1 M-related protein Mrp [Streptococcus pyogenes]
-MSKRNPNKHYSLRKLKTGTASVAVALTVLGTGLANTTDVKADLSTQENPRVTKAREEALEEVLRSWDYGS
-VRAALAGSYRKNLQLENTIKQKDKELSFLSKVLDEAAKKYRESSDKYKQEIGQLKAAAEAEAQKALDALN
-NKNKQISDLTNENAQLKEAIEGYVQTIQNASREIAAKQQELAAAKSQLEAKNAEIEALKQQDASKTEEIA
-KLQSEAETLENLLGSAKRELTDLQAKLDTATAEKAKLESQVTTLENLLGSAKRELTDLQAKLDAANAEKE
-KLQSQAAALEKQLEATKKELADLQAKLAATNQEKEKLEAEAKALKEQLAKQAEELAKLKADKASGAQKPD
-TKPGNKEVPTRPSQTRTNTNKAPMAQTKRQLPSTGEETTNPFFTAAALTVIASAGVLALKRKEEN
+The Rgg2/3 pathway is essential for biofilm maturation and plays a central role in *S.pyogenes* pathogenesis, particularly in facilitating persistent infections by enhancing resistance to host immune defences and antimicrobial agents. 
 
 ***
 
 # MELANOMA 
-
 
 ### Neural Crest Cells 
 
@@ -535,68 +547,6 @@ The MAPK pathway is activated when growth factors like Stem Cell Factor (SCF) bi
 
 \newpage 
 
-
-\newpage 
-
-
-### Corneocyte Morphometry 
-
-Corneocyte morphometry refers to the quantitative and qualitative analysis of dead skin cells called corneocytes. Corneocytes are the enucleated cells found in the outermost layer of the epidermis. These cells pay a critical role in maintaining the integrity of the skin barrier and overall epidermal homeostasis. 
-
-Corneocytes are commonly obtained through tape stripping , a minimally -invasive procedure that is used to sequentially removal layers of the stratum corneum. This technique facilitates the collection of corneocytes in a manner that is suitable for microscopic and biochemical analysis [2].
-
-The morphological characteristics of corneocytes such as the size , shape and surface reflects the status and the functional integrity of the skin barrier. In particular , the Natural Moisturising Factor (NMF ) within the corneocytes is directly associated with the hydration and maintenance of the function of the skin as a barrier. 
-
-A notable microscopic feature is the presence of Circular Nano-Objects (CNOs) , which are subcellular protrusions that are found at a high frequency in individuals with atopic dermatitis. The density of CNOs is quantified as the Dermal Texture Index (DTI), which has been shown to correlate with the severity of the atopic dermatitis [2].
-
-Moreover, corneocyte morphometry has proven valuable in clinical dermatological research, particularly for evaluating therapeutic efficacy.  It enables the monitoring of the therapeutic treatment response to topical agents such as corticosteroids and can aid in distinguishing between irritant and allergic contact dermatitis [2].
-
-
-### Atomic Force Microscopy 
-
-Atomic Force Microscopy (AFM) has emerged as a valuable tool in dermatological research, particularly in the assessment of the skin as a barrier. This technique allows for high resolution, three-dimensional imaging of biological surfaces at the nanoscale, including the detailed topographical analysis of corneocytes obtained via tape stripping [1] . 
-
-Atopic dermatitis (AD) is associated with loss of function mutations in the filaggrin gene (FLG), contributing to impaired skin barrier integrity, immune dysregulation and reduced levels of  Natural Moisturising Factor [1]. 
-
-Atomic Force Microscopy enables precise visualisation of the corneocyte surface morphology, including the identification of Circular Nano Objects (CNOs) from tape-stripped skin samples.  
-
-The quantification of Circular Nano Objects is expressed the Dermal Texture index (DTI), a parameter that correlates with both the clinical severity of atopic dermatitis and the Natural Moisturising Factor concentration in the stratum corneum [1]. 
-
-By providing nanoscale morphological data, Atomic Force Microscopy serves as a quantitative biomarker tool to monitor disease progression and therapeutic response. Its application contributes to a deeper understanding of skin barrier pathophysiology and enhances the evaluation of interventions aimed at restoring barrier function. 
-
-
-### Optical Pickup Units in Atomic Force Microscopy 
-
-The core components of many low-cost atomic force microscopy (AFM) systems are derived from  optical pickup units (OPUs) developed for  CD and DVD players. These units are compact, inexpensive and easy to repurpose, making them promising candidates for use as point-of-care diagnostic technologies [5].
-
-The Atomic Force Microscope is a non-invasive and highly sensitive tool used for quantitative assessment of the skin barrier function [5] . It enables nanometer-scale imaging of biological samples, including corneocytes, by detecting minute surface topographies [5]. 
-
-An optical pickup unit from a DVD player is a miniature optical system that employs a laser to scan the surface of a data disc and detect the reflected signal to interpret the stored digital information. The reflected light is captured by a photodetector, which converts the optical signal into a binary digital signal output (0 or 1), corresponding to the stored information [ 5]. In the context of the AFM, the laser and photodetector components of the optical pickup unit are repurposed to detect sub-nanometer defections of a cantilever probe as it interacts with a sample surface.
-
-A tiny cantilever with a sharp tip , typically only a few nanometers wide, that feels the surface of the sample (skin cells). As the tip traverses over the surface of the skin cells, it is subjected to intermolecular forces such as van der Waals interactions and electrostatic forces,  which cause the cantilever to bend or deflect [5].
-
-These deflections  of the cantilever tip are detected by the optical pickup unit’s laser and photodetector system, enabling high resolution surface profiling and nanometer scale imaging of corneocytes and other biological structures [5] . 
-
-The optical pickup unit laser and detector are crucial components that allow the system to detect incredibly small deflections of the cantilever tip. These deflections occur as the tip interacts with the surface of the skin cells and this is how Atomic Force Microscope achieves nanometer - scale imaging and probing [5]. 
-
-The adaptation of optical pickup units from consumer electronic for scientific instrumentation demonstrates an innovative and cost-effective approach to biomedical imaging, particularly for applications requiring accessible and portable solutions [5] . 
-
-
-
-### Deflection Detection via Optical Pickup Systems in Atomic Force Microscopy
-
-In atomic force microscopy (AFM) , the optical pickup system plays a central role in detecting cantilever deflections with high precision. A low-power laser beam is directed onto the rear surface of the reflective cantilever, which is typically coated with gold or aluminium to enhance reflectivity and signal accuracy [6].
-
-As the AFM tip interacts with the skin sample surface, the cantilever bends in response to intermolecular forces. These deflections alter the angle of the reflected laser beam which is then projected onto a position-sensitive photodetector, commonly configured as a four-quadrant photodiode [6].
-
-Sub-nanometer deflections of the cantilever result in measurable displacement of the laser spot on the detector. The change in position on the photodiode can be accurately measured. These positional changes are converted into voltage signals, which correspond to the vertical displacement (deflection) of the cantilever tip [6].
-
-A feedback control loop continuously adjusts the vertical position of the cantilever to maintain a constant interaction force between the tip and the sample. These vertical adjustments are recorded and subsequently used to reconstruct a topographical map of the sample surface, achieving a nanometer-scale resolution [6]. 
-
-Beyond imaging,  Atomic Force Microscopy is capable of assessing the mechanical properties of biological samples such as  stiffness and elasticity, without the need for staining or vacuum environments. or vacuum. This capacity makes it particularly suitable for investigating the surface morphology, skin cell structure, cell-membrane architecture and mechano-biological behaviour of skin cells in both health and pathological conditions [6]. By leveraging the optical pickup system, the Atomic Force Microscope acts like an ultra-sensitive eye and enables detailed visualisation and characterisation of the skin barrier structures at the nanoscale. This contributes significantly to scientific understanding of dermatological physiology and disease. 
-
-\newpage
-
 # Chapter III
 
 # RESEARCH METHODS 
@@ -614,7 +564,6 @@ It is important to have clear goals.
 
 You have to accomplish your goals in the thesis. 
 
-
 \newpage
 
 # Chapter IV 
@@ -629,11 +578,25 @@ This is the results of the data processing according to the analytical tools and
 
 Where do you get your data?
 
+Complete genome sequences of the type strain of S. pyogenes (NCTC 8198T = CCUG 4207T) are available in DNA Data Bank of Japan, European Nucleotide Archive, and GenBank under the accession numbers LN831034 and CP028841.[33] 
+
+https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP028841.1
+
+https://www.ncbi.nlm.nih.gov/protein/XDR38324.1?report=fasta
+
+XDR38324.1 M-related protein Mrp [Streptococcus pyogenes]
+MSKRNPNKHYSLRKLKTGTASVAVALTVLGTGLANTTDVKADLSTQENPRVTKAREEALEEVLRSWDYGS
+VRAALAGSYRKNLQLENTIKQKDKELSFLSKVLDEAAKKYRESSDKYKQEIGQLKAAAEAEAQKALDALN
+NKNKQISDLTNENAQLKEAIEGYVQTIQNASREIAAKQQELAAAKSQLEAKNAEIEALKQQDASKTEEIA
+KLQSEAETLENLLGSAKRELTDLQAKLDTATAEKAKLESQVTTLENLLGSAKRELTDLQAKLDAANAEKE
+KLQSQAAALEKQLEATKKELADLQAKLAATNQEKEKLEAEAKALKEQLAKQAEELAKLKADKASGAQKPD
+TKPGNKEVPTRPSQTRTNTNKAPMAQTKRQLPSTGEETTNPFFTAAALTVIASAGVLALKRKEEN
+
 Where do you analyse it?
 
 Can you do this yourself?
 
-##  4.2 Interpretations 
+## 4.2 Interpretations 
 
 ## 4.3 Implications or Perspectives 4.4 Impact - Innovation and Application 
 
@@ -663,50 +626,14 @@ Interprets the results, linking them back to the research questions and existing
 
 \newpage 
 
-
-Lists all the sources cited in the thesis in a consistent format. 
-
-Anatomy and Physiology 
-
-Riethmüller, Christoph. ‘Assessing the Skin Barrier via Corneocyte Morphometry’. Experimental Dermatology, vol. 27, no. 8, Aug. 2018, pp. 923–30. DOI.org , https://doi.org/10.1111/exd.13741.
-
-131476@au.dk. Guidelines for Writing Your Thesis Report. https://studerende.au.dk/en/studies/subject-portals/agroecology-food-and-environment/bachelors-project-masters-thesis-and-other-projects/masters-thesis/thesis-projects-at-agricultural-and-food-science/guidelines-for-writing-your-thesis-report. Accessed 13 May 2025 
-
-ZoteroBib: Fast, Free Bibliography Generator - MLA, APA, Chicago, Harvard Citations. https://zbib.org/. Accessed 13 May 2025.
-
-Pereda, Jorge, et al. ‘A Review of Atomic-Force Microscopy in Skin Barrier Function Assessment’. Journal of Investigative Dermatology, vol. 144, no. 10, Oct. 2024, pp. 2136–44. DOI.org (Crossref), https://doi.org/10.1016/j.jid.2024.04.005.
-
-Alsteens, David. ‘Microbial Cells Analysis by Atomic Force Microscopy’. Methods in Enzymology, vol. 506, Elsevier, 2012, pp. 3–17. DOI.org, https://doi.org/10.1016/B978-0-12-391856-7.00025-1.
-
-Arduino. (n.d.). Getting started with Arduino. Retrieved May 15, 2025, from https://docs.arduino.cc/learn/starting-guide/getting-started-arduino/ 
-
-8.  ‘Stromlinet Nano - Nanoscience Made Easy’. The World’s First Arduino Compatible Atomic Force Microscope , My Site, https://www.stromlinet-nano.org/products. Accessed 17 May 2025
-
-https://www.unyt.edu.al/page/thesis-manuals
-
-chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://students.uu.nl/sites/default/files/Course%20manual%20IS%20Thesis%202022-2023.pdf
-
-https://grad.gatech.edu/theses-dissertations
-
-https://grad.gatech.edu/theses-dissertations
-
-Arduino Language Reference - Detailed documentation of the Arduino programming language
-
-https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/
-
-Analog Input pins https://docs.arduino.cc/learn/microcontrollers/analog-input/
-
-https://docs.arduino.cc/language-reference/
-
-\newpage
-
 # Appendices
 
 Supplementary material, such as raw data, questionnaires or additional charts that are relevant to the thesis but not critical in the main sections. 
 
-
 # Bibliography 
 
+Lists all the sources cited in the thesis in a consistent format. 
+
+ZoteroBib: Fast, Free Bibliography Generator - MLA, APA, Chicago, Harvard Citations. https://zbib.org/. Accessed 13 May 2025.
+
 # References
-
-

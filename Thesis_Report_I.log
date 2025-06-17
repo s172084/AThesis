@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.19)  16 JUN 2025 22:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.19)  17 JUN 2025 20:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1240,56 +1240,40 @@ File: Images/Glands.png Graphic file (type bmp)
 
 Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
 
-[15]
+[15] [16]
 
 Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
 
-File: Images/pyogenes.png Graphic file (type bmp)
-<Images/pyogenes.png>
 
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
 
-[16]
+File: Images/pyogenes2.png Graphic file (type bmp)
+<Images/pyogenes2.png>
 
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
 
 [17]
-LaTeX Font Info:    Font shape `TU/Optima(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 852.
-LaTeX Font Info:    Font shape `TU/Optima(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 852.
 
-Overfull \hbox (39.6774pt too wide) in paragraph at lines 856--864
-\TU/Optima(0)/m/n/10 GLANTTDVKADLSTQENPRVTKAREEALEEVLRSWDYGS VRAALAGSYRKNLQLENT
-IKQKDKELSFLSKVLDEAAKKYRESS-
- []
+Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
+
+[18]
+
+Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--864
-\TU/Optima(0)/m/n/10 DKYKQEIGQLKAAAEAEAQKALDALN NKNKQISDLTNENAQLKEAIEGYVQTIQNAS
-REIAAKQQELAAAK-
- []
+Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--864
-\TU/Optima(0)/m/n/10 SQLEAKNAEIEALKQQDASKTEEIA KLQSEAETLENLLGSAKRELTDLQAKLDTATA
-EKAKLESQVTTLENLL-
- []
+Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
 
 
-Overfull \hbox (1.22739pt too wide) in paragraph at lines 856--864
-\TU/Optima(0)/m/n/10 GSAKRELTDLQAKLDAANAEKE KLQSQAAALEKQLEATKKELADLQAKLAATNQEKE
-KLEAEAKALKEQLAKQAEE-
- []
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
 
 
-Overfull \hbox (30.4474pt too wide) in paragraph at lines 856--864
-\TU/Optima(0)/m/n/10 LAKLKADKASGAQKPD TKPGNKEVPTRPSQTRTNTNKAPMAQTKRQLPSTGEETTNP
-FFTAAALTVIASAGVLALKRKEEN 
- []
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
 
 
 Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
@@ -1297,19 +1281,12 @@ Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
 
-[18] [19]
+[19] [20]
 
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
-
-
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
+Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
-
-[20]
-
-Package fontspec Info: Bodoni 72 scale = 1.104780046680552.
+Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 [21]
 
@@ -1317,6 +1294,49 @@ Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 
 Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
+
+
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
+
+LaTeX Font Info:    Font shape `TU/Optima(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 1007.
+LaTeX Font Info:    Font shape `TU/Optima(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 1007.
+
+Overfull \hbox (39.6774pt too wide) in paragraph at lines 1011--1019
+\TU/Optima(0)/m/n/10 GLANTTDVKADLSTQENPRVTKAREEALEEVLRSWDYGS VRAALAGSYRKNLQLENT
+IKQKDKELSFLSKVLDEAAKKYRESS-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1019
+\TU/Optima(0)/m/n/10 DKYKQEIGQLKAAAEAEAQKALDALN NKNKQISDLTNENAQLKEAIEGYVQTIQNAS
+REIAAKQQELAAAK-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1019
+\TU/Optima(0)/m/n/10 SQLEAKNAEIEALKQQDASKTEEIA KLQSEAETLENLLGSAKRELTDLQAKLDTATA
+EKAKLESQVTTLENLL-
+ []
+
+
+Overfull \hbox (1.22739pt too wide) in paragraph at lines 1011--1019
+\TU/Optima(0)/m/n/10 GSAKRELTDLQAKLDAANAEKE KLQSQAAALEKQLEATKKELADLQAKLAATNQEKE
+KLEAEAKALKEQLAKQAEE-
+ []
+
+
+Overfull \hbox (30.4474pt too wide) in paragraph at lines 1011--1019
+\TU/Optima(0)/m/n/10 LAKLKADKASGAQKPD TKPGNKEVPTRPSQTRTNTNKAPMAQTKRQLPSTGEETTNP
+FFTAAALTVIASAGVLALKRKEEN 
+ []
+
+
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
+
+
+Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
 
 [22]
 
@@ -1342,32 +1362,29 @@ Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 
-Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
-
-
-Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
-
-
-Package fontspec Info: Bodoni 72 scale = 1.104781148696777.
-
-[24] [25]
-
 Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
 
 
-Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
+Underfull \hbox (badness 6204) in paragraph at lines 1147--1147
+[]|\TU/Optima(0)/m/n/10 Proctor, E.-J., H. R. Frost and B. Mantri, “\TU/Optima(
+0)/m/it/10 Fibrinogen-binding m-related proteins facilitate
+ []
 
 
-Package fontspec Info: Bodoni 72 scale = 1.104781402560903.
+Underfull \hbox (badness 2343) in paragraph at lines 1147--1147
+\TU/Optima(0)/m/it/10 the recruitment of plasminogen by \TU/Optima(0)/m/n/10 st
+reptococcus pyogenes,” \TU/Optima(0)/m/it/10 Frontiers in Microbiology\TU/Optim
+a(0)/m/n/10 , 2023,
+ []
 
-[26] (./Thesis_Report_I.aux) ) 
+[24] [25] (./Thesis_Report_I.aux) ) 
 Here is how much of TeX's memory you used:
- 18593 strings out of 476919
- 328959 string characters out of 5821840
- 835293 words of memory out of 5000000
- 38270 multiletter control sequences out of 15000+600000
+ 18609 strings out of 476919
+ 329456 string characters out of 5821840
+ 835580 words of memory out of 5000000
+ 38286 multiletter control sequences out of 15000+600000
  410137 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 98i,6n,131p,520b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,6n,131p,520b,503s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Thesis_Report_I.pdf (26 pages).
+Output written on Thesis_Report_I.pdf (25 pages).
