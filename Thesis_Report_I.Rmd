@@ -40,13 +40,9 @@ knitr::opts_chunk$set(echo = TRUE)
 knitr::include_graphics(c("Images/Whitespace.png"))
 ```
 
-
-
-
 Thesis Title: information on the main problem.
 
-Time: 16:53 
-
+Time:14.14
 
 
 ```{r echo=FALSE, fig.align='center', out.width='15%'}
@@ -103,6 +99,8 @@ knitr::include_graphics(c("Images/Whitespace.png"))
 
 knitr::include_graphics(c('Images/math.png'))
 ```
+
+
 **Technical University of Denmark**
 
 **DTU Health Tech**
@@ -138,8 +136,6 @@ This section provides a concise summary of the research, including the central r
 The keywords related to the thesis are listed. ( Write this at the end. ) 
 
 
-
-
 \newpage
 
 # Acknowledgements
@@ -164,15 +160,14 @@ I would also like to express gratitude to Frederik Clausen for hiring me as an A
 
 \newpage
 
-# List of Tables 
 ```{=latex}
 \listoftables
 ```
-# List of Figures
+
+
 ```{=latex}
 \listoffigures
 ```
-
 
 \newpage
 
@@ -182,8 +177,6 @@ I would also like to express gratitude to Frederik Clausen for hiring me as an A
 \tableofcontents
 ```
 
-A detailed outline of all major sections and subsections, accompanied by page numbers for ease of navigation throughout the thesis.
-
 \newpage
 
 # Chapter I 
@@ -192,7 +185,6 @@ A detailed outline of all major sections and subsections, accompanied by page nu
 
 
 ### 1.1 Background of the Problem 
-
 
 The rationale facts and observations that are important. 
 The research problem and why the research problem is important and needs to be researched. 
@@ -237,6 +229,7 @@ Through the formulation of a coherent research narrative and the integration of 
 
 The master’s thesis contributes original knowledge or insights to a specific discipline which can be beneficial for academic and practical applications. 
 
+The references are made using Zotero [@zoterobib2025]. 
 
 # Chapter II 
 
@@ -259,7 +252,6 @@ What is the state of the art of methods and solution to the problem?
 What other work complements this research ?
 
 
-
 ## 2.2 Framework 
 
 The problems to be studied are explained. There is a research hypothesis. This explanation is included in the form of a schematic to clarify the purpose of the study. This is a series of thought arrangements about what should happen so the intended hypothesis arises. 
@@ -272,11 +264,39 @@ This is a statement of the hypothesis and problems. The hypothesis is the highes
 
 The problems should be unambiguous. The importance of the problem should be mentioned if it was not already done so. You can develop a new approach for solving a well known problem or replicate a method in the literature. 
 
-Data Collection Method of Analysis
 
 **Hypothesis I:** Analysing the genomic sequence of Streptococcus pyogenes (GAS) can reveal key virulence factors and their regulation mechanisms, providing insights into potential targets for vaccine development and therapeutic interventions. 
 
-**Hypothesis II:** Determine the structure of the M Protein?
+**Hypothesis II:** Determine the structure of the M Protein. 
+
+Hypothesis:High-quality genomic sequences of GAS strains will reveal conserved and strain-specific genetic features associated with virulence.
+
+Hypothesis: Virulence-associated genes in GAS are enriched in GO terms related to immune evasion, adhesion, and toxin activity, suggesting coordinated biological roles in host-pathogen interaction.
+
+Network Analysis: Construct gene/protein interaction networks and analyze relationships
+Hypotheses: Network analysis will reveal key hub proteins that coordinate multiple virulence pathways in GAS.
+Virulence factors form tightly connected modules in protein-protein interaction networks, indicating co-regulation or functional synergy.
+
+Hypothesis: Phylogenetic clustering of GAS strains will correlate with emm types and virulence gene profiles, reflecting evolutionary adaptations to host immune pressures.
+
+Hypotheses:emm gene diversity across GAS strains correlates with distinct virulence gene repertoires.
+Certain emm types are associated with the presence of unique virulence genes, which may contribute to tissue tropism or infection severity.
+
+Hypotheses:Structural variants of the M protein display differential binding affinities to human skin cell receptors.
+Key amino acid residues in the M protein are conserved across strains and are essential for receptor binding, representing potential therapeutic targets.
+
+
+# RESEARCH AIMS 
+
+ - To collect and curate high-quality genomic sequences of Streptococcus pyogenes (GAS) strains from diverse clinical and geographical sources.
+To characterize the functional roles of identified virulence genes via GO enrichment analysis using tools such as DAVID and GSEA.
+
+ - To construct gene and protein interaction networks to explore the regulatory relationships between virulence factors using Cytoscape.
+
+ - To compare virulence gene content and emm-type distribution across multiple GAS strains to uncover patterns of genomic diversity.
+
+ - To identify and characterize virulence genes across multiple GAS strains.
+Hypothesis: GAS strains share a conserved core of virulence factors, with additional strain-specific genes that correlate with clinical severity.
 
 \newpage
 
@@ -286,12 +306,10 @@ Data Collection Method of Analysis
 
 The skin is the largest organ of the human body and is comprised of a diverse array of specialised cells types. It serves as a critical barrier that protects the internal organs from bacteria invasion, environmental pathogens, ultraviolet (UV) radiation and various biochemical agents.In addition to its protective role, the skin plays a fundamental part in thermoregulation by modulating body temperature and enabling adaptation to fluctuating environmental conditions.[@noauthor_integumentary_nodate]
 
-  
 Furthermore, the skin facilitates the excretion of sweat, sebum, and metabolic waste products through its glandular structures [@noauthor_integumentary_nodate]. It possesses wound-healing capabilities, allowing for the repair of abrasions, lacerations and other forms of tissue injury [@noauthor_integumentary_nodate]. The subcutaneous fat layer functions as a mechanical cushion, providing shock absorption and an additional line of defence against infection [@noauthor_integumentary_nodate].
 
-The skin also contributes to endocrine function through its role in the synthesis of vitamin D upon exposure to UV radiation [@noauthor_integumentary_nodate]. Additionally, it plays a vital sensory role, continuously transmitting information to the central nervous system regarding the external environment [@healthline2018layers]. The skin is integrated with the nervous system to enable the perception of thermal stimuli, tactile sensations, and other sensory inputs essential for survival and interaction with the environment [@healthline2018layers;@noauthor_integumentary_nodate]. 
+The skin also contributes to endocrine function through its role in the synthesis of vitamin D upon exposure to UV radiation [@noauthor_integumentary_nodate]. Additionally, it plays a vital sensory role, continuously transmitting information to the central nervous system regarding the external environment [@healthline2018layers]. The skin is integrated with the nervous system to enable the perception of thermal stimuli, tactile sensations, and other sensory inputs essential for survival and interaction with the environment [@healthline2018layers, @noauthor_integumentary_nodate]. 
 
-\newpage
 
 ## The Structure of the Skin
 
@@ -328,7 +346,7 @@ The **stratum granulosum** contains flattened keratinocytes that undergo termina
 
 The **stratum basale** (or stratum germinativum) is the deepest layer of the epidermis and plays a central role in skin regeneration. This layer has mitotically active keratinocytes, which divide to replenish the upper layers. In addition to keratinocytes, several other specialised cells are found within this layer :
 
-- **Melanocytes**, which produce melanin, the pigment responsible for skin colour and protection against ultraviolet (UV) radiation [@caon2020examination]. 
+- **Melanocytes**, which produce melanin, the pigment responsible for skin colour and protection against ultraviolet (UV) radiation [@caon2020examination, @koike2018toll]. 
 
 - **Langerhans Cells**, (LCs) a type of dendritic cell (DC) that originate from hematopoietic stem cells in the bone marrow. They have a role in immune surveillance by recognising antigens and initiating T-cell responses [@caon2020examination].
 
@@ -388,7 +406,7 @@ The **hypodermis**, also known as the subcutaneous layer of fat, lies beneath th
 
 Structurally, the hypodermis includes the following key components:
 
- - Fibroblasts: Cells responsible for the production of collagen [@verywell2025hypodermis]. They also regulate the immune response to producing cytokines and chemokines [@moon2021invitro].
+ - Fibroblasts: Cells responsible for the production of collagen [@verywell2025hypodermis]. They also regulate the immune response to producing cytokines and chemokines[@moon2021invitro].
  
  - Adipose tissue: Specialised are fatty tissues composed of lipocytes [@verywell2025hypodermis]
 
@@ -521,95 +539,351 @@ The specific transport mechanism responsible for the SHP export and the identity
 
 The Rgg2/3 pathway is essential for biofilm maturation and plays a central role in *S.pyogenes* pathogenesis, particularly in facilitating persistent infections by enhancing resistance to host immune defences and antimicrobial agents. 
 
+\newpage
+
+# Melanoma
+
+## Introduction to Melanoma
+
+Melanoma is a highly prevalent form of skin cancer originating from the melanocytes [@sinha2025nrp1, @tao2024melanoma, @li2025integrating, @liu2022gene].
+
+As mentioned in the earlier section, Melanocytes are cells that contribute to skin colouration due to the creation of melanin[@mayo2025melanoma]. A tumour occurs when the DNA mutates inside of the Melanocyte cells [@mayo2025melanoma, @jayaraj2024bioinformatics]. Melanoma is notable for its high metastatic potential[ @li2025integrating, @xie2025centromere]. 
+
+Melanoma has several distinct subtypes, including Acral Melanoma[@tsetsos2025], Mucosal Melanoma and Uveal Melanoma, each arising in different anatomical sites and with unique molecular profiles[@jayaraj2024bioinformatics]. In contrast to keratinocyte carcinomas which include basal cell carcinoma and squamous cell carcinoma, these melanomas originate from melanocytes[@tsetsos2025]. 
+
+## Related Skin Cancers
+Other rare cutaneous malignancies include Sebaceous Carcinoma and Apocrine Adenocarcinoma, as well as Merkel Cell Carcinoma, a neuroendocrine tumour strongly linked with exposure to ultraviolet light. Although these cancers are less common than melanoma, they use similar methods for diagnosis and molecular testing.
+
+```{r echo=FALSE,fig.align='center',out.width='90%', fig.cap="Melanoma , Diseases and Conditons (Source Mayo Clinic, June 2025)"}
+knitr::include_graphics("Images/melanoma.png")
+```
+
+## Melanocyte Development and Key Pathways 
+
+The development of Melanocytes from neural crest cells (NCCs) is regulated by a network of growth factors and intracellular signalling pathways[@xie2025centromere, @koike2018toll]. 
+
+The most important regulatory molecules are endothelins and stem cell factors.
+Stem cell factors are ligands for the c-Kit receptor. Other critical growth factors include members of the Wnt protein family and Neuregulin-1 (NRG1). 
+
+### Neuregulin-1
+
+Neuregulin-1 (NRG1) is a growth factor that is known for its pleiotropic effects[@sinha2025nrp1]. 
+In addition to its role in melanocyte biology, NRG1 is a key growth factor within the nervous system. It promotes development of Schwann cells, glial cells that form the myselin sheath, while also supporting neuron growth and enhancing synaptic plasticity.
+
+Furthermore, Neuregulin-1 contributes to the repair of the cardiac and vascular tissues and acts via ErbB receptors.
+
+### The Mitogen-Activated Protein Kinase (MAPK) signalling pathway
+
+The Mitogen-Activated Protein Kinase (MAPK) signalling pathway is central to the development of melanocytes[@liu2022gene]. This pathways plays a fundamental role in cell survival, proliferation and differentiation. Signalling pathways are cascades of protein interactions that respond to growth factors to direct the cells. 
+
+The MAPK pathway is activated when stem cell factors bind to the c-Kit receptors on the melanoblast cell surface. The binding event initiates a signalling cascade that leads to the activation of extracellular signal-regulated kinases (ERKs).
+These kinases move to into the nucleus and activate gene expression processes required for melanocyte development and melanin biosynthesis.  
+
+Understanding how melanocytes normally develop is important for figuring out how melanoma begins and spreads, since problems in these signalling pathways are often involved in the disease process. 
+
+## Diagnosis and Imaging Techniques
+Magnetic Resonance Imaging (MRI) is the primary diagnostic tool for Melanoma.
+MRI can be conducted with or without the use of contrast agents to enhance lesion visualisation. In cases where imaging results are inconclusive or suspicious, a biopsy is performed to obtain a tissue sample for histological and molecular examination[@tao2024melanoma].
+
+Histopathological analysis typically involves immunohistochemical staining protocols, where tissue samples are incubated in biotin and stained used haematoxylin blue/black nuclear stain and eosin pink cytoplasmic stain to highlight cellular architecture and pathology[@tao2024melanoma]. To preserve biological integrity for subsequent analyses, the specimen are often cryopreserved. 
+
+## Molecular and Genetic Characterisation 
+The identification of genetic mutations and molecular pathways involved in melanoma is pivotal for both diagnosis and the development of targeted therapies. Several genes are recognised as therapeutic biomarkers and are investigated for the presence of mutations [@tao2024melanoma]. 
+
+Minimal Residual Disease (MRD) relates to the small number of cancer cells that may remain in the body during or after treatment for Melanoma and potentially lead to recurrence. Minimal Residual Disease is typically assessed via liquid biopsy, a minimally invasive technique that analyses circulating tumour DNA (ctDNA) in cerebrospinal fluid, blood or urine.
+
+This ctDNA analysis is referred to as fragmentomics and it uses advanced techniques such as Digital PCR (dPCR) and Droplet Digital PCR (ddPCR) to detect mutations.
+
+Micro-RNAs (microRNA) also play a significant role in melanoma pathogenesis.
+For example, miR-21 is often up-regulated in patients with Melanoma and breast cancer. These non-coding RNAs are regulators of gene expression and may serve as diagnostic and prognostic biomarkers[@tao2024melanoma].
+
+## Omics Approaches in Melanoma Research 
+Comprehensive molecular profiling using omics based technologies has changed the classification and understanding of melanoma [@sinha2025nrp1]. 
+Transcriptomics, which investigates the full range of RNA transcripts expressed in tumour cells, provides insight into the functional state of cancerous tissues [@sinha2025nrp1]. 
+Methylomics, focusing on DNA methylation patterns reveals epigenetic modifications that contribute to the oncogenesis and may serve as early diagnostic indicators. 
+Microarray based transcription profiling is employed for high throughput analysis of gene expression, while cell surface proteomic analysis enables the identification of differentially expressed membrane proteins. 
+
+## Molecular Subtyping and Future Directions
+Molecular subtyping of melanoma has become a cornerstone of personalised oncology. 
+By integrating data from genomics, transcriptomics and proteomics, clinicians and researchers can classify tumours into subtypes that inform prognosis and therapeutic response. This systems biology approach not only enhances diagnostic precision but also opens up avenues for novel targeted treatments[@xie2022identification]. Bioinformatics studies may provide a clearer understanding of the molecular mechanisms behind melanoma metastasis[@xie2022identification].
+
+Further insights into the overlap between cutaneous and Uveal Melanoma have been gained through bioinformatics approaches which identify shared gene expression signature and signalling pathways[@jayaraj2024bioinformatics]. 
+Such comparative analyses deepen the understanding of melanoma heterogeneity and path the way for cross-subtype therapeutic strategies[@xie2022identification]. 
+
+
+# Chapter III : RESEARCH METHODS 
+
+### Overview of Research Design
+
+This thesis investigates two biologically distinct but methodologically complementary topics: 
+
+- The analysis of gene expression and immune-related pathways in melanoma, and 
+ 
+- The genomic and structural analysis of virulence genes in Streptococcus pyogenes.
+
+Despite different biological systems, both studies rely on bioinformatics and integrative genomic approaches.
+
+```{bash eval=FALSE, include=FALSE}
+Describes the research design, methods used for data collection and analysis and justifies the chosen approach. 
+Interprets the results, linking them back to the research questions and existing literature, 
+discussing implications, limitations and future research directions.
+```
+
+# Topic I: Melanoma — Gene Expression and Pathway Analysis
+
+### 3.2 Topic 1: Melanoma Data and Methods
+
+### 3.2.1 Data Sources
+
+ - TCGA-SKCM and GEO datasets
+
+The data used in this study are available from public databases (TCGA and GEO). I utilized X data from
+tumour samples and the associated clinical information from the TCGA-SKCM project. The datasets GSEXXX,
+GSXXXX, and GSEXXXX were obtained from the GEO database.
+
+ - Clinical info, RNA-seq, gene expression signatures
+
+### 3.2.2 Data Preprocessing
+
+Normalization, filtering, preprocessing tools
+
+### 3.2.3 Analytical Methods
+ - GSVA / ssGSEA
+
+ - Principal Component Analysis
+
+ - Survival analysis (Kaplan-Meier, ROC)
+
+ - KEGG/Pathway analysis
+
+ - Tumour Micro-environment analysis (mention GEPIA if used)
+
 ***
 
-# MELANOMA 
+# Topic II: Streptococcus pyogenes — Virulence Gene & Protein Analysis
 
-### Neural Crest Cells 
+### 3.3.1 Data Sources
+ - Public databases (NCBI, etc.)
+ 
+ - Genomic Data Acquisition
+ 
+ - Download of genomic and protein sequence data of multiple S. pyogenes strains from NCBI
+   
+ - Standardized file naming and merging into emm.fasta.
+ 
+ - Include Table of emm genes and strains
+ 
+### 3.3.2 Data Preparation
+ - Renaming FASTA files
 
-The most important growth factors that regulate the development of melanocytes from neural crest cells (NCCs) include Endothelins, Stem cell factor (SCF), which is the ligand for the c-Kit receptor, and Wnt proteins and Neuregulin-1 (NRG1) which is a key growth factor. 
+ - Merging into emm.fasta
 
-NRG1 is also important in:
-Nervous system: Promotes development of Schwann cells (which form the myelin sheath), supports neuron growth, and synaptic plasticity.
-Heart: Regulates the development of heart muscle and blood vessels.
-Repair processes: Involved in healing after injury, especially in nerve and heart tissue.
-Neuregulin-1 (NRG1) = A key growth factor. Acts via: ErbB receptors.
-Also important for: Nervous system and heart development.
+### 3.3.3 Analytical Methods
 
-Other key signaling pathways involved in melanocyte development include:
-The MAPK (mitogen-activated protein kinase) pathway
+ - MUSCLE alignment of emm genes
 
-MAPK stands for Mitogen-Activated Protein Kinase. It's a signalling pathway , a series of protein interactions inside a cell,  that responds to external signals (like growth factors) and tells the cell what to do.
+ - WebLogo motif analysis
 
-In melanocyte development, the MAPK pathway helps control cell survival (preventing cell death, Proliferation (making more cells), Differentiation (developing into mature melanocytes.
+ - Phylogenetic Tree Construction or comparative genomics
+  - Use aligned sequences to infer phylogeny and strain relationships.
+  - Evaluate whether emm-type clusters correlate with virulence gene presence.
 
-The MAPK pathway is activated when growth factors like Stem Cell Factor (SCF) bind to receptors such as c-Kit on the surface of melanoblasts. This triggers a chain reaction inside the cell that leads to activation of proteins like ERK, which then move to the nucleus and turn on specific genes needed for melanocyte development and melanin production.
+- Functional Enrichment (GO/KEGG)
+ - Use DAVID or GSEA to perform enrichment analysis for virulence-related genes.
+
+- Gene/Protein Interaction Network
+   - Construct virulence gene networks using STRING or Cytoscape.
+   - Identify hub genes/modules.
+
+-  Protein Structure and Docking
+   - Use Swiss-Model and PyMOL to model M protein structures.
+   -Perform docking simulations to assess receptor interactions.
+
+- Comparative Genomics and Analysis of Virulence Factors
+    - Create virulence factor heatmaps, assess emm-type distribution across strains
+
+***
+
+\newpage
+
+# Chapter IV: RESULTS AND ANALYSIS 
+
+- (What was found )
+
+# 4.1 Results – Topic I: Melanoma
+
+### 4.1 Topic 1: Melanoma
+
+### 4.1.1 Overview of Datasets
+
+Include sample sizes, filtering criteria, etc.
+
+### 4.1.2 Gene Signature Enrichment
+
+ - GSVA / ssGSEA results
+ 
+ - GSVA to perform ssGSEA analysis on signature genes | ClusterProfileR Package
+ 
+ - Heatmaps or enrichment scores
+
+### 4.1.3 PCA & Clustering
+
+PCA plots to show sample distribution
+
+### 4.1.4 Kaplan-Meier Survival Analysis
+
+Kaplan-Meier plots - Gene Expression Profiling Interactive Analysis (GEPIA)
+
+### ROC curves
+
+Key prognostic gene sets
+
+### 4.1.5 Pathway and TME Analysis
+
+KEGG / GO enrichment KEGG pathways identified to look at genes in TCGA melanoma samples
+Biological Process and Pathway Analysis
+
+### Tumour Microenvironment : Immune landscape/TME scores
+
+*** 
 
 \newpage 
+# 4.2 Results – Topic II: Streptococcus pyogenes
 
-# Chapter III
+### 4.2.1 Sequence Dataset Overview
 
-# RESEARCH METHODS 
+Summary table of GAS strains and emm genes.
 
-3.1 Types and Sources of Data 
+Total number of strains, collection dates, accession numbers.
 
-3.2 Methods of Collecting Data 
+Table: (Table of *Streptococcus pyogenes* genomes)
 
-3.3 Methods of Analysis
-This section describes the techniques of analysis and the mechanism for using tools in research. 
+| Name.       |Accession Number | Strain   | Collection Date | Link                                            |  
+|-------------|---------------- |----------|-----------------|-------------------------------------------------|
+| S. Pyogenes | AE014074.1      | MGAS315  |   31-JAN-2014   |https://www.ncbi.nlm.nih.gov/nuccore/AE014074.1  |
+| S. Pyogenes | CP000017.2      | MGAS5005 |   01-APR-2014   |https://www.ncbi.nlm.nih.gov/nuccore/CP000017.2  |
+| S. Pyogenes | CP155740.1      | 1851/03  |   06-AUG-2024   |https://www.ncbi.nlm.nih.gov/nuccore/CP155740.1  |
 
-The job is to translate the problems into research goals and briefly indicate how you will solve the problem and which method you will use to solve it. 
 
-It is important to have clear goals. 
+Table: (Table of *Streptococcus pyogenes* emm genes) *Streptococcus pyogenes* emm gene for M protein, complete cds of various strains – Collection Date: 15-JAN-2014
 
-You have to accomplish your goals in the thesis. 
+|Accession Number |  Gene Name               |  Strain    | Link                                           |  
+|-----------------|--------------------------|------------|------------------------------------------------|
+|AB548437.1       | emm1 gene for M protein  |  RE014     |https://www.ncbi.nlm.nih.gov/nuccore/AB548437.1 |
+|AB548438.1       | emm28 gene for M protein |  RE015     |https://www.ncbi.nlm.nih.gov/nuccore/AB548438.1 |
+|AB548441.1       | emm1 gene for M protein  |  RE020     |https://www.ncbi.nlm.nih.gov/nuccore/AB548441.1 |
+|AB548442.1       | emm1 gene for M protein  |  RE025     |https://www.ncbi.nlm.nih.gov/nuccore/AB548442.1 |
+|AB548444.1       | emm28 gene for M protein |  RE031     |https://www.ncbi.nlm.nih.gov/nuccore/AB548444.1 |
+|AB548445.1       | emm1 gene for M protein  |  RE032     |https://www.ncbi.nlm.nih.gov/nuccore/AB548445.1 |
+|AB548446.1       | emm49 gene for M protein |  RE037     |https://www.ncbi.nlm.nih.gov/nuccore/AB548446.1 |
+|AB548447.1       | emm49 gene for M protein |  RE039     |https://www.ncbi.nlm.nih.gov/nuccore/AB548447.1 |
+|AB548448.1       | emm28 gene for M protein |  RE041     |https://www.ncbi.nlm.nih.gov/nuccore/AB548448.1 | 
+|AB548449.1       | emm89 gene for M protein |  RE050     |https://www.ncbi.nlm.nih.gov/nuccore/AB548449.1 |
+|AB548450.1       | emm1 gene for M protein  |  RE059     |https://www.ncbi.nlm.nih.gov/nuccore/AB548450.1 |
+|AB548451.1       | emm12 gene for M protein |  RE066     |https://www.ncbi.nlm.nih.gov/nuccore/AB548451.1 |
+|AB548452.1       | emm49 gene for M protein |  RE076     |https://www.ncbi.nlm.nih.gov/nuccore/AB548452.1 |
+|AB548453.1       | emm49 gene for M protein |  RE080     |https://www.ncbi.nlm.nih.gov/nuccore/AB548453.1 |
+|AB548454.1       | emm49 gene for M protein |  RE104     |https://www.ncbi.nlm.nih.gov/nuccore/AB548454.1 |
+|AB548456.1       | emm49 gene for M protein |  RE121     |https://www.ncbi.nlm.nih.gov/nuccore/AB548456.1 |
+|AB548503.1       | emm4 gene for M protein  |  RE342     |https://www.ncbi.nlm.nih.gov/nuccore/AB548503.1 |
+|AB548508.1       | emm12 gene for M protein |  RE366     |https://www.ncbi.nlm.nih.gov/nuccore/AB548508.1 |
+|AB548516.1       | emm75 gene for M protein |  RE436     |https://www.ncbi.nlm.nih.gov/nuccore/AB548516.1 |
+|AB549960.1       | emm58 gene for M protein |  RE614     |https://www.ncbi.nlm.nih.gov/nuccore/AB549960.1 |
+
+
+Table: (Outgroup *Streptococcus pyogenes* emm50 type - emm gene for M protein, partial cds. of various strains – Collection Date: 26-JUN-2013
+
+|Accession Number |  Gene Name           |  Strain    | Link                                           |  
+|-----------------|----------------------|------------|------------------------------------------------|
+|JX028641.1       | emm gene, emm50 type |   GLS244   | https://www.ncbi.nlm.nih.gov/nuccore/JX028641  |
+
+
+### 4.2.2 Multiple Sequence Alignment and Motif Identification
+
+A multiple alignment of emm genes was constructed using MUSCLE software.
+
+```{bash eval=FALSE}
+muscle -in emm.fasta -out emm_aligned.fasta
+```
+
+Alignment log (MUSCLE summary table).
+
+Table: (Summary of MUSCLE Alignment Log for emm Genes Isolated from Streptococcus pyogenes)
+
+MUSCLE v3.8.1551 by Robert C. Edgar | http://www.drive5.com/muscle
+This software is donated to the public domain.
+Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
+
+| Time     | Memory     | Iteration | Progress  | Step               |
+|----------|------------|-----------|-----------|--------------------|
+| 00:00:00 | 1 MB(0%)   | 1         | 100.00%   | K-mer dist pass 1  |
+| 00:00:00 | 1 MB(0%)   | 1         | 100.00%   | K-mer dist pass 2  |
+| 00:00:00 | 22 MB(0%)  | 1         | 100.00%   | Align node         |
+| 00:00:00 | 22 MB(0%)  | 1         | 100.00%   | Root alignment     |
+| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Refine tree        |
+| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Root alignment     |
+| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Root alignment     |
+| 00:00:01 | 24 MB(0%)  | 3         | 100.00%   | Refine biparts     |
+| 00:00:03 | 24 MB(0%)  | 4         | 100.00%   | Refine biparts     |
+| 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
+| 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
+
+
+## WebLogo output — identify conserved and variable regions.
+
+Interpretation: conserved motifs likely under selective pressure; variable ones may contribute to immune evasion.
+
+### 4.2.3 Phylogenetic Analysis
+Phylogenetic tree showing clustering by emm type.
+
+Interpretation: Strain evolution reflects functional divergence.
+
+### 4.2.4 Virulence Gene Profiles and Comparative Genomics
+Heatmaps of virulence gene presence/absence.
+
+Association between emm type and gene content.
+
+### 4.2.5 Functional Enrichment (GO/KEGG)
+Tables and graphs of enriched pathways for virulence genes.
+
+Immune response and adhesion-related terms highlighted.
+
+### 4.2.6 Protein-Protein Interaction Networks
+Network plots from Cytoscape.
+
+Interpretation: central hubs as potential drug targets.
+
+### 4.2.7 M Protein Structure and Docking
+PyMOL screenshots and docking affinity results.
+
+Interpretation: key conserved residues in binding interfaces.
+
+# 4.3 Integrated Interpretations
+Comparative reflection on results:
+
+Immune evasion is a key mechanism in both melanoma and GAS.
+
+Multi-omic data can guide precision medicine or vaccine development.
+
+# 4.4 Implications and Future Directions
+Melanoma: prognostic gene sets, TME insights.
+
+GAS: M protein as vaccine candidate; deeper exploration of strain diversity.
+Summarise what you think is an important find or contribution.
+What you do about the problem you have identified.
+
+### Future work:
+experimental validation, longitudinal data, more strains/tumours.
 
 \newpage
 
-# Chapter IV 
-
-# RESULTS AND ANALYSIS 
-
-Presents the findings of the research often with charts and graphs to illustrate data. The GUI created look like this, but I have to get it to scan the image properly, and also take in the real time data correctly. 
-
-## 4.1 Data Analysis 
-
-This is the results of the data processing according to the analytical tools and techniques. 
-
-Where do you get your data?
-
-Complete genome sequences of the type strain of S. pyogenes (NCTC 8198T = CCUG 4207T) are available in DNA Data Bank of Japan, European Nucleotide Archive, and GenBank under the accession numbers LN831034 and CP028841.[33] 
-
-https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP028841.1
-
-https://www.ncbi.nlm.nih.gov/protein/XDR38324.1?report=fasta
-
-XDR38324.1 M-related protein Mrp [Streptococcus pyogenes]
-MSKRNPNKHYSLRKLKTGTASVAVALTVLGTGLANTTDVKADLSTQENPRVTKAREEALEEVLRSWDYGS
-VRAALAGSYRKNLQLENTIKQKDKELSFLSKVLDEAAKKYRESSDKYKQEIGQLKAAAEAEAQKALDALN
-NKNKQISDLTNENAQLKEAIEGYVQTIQNASREIAAKQQELAAAKSQLEAKNAEIEALKQQDASKTEEIA
-KLQSEAETLENLLGSAKRELTDLQAKLDTATAEKAKLESQVTTLENLLGSAKRELTDLQAKLDAANAEKE
-KLQSQAAALEKQLEATKKELADLQAKLAATNQEKEKLEAEAKALKEQLAKQAEELAKLKADKASGAQKPD
-TKPGNKEVPTRPSQTRTNTNKAPMAQTKRQLPSTGEETTNPFFTAAALTVIASAGVLALKRKEEN
-
-Where do you analyse it?
-
-Can you do this yourself?
-
-## 4.2 Interpretations 
-
-## 4.3 Implications or Perspectives 4.4 Impact - Innovation and Application 
-
-You should summarise what you expect to be the most important find is or contributions. What to you do about the problem you have identified. 
-
-\newpage
+***
 
 # CHAPTER V 
 
 # CONCLUSION 
 
 ## 4.1 Conclusion 
-
 The conclusion is a brief presentation of what has been obtained from the discussion.
 Summarises the key findings and their importance offering final thoughts on the research. 
 
@@ -617,23 +891,14 @@ Summarises the key findings and their importance offering final thoughts on the 
 The limitations of the study describe the weaknesses and shortcomings found after analysis and interpretations of the results. 
 
 ## 4.3 Suggestion 
-
 Suggestions for future research. 
-
-Describes the research design, methods used for data collection and analysis and justifies the chosen approach. 
-
-Interprets the results, linking them back to the research questions and existing literature, discussing implications, limitations and future research directions. 
 
 \newpage 
 
 # Appendices
-
 Supplementary material, such as raw data, questionnaires or additional charts that are relevant to the thesis but not critical in the main sections. 
 
 # Bibliography 
-
 Lists all the sources cited in the thesis in a consistent format. 
-
-ZoteroBib: Fast, Free Bibliography Generator - MLA, APA, Chicago, Harvard Citations. https://zbib.org/. Accessed 13 May 2025.
 
 # References

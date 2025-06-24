@@ -46,7 +46,8 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout delimiter="," prefix="[" suffix="]">
+    <layout delimiter="," font-variant="normal" vertical-align="sup">
+    <!--layout delimiter="," prefix="[" suffix="]"-->
       <text variable="citation-number"/>
     </layout>
   </citation>
