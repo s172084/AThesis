@@ -42,7 +42,7 @@ knitr::include_graphics(c("Images/Whitespace.png"))
 
 Thesis Title: information on the main problem.
 
-Time:14.14
+Time: 26 June 2025 at 16.47pm 
 
 
 ```{r echo=FALSE, fig.align='center', out.width='15%'}
@@ -611,17 +611,42 @@ Further insights into the overlap between cutaneous and Uveal Melanoma have been
 Such comparative analyses deepen the understanding of melanoma heterogeneity and path the way for cross-subtype therapeutic strategies[@xie2022identification]. 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 # Chapter III : RESEARCH METHODS 
 
-### Overview of Research Design
+## Overview of Research Design
 
 This thesis investigates two biologically distinct but methodologically complementary topics: 
 
-- The analysis of gene expression and immune-related pathways in melanoma, and 
+- The analysis of gene expression and immune-related pathways in melanoma
  
 - The genomic and structural analysis of virulence genes in Streptococcus pyogenes.
 
-Despite different biological systems, both studies rely on bioinformatics and integrative genomic approaches.
+Despite being different biological systems, both studies rely on bioinformatics and integrative genomic approaches.
 
 ```{bash eval=FALSE, include=FALSE}
 Describes the research design, methods used for data collection and analysis and justifies the chosen approach. 
@@ -631,38 +656,42 @@ discussing implications, limitations and future research directions.
 
 # Topic I: Melanoma — Gene Expression and Pathway Analysis
 
-### 3.2 Topic 1: Melanoma Data and Methods
+### Topic 1: Melanoma Data and Methods
 
-### 3.2.1 Data Sources
+### Data Sources
 
- - TCGA-SKCM and GEO datasets
+ - National Centre for Biotechnology Information (NCBI) Gene Expression Omnibus (GEO) dataset
 
-The data used in this study are available from public databases (TCGA and GEO). I utilized X data from
-tumour samples and the associated clinical information from the TCGA-SKCM project. The datasets GSEXXX,
-GSXXXX, and GSEXXXX were obtained from the GEO database.
+The data used in this study were obtained from publicly available databases and include the *Cutaneous Malignant Melanoma* dataset. 
+Specifically, I utilized gene expression data and associated clinical information from tumour samples available through the National Centre for Biotechnology Information (NCBI) Gene Expression Omnibus (GEO).
 
- - Clinical info, RNA-seq, gene expression signatures
+ - Clinical information, GPL96 Affymetrix Microarray Data, gene expression
+ 
+```{r echo=FALSE, fig.align='center', out.width='90%', fig.cap="Cutaneous Malignant Melanoma dataset (Source:GDS Browser, 2025)"}
+knitr::include_graphics("Images/GEO_Data_2025-06-18 at 10.07.32.png")
+```
 
-### 3.2.2 Data Preprocessing
+### Data Preprocessing
 
 Normalization, filtering, preprocessing tools
 
-### 3.2.3 Analytical Methods
- - GSVA / ssGSEA
+### Analytical Methods
 
+ - Linear Models for Microarray and Omics Data (LIMMA) : Differential Gene Expression 
+ 
  - Principal Component Analysis
-
- - Survival analysis (Kaplan-Meier, ROC)
 
  - KEGG/Pathway analysis
 
- - Tumour Micro-environment analysis (mention GEPIA if used)
+ - GSVA / ssGSEA
+
+ - Tumour Analysis using the ESTIMATE package 
 
 ***
 
 # Topic II: Streptococcus pyogenes — Virulence Gene & Protein Analysis
 
-### 3.3.1 Data Sources
+### Data Sources
  - Public databases (NCBI, etc.)
  
  - Genomic Data Acquisition
@@ -673,12 +702,12 @@ Normalization, filtering, preprocessing tools
  
  - Include Table of emm genes and strains
  
-### 3.3.2 Data Preparation
+### Data Preparation
  - Renaming FASTA files
 
  - Merging into emm.fasta
 
-### 3.3.3 Analytical Methods
+### Analytical Methods
 
  - MUSCLE alignment of emm genes
 
@@ -704,53 +733,448 @@ Normalization, filtering, preprocessing tools
 
 ***
 
-\newpage
 
+
+
+
+
+
+
+
+
+\newpage
 # Chapter IV: RESULTS AND ANALYSIS 
 
-- (What was found )
+# RESULTS - Topic I: Melanoma
+## Overview of the Dataset
 
-# 4.1 Results – Topic I: Melanoma
+The dataset selected for this study is the *Cutaneous Malignant Melanoma* dataset, identified by GEO Data Set (GDS) accession number **GDS1375** and series number **GSE3189**, comprised of a total of 70 samples. This dataset was made publicly available on the 25th day of August in 2005. It consists of microarray gene expression profiles from three distinct sample groups: 45 malignant melanoma samples, 18 benign skin nevus samples and 7 normal skin samples. 
 
-### 4.1 Topic 1: Melanoma
+For the purposes of this analysis, the SOFT file was downloaded and both the phenotype data and gene expression counts were extracted and processed.From the full dataset, a subset was selected for differential analysis, comprising of 21 malignant melanoma samples and 14 skin nevus samples. The 7 normal skin samples were excluded from this comparative analysis. 
 
-### 4.1.1 Overview of Datasets
+```{r echo=FALSE, fig.align='center', out.width='90%', fig.cap="Selection of GSE3189 Series Data (Source:GDS Browser, 2025)"}
+knitr::include_graphics("Images/Gene_Expression_Omnibus2025-06-18 at 10.07.49.png")
+```
+\newpage
 
-Include sample sizes, filtering criteria, etc.
+```{r include=FALSE}
+library(GEOquery)
+library(limma)
+library(Biobase)
+library(tidyverse)
+library(viridis)
+library(pheatmap)
+library(ggpubr)
+library(edgeR)
+library(umap)
+library(dplyr)
+library(ggplot2)
+library(factoextra)
+library(estimate)
 
-### 4.1.2 Gene Signature Enrichment
+# Getting GSE Series Matrix files as an ExpressionSet (based on Bioconductor instructions)
+# Extract expression matrix
+new_gse3189 <- getGEO('gse3189',GSEMatrix=TRUE)
+```
+
+```{r include=FALSE}
+show(new_gse3189)
+#Look at the metadata 
+
+# -------------------- Viewing Expression Data Information ----------------------
+# Get the expression matrix
+expr_matrix <- exprs(new_gse3189[[1]])
+mel_pheno <-pData(new_gse3189[[1]])
+
+# Basic info
+cat("Number of genes:", nrow(new_gse3189[[1]]), "\n")
+cat("Number of samples:", ncol(new_gse3189[[1]]), "\n")
+```
+
+
+```{r include=FALSE}
+# -------------------- Sample Selection ----------------------
+
+# Function to identify sample types from both columns
+identify_sample_type <- function(char_ch1, description) {
+  # Convert to lowercase for easier matching
+  char_lower <- tolower(char_ch1)
+  desc_lower <- tolower(description)
+  
+  # Check for melanoma
+  if(grepl("melanoma", char_lower) | grepl("melanoma", desc_lower)) {
+    return("Melanoma")
+  }
+  # Check for nevus
+  else if(grepl("nevus|nevi", char_lower) | grepl("nevus|nevi", desc_lower)) {
+    return("Nevus")
+  }
+  # Check for normal
+  else if(grepl("normal", char_lower) | grepl("normal", desc_lower)) {
+    return("Normal")
+  }
+  else {
+    return("Unknown")
+  }
+}
+
+# Apply function to identify sample types
+mel_pheno$sample_type <- mapply(identify_sample_type, 
+                                mel_pheno$characteristics_ch1, 
+                                mel_pheno$description)
+
+
+# -------------------- Extract Specific Numbers of Samples ----------------------
+set.seed(123)  # For reproducible sampling
+
+# Extract samples
+normal_samples <- mel_pheno[mel_pheno$sample_type == "Normal", ]
+nevus_samples <- mel_pheno[mel_pheno$sample_type == "Nevus", ]
+melanoma_samples <- mel_pheno[mel_pheno$sample_type == "Melanoma", ]
+
+# Sample the required numbers (if available)
+extract_samples <- function(df, n_samples, sample_name) {
+  if(nrow(df) >= n_samples) {
+    selected <- df[sample(nrow(df), n_samples), ]
+    cat(paste("Selected", n_samples, sample_name, "samples\n"))
+    return(selected)
+  } else {
+    cat(paste("Warning: Only", nrow(df), sample_name, "samples available, need", n_samples, "\n"))
+    return(df)
+  }
+}
+
+# Extract required samples
+selected_normal <- extract_samples(normal_samples, 7, "Normal")
+selected_nevus <- extract_samples(nevus_samples, 14, "Nevus")
+selected_melanoma <- extract_samples(melanoma_samples, 21, "Melanoma")
+
+# Combine selected samples for analysis (Melanoma vs Nevus only)
+analysis_samples <- rbind(selected_melanoma, selected_nevus)
+analysis_samples$sample_type <- factor(analysis_samples$sample_type, levels = c("Nevus", "Melanoma"))
+
+print("Selected samples for analysis:")
+print(table(analysis_samples$sample_type))
+
+# -------------------- Prepare Expression Data ----------------------
+# Extract expression data for selected samples
+sample_ids <- rownames(analysis_samples)
+analysis_expr <- expr_matrix[, sample_ids]
+analysis_expr
+
+# Check dimensions
+cat("Expression matrix dimensions:", dim(analysis_expr), "\n")
+cat("Number of samples in analysis:", ncol(analysis_expr), "\n")
+
+
+# -------------------- Data Preprocessing ----------------------
+# Remove genes with low expression (optional but recommended)
+# Calculate mean expression for each gene
+gene_means <- rowMeans(analysis_expr)
+
+# Filter genes with very low expression (you can adjust this threshold)
+expressed_genes <- gene_means > quantile(gene_means, 0.25)  # Keep top 75% expressed genes
+analysis_expr_filtered <- analysis_expr[expressed_genes, ]
+```
+
+```{r include=FALSE}
+cat("Genes after filtering:", nrow(analysis_expr_filtered), "\n")
+```
+
+\newpage
+## Differential Gene Expression
+
+```{r include=FALSE}
+# -------------------- Limma-Voom Analysis ----------------------
+# Create design matrix
+design <- model.matrix(~ sample_type, data = analysis_samples)
+design
+
+colnames(design) <- c("Intercept", "Melanoma_vs_Nevus")
+
+print("Design matrix:")
+print(design)
+
+# Convert to DGEList object for voom
+dge <- edgeR::DGEList(counts = analysis_expr_filtered)
+
+# Calculate normalization factors
+dge <- calcNormFactors(dge)
+
+# Apply limma voom transformation
+v <- voom(dge, design, plot = TRUE)
+v
+
+# Fit linear model
+fit <- lmFit(v, design)
+
+# Apply empirical Bayes
+# Empirical bayes pulls very high variance estimates toward the average (shrinks them down) and pulls very low variance estimates toward the average (shrinks them up)
+fit <- eBayes(fit)
+```
+
+### Mean-variance trend
+
+```{r echo=FALSE}
+plotSA(fit, main = "Mean variance trend, GSE3189",
+       family = 'Times')
+```
+
+
+This is a diagnostic plot where each point represents a gene. The x-axis shows the average log2-counts per million (logCPM) for each gene. The y-axis shows the estimated variance (or square root of standard deviation) of the log2 expression values for each gene. The trend line is plotted over the points to estimate the mean-variance relationship in the dataset. The mean-variance trend shows a relatively stable variance across expression levels, indicating the normalization and statistical modelling are appropriate for differential expression analysis. 
+
+```{r include=FALSE}
+# -------------------- Results ----------------------
+# Get differential expression results
+results <- topTable(fit, 
+                    coef = "Melanoma_vs_Nevus", number = Inf, sort.by = "P")
+
+
+cat("Differential Expression Results Summary:\n")
+cat("Total genes analyzed:", nrow(results), "\n")
+    
+cat("Significantly upregulated genes (adj.P.Val < 0.05, logFC > 1):", 
+    sum(results$adj.P.Val < 0.05 & results$logFC > 1), "\n")
+
+cat("Significantly downregulated genes (adj.P.Val < 0.05, logFC < -1):", 
+    sum(results$adj.P.Val < 0.05 & results$logFC < -1), "\n")
+
+# View top results
+print("Top 20 differentially expressed genes:")
+print(results[1:20, c("logFC", "AveExpr", "t", "P.Value", "adj.P.Val")])
+
+
+# Add gene symbols from the ExpressionSet
+# Using the $ operator with backticks
+results$gene_symbol <- fData(new_gse3189[[1]])[rownames(results), ]$`Gene Symbol`
+
+# View results with gene symbols
+head(results, 20)
+
+# Summary with gene symbols
+cat("Top 20 differentially expressed genes:\n")
+print(results[1:20, c("gene_symbol", "logFC", "AveExpr", "t", "P.Value", "adj.P.Val")])
+
+# ----------------------Looking at the extremes ----------------------------
+
+# Add gene symbols first
+results$gene_symbol <- fData(new_gse3189[[1]])[rownames(results), ]$`Gene Symbol`
+
+# Get top 20 UPREGULATED genes (highest positive logFC)
+top_upregulated <- results %>%
+  filter(logFC > 0) %>%  # Only positive fold changes
+  arrange(desc(logFC)) %>%  # Sort by highest logFC first
+  head(20)
+
+top_upregulated
+
+# Get top 20 DOWNREGULATED genes (most negative logFC)
+top_downregulated <- results %>%
+  filter(logFC < 0) %>%  # Only negative fold changes
+  arrange(logFC) %>%  # Sort by most negative logFC first
+  head(20)
+
+# Display results
+cat("TOP 20 UPREGULATED GENES (highest fold change):\n")
+print(top_upregulated[, c("gene_symbol", "logFC", "AveExpr", "P.Value", "adj.P.Val")])
+
+cat("\nTOP 20 DOWNREGULATED GENES (lowest fold change):\n")
+print(top_downregulated[, c("gene_symbol", "logFC", "AveExpr", "P.Value", "adj.P.Val")])
+
+# Get significantly upregulated/downregulated genes
+#cat("\nTOP 20 SIGNIFICANTLY UPREGULATED GENES (adj.P.Val < 0.05):\n")
+sig_upregulated <- results %>%
+  filter(adj.P.Val < 0.05 & logFC > 0) %>%
+  arrange(desc(logFC)) %>%
+  head(20)
+
+kableExtra::kable(sig_upregulated[, c("gene_symbol", "logFC", "AveExpr", "P.Value", "adj.P.Val")])
+
+#cat("\nTOP 20 SIGNIFICANTLY DOWNREGULATED GENES (adj.P.Val < 0.05):\n")
+sig_downregulated <- results %>%
+  filter(adj.P.Val < 0.05 & logFC < 0) %>%
+  arrange(logFC) %>%
+  head(20)
+
+kableExtra::kable(sig_downregulated[, c("gene_symbol", "logFC", "AveExpr", "P.Value", "adj.P.Val")])
+```
+
+\newpage
+
+ Table: (Table of Top 20 Significantly Up-regulated Genes)
+
+| Gene Symbol                  | Log FC | Ave Expr | P-Value     | Adj P-Value |
+|------------------------------|--------|----------|-------------|-------------|
+| NTRK3                        | 5.574  | 5.693    | 0.0000129   | 0.0001071   |
+| WFDC1                        | 5.222  | 4.888    | 0.0000264   | 0.0001952   |
+| HEY1                         | 5.047  | 4.436    | 0.0000000   | 0.0000000   |
+| GDF15                        | 4.964  | 5.666    | 0.0000000   | 0.0000000   |
+| NTRK3                        | 4.946  | 5.498    | 0.0001644   | 0.0009026   |
+| PHACTR1                      | 4.654  | 4.232    | 0.0000001   | 0.0000024   |
+| NTRK3                        | 4.639  | 5.913    | 0.0000029   | 0.0000314   |
+| SPP1                         | 4.363  | 5.332    | 0.0000000   | 0.0000004   |
+| ABHD2                        | 4.228  | 4.999    | 0.0000002   | 0.0000035   |
+| NTRK3                        | 3.960  | 6.619    | 0.0000000   | 0.0000011   |
+| KIF23                        | 3.849  | 2.064    | 0.0001005   | 0.0005954   |
+| MIR6872 /// SEMA3B           | 3.819  | 3.665    | 0.0000005   | 0.0000077   |
+| RNFT2                        | 3.800  | 1.402    | 0.0000763   | 0.0004709   |
+| NTRK3                        | 3.792  | 6.718    | 0.0000001   | 0.0000016   |
+| RASGRF1                      | 3.698  | 1.962    | 0.0044561   | 0.0144427   |
+| NTRK3                        | 3.668  | 6.624    | 0.0000001   | 0.0000014   |
+| UBE2S                        | 3.557  | 5.534    | 0.0000000   | 0.0000003   |
+| ATP6V0E2                     | 3.540  | 6.915    | 0.0000000   | 0.0000000   |
+| BCL2A1                       | 3.531  | 4.655    | 0.0000000   | 0.0000000   |
+| ARHGAP8 /// PRR5-ARHGAP8     | 3.522  | 2.658    | 0.0147619   | 0.0385832   |
+
+
+
+ Table: (Table of Top 20 Significantly Down-regulated Genes)
+
+| Gene Symbol             | Log FC | Ave Expr | P-Value   | Adj P-Value |
+|-------------------------|--------|----------|-----------|-------------|
+| KRT15                   | -8.013 | 3.912    | 0.0000000 | 0.0000000   |
+| KRT14                   | -7.298 | 6.514    | 0.0000000 | 0.0000000   |
+| LOR                     | -6.931 | 5.048    | 0.0000000 | 0.0000000   |
+| LGALS7 /// LGALS7B      | -6.740 | 5.159    | 0.0000000 | 0.0000000   |
+| KRT1                    | -6.686 | 6.289    | 0.0000000 | 0.0000000   |
+| SERPINB5                | -6.510 | 3.593    | 0.0000000 | 0.0000000   |
+| PKP1                    | -6.493 | 3.489    | 0.0000002 | 0.0000028   |
+| KRT5                    | -6.399 | 6.329    | 0.0000000 | 0.0000000   |
+| LY6D                    | -6.246 | 3.688    | 0.0000000 | 0.0000000   |
+| S100A7                  | -6.224 | 4.062    | 0.0000008 | 0.0000109   |
+| FGFR3                   | -6.213 | 3.892    | 0.0000002 | 0.0000035   |
+| HOPX                    | -6.075 | 4.480    | 0.0000000 | 0.0000000   |
+| AQP3                    | -5.998 | 5.094    | 0.0000000 | 0.0000000   |
+| SFN                     | -5.965 | 3.973    | 0.0000000 | 0.0000010   |
+| TACSTD2                 | -5.873 | 5.161    | 0.0000000 | 0.0000000   |
+| PPL                     | -5.805 | 3.711    | 0.0000000 | 0.0000000   |
+| SPRR1A                  | -5.713 | 2.635    | 0.0031335 | 0.0107551   |
+| CHL1                    | -5.709 | 3.169    | 0.0000000 | 0.0000000   |
+| DSP                     | -5.691 | 5.536    | 0.0000000 | 0.0000000   |
+| FLG                     | -5.622 | 4.183    | 0.0000002 | 0.0000032   |
+
+\newpage
+### Volcano Plot 
+
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="Volcano Plot I "}
+knitr::include_graphics("Images/Volcano_Plot.jpeg")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="Volcano Plot II"}
+knitr::include_graphics(c("Images/Volcano_Labelled.jpeg"))
+```
+
+\newpage
+
+### MA Plot
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="MA Plot"}
+knitr::include_graphics("Images/MA_Plot.jpeg")
+```
+
+\newpage
+## Principal Component Analysis (PCA) & Clustering
+
+### Sample Correlation Heatmap
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Sample Correlation Heatmap"}
+knitr::include_graphics("Images/Heatmap.jpeg")
+```
+This heatmap shows the pairwise correlations between the samples in the dataset.Yellow signifies a strong correlation and blue signifies no correlation. 
+The rows and columns represent the same set of samples. Samples are hierarchically clustered based on their correlation. 
+Similar samples are grouped together. However, there is 1 melanoma sample that is clustering with the nevi skin samples.
+
+### Principal Component Analysis (PCA) 
+```{r echo=FALSE, fig.align='center', out.width='60%', fig.cap="Principal Component Analysis (PCA)"}
+knitr::include_graphics("Images/PCA_I.png.jpeg")
+```
+
+Principal Component Analysis (PCA) is a dimensionality reduction technique used to simplify complex datasets by transforming correlated variables into a smaller set of uncorrelated variables called principal components.
+
+```{r echo=FALSE, fig.align='center', out.width='50%', fig.cap="Scree Plot"}
+knitr::include_graphics("Images/Scree.png.jpeg")
+```
+\newpage
+### Uniform Manifold Approximation and Projection (UMAP)
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="Uniform Manifold Approximation and Projection"}
+knitr::include_graphics("Images/Umap.jpeg")
+```
+
+\newpage
+## Pathway Analysis
+KEGG / GO enrichment KEGG pathways identified to look at genes in melanoma samples
+Biological Process and Pathway Analysis
+
+The clusterProfiler package was used for pathway analysis. 
+
+### Top GO Biological Processes
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="Gene Ontology Biological Processes"}
+knitr::include_graphics("Images/Top_GO_Biological_Processes.jpeg")
+```
+
+\newpage
+
+### Top KEGG Pathways 
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="KEGG Pathways"}
+knitr::include_graphics("Images/KEGG_pathways.jpeg")
+```
+
+\newpage
+
+## Gene Signature Enrichment
 
  - GSVA / ssGSEA results
  
- - GSVA to perform ssGSEA analysis on signature genes | ClusterProfileR Package
+ - GSVA to perform ssGSEA analysis on signature genes with GSVA Package. 
  
- - Heatmaps or enrichment scores
+ Table: (ssGSEA Enrichment Summary)
 
-### 4.1.3 PCA & Clustering
+| Gene Set                 | Mean Difference (Mel-Nevus) | P-value        | Adjusted P-value | Significance                              |
+|--------------------------|-----------------------------|----------------|------------------|-------------------------------------------|
+| Melanoma Upreg Top20     | 0.524                       | 1.51e-14       | 4.53e-14         | Higher enrichment in Melanoma             |
+| Melanoma Downreg Top20   | -0.7301                     | 1.12e-10       | 1.68e-10         | Lower enrichment in Melanoma              |
+| All Top DE Genes         | -0.0661                     | 1.08e-02       | 1.08e-02         | Lower enrichment in Melanoma (small diff) | 
 
-PCA plots to show sample distribution
 
-### 4.1.4 Kaplan-Meier Survival Analysis
+```{r echo=FALSE, fig.align='center', out.width='80%', fig.cap="ssGSEA Enrichment Scoress"}
+knitr::include_graphics("Images/Boxplots of ssGSEA.jpeg")
+```
 
-Kaplan-Meier plots - Gene Expression Profiling Interactive Analysis (GEPIA)
+```{r echo=FALSE, fig.align='center', out.width='90%', fig.cap="PCA from GSVA"}
+knitr::include_graphics("Images/ssGSEA_PCA.jpeg")
+```
 
-### ROC curves
+\newpage
 
-Key prognostic gene sets
+## Tumor Purity Estimation for Melanoma vs Nevus Samples
 
-### 4.1.5 Pathway and TME Analysis
+Table: (ESTIMATE Score Comparison: Melanoma vs Nevus)
 
-KEGG / GO enrichment KEGG pathways identified to look at genes in TCGA melanoma samples
-Biological Process and Pathway Analysis
+| Score         | Melanoma_Mean | Nevus_Mean | P_Value |
+|---------------|---------------|------------|---------|
+| StromalScore  | -602.188      | -486.441   | 0.6347  |
+| ImmuneScore   | -302.864      | -505.272   | 0.5063  |
+| ESTIMATEScore | -905.052      | -991.713   | 0.8710  |
+| TumorPurity   | 0.869         | 0.879      | 0.8334  |
 
-### Tumour Microenvironment : Immune landscape/TME scores
+```{r echo=FALSE, fig.align='center', out.width='90%', fig.cap="ESTIMATE Scores"}
+knitr::include_graphics("Images/ESTIMATE.jpeg")
+```
 
-*** 
+
+
+
+
+
 
 \newpage 
-# 4.2 Results – Topic II: Streptococcus pyogenes
 
-### 4.2.1 Sequence Dataset Overview
+(***not this part yet 11.15 )
+
+
+# RESULTS – Topic II: Streptococcus pyogenes
+
+
+### Sequence Dataset Overview
 
 Summary table of GAS strains and emm genes.
 
@@ -798,7 +1222,7 @@ Table: (Outgroup *Streptococcus pyogenes* emm50 type - emm gene for M protein, p
 |JX028641.1       | emm gene, emm50 type |   GLS244   | https://www.ncbi.nlm.nih.gov/nuccore/JX028641  |
 
 
-### 4.2.2 Multiple Sequence Alignment and Motif Identification
+###  Multiple Sequence Alignment and Motif Identification
 
 A multiple alignment of emm genes was constructed using MUSCLE software.
 
@@ -876,6 +1300,44 @@ What you do about the problem you have identified.
 experimental validation, longitudinal data, more strains/tumours.
 
 \newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ***
 
