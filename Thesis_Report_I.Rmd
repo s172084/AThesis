@@ -42,7 +42,7 @@ knitr::include_graphics(c("Images/Whitespace.png"))
 
 Thesis Title: information on the main problem.
 
-Time: 26 June 2025 at 16.47pm 
+Time: 26 June 2025 at 22.53pm 
 
 
 ```{r echo=FALSE, fig.align='center', out.width='15%'}
@@ -126,16 +126,6 @@ All sources of information and ideas that are not my own have been appropriately
 This thesis is submitted in partial fulfilment of the requirements for the Master’s Programme at the Department of Health Technology, Technical University of Denmark.
 
 
-
-\newpage
-
-# Abstract
-
-This section provides a concise summary of the research, including the central research question, the methodology employed,  key findings and the main conclusions drawn from the analysis. The abstract does not exceed 500 words. It consists of 3 paragraphs each of which contains research problems and objectives research method and research results. The abstract is typed italicised. 
-
-The keywords related to the thesis are listed. ( Write this at the end. ) 
-
-
 \newpage
 
 # Acknowledgements
@@ -179,6 +169,11 @@ I would also like to express gratitude to Frederik Clausen for hiring me as an A
 
 \newpage
 
+# Abstract
+
+This section provides a concise summary of the research, including the central research question, the methodology employed,  key findings and the main conclusions drawn from the analysis. The abstract does not exceed 500 words. It consists of 3 paragraphs each of which contains research problems and objectives research method and research results. The abstract is typed italicised. 
+
+
 # Chapter I 
 
 # INTRODUCTION 
@@ -192,113 +187,118 @@ Apply new knowledge from the program and present a piece of work that involves t
 
 Set the scene and motivate the problem being studied. It describes a domain and indicates a problem in general terms.
 
-What is the general area being addressed?
-What is the motivation for studying a particular problem?
+ - What is the general area being addressed?
 
-What makes it worth the effort?
+ Gather existing literature on GAS, its virulence factors,
+ 
+  -What is the motivation for studying a particular problem?
 
-Is it a real problem in everyday life?
+
+
+- Is it a real problem in everyday life?
+There is a need to identify genomic biomarkers that can enable personalised treatment strategies for aggressive forms of skin cancer such as melanoma
+Precision oncology in dermatology in the intersection of :
+Genomic biomarker discovery in skin cancer
+Structural bioinformatics to understand the impacts of mutation.
+
 
 Is it a theoretical problem that is worth solving?
+There is a strong theoretical foundation as it may lead to advances in understanding cancer genomics. 
+It can test hypothesis about the structure-function relationships in cancer genes, 
+It contributes to precision medicine 
+There is a bridge with computational biology and clinical applications
 
-Would anyone care if I solved this?
+
+ - Would anyone care if I solved this?
+skin cancer is the most common cancer in the world. The mortality level for Melanoma is high despite advances in treatment. A late stage diagnosis can worsen the prognosis. There is limited integration of structural biology with clinical genomics. It is worth understanding the molecular mechanisms of rare hereditary syndromes. 
+
+ - What makes it worth the effort?
+An earlier more accurate diagnosis can save lives and improves treatment outcomes, personalised treatment may reduce unnecessary side effects. There is a reduction in the cost by selecting and using  targeted therapy and there is a better prognosis prediction when counselling patients. 
 
 
 ### 1.2 Formulation of the problem
 
-The situation or phenomenon that needs to be solved and requires an answer through thorough research and in depth thinking using scientific tools. 
-
-The research has a sense of clarity and authenticity and it is in line with the research objectives it is an important matter and worthy of research and it provides implications for empirical studies. It is supported by primary or secondary data. Based on the research problem research questions can be formulated. 
-
-### 1.3 Objective and Benefits of the Research 
-
-The research objectives reveals the results to be achieve through the research process. The research objective answers the research problem and reflects the scope of the research, the methods used and the expected results. 
+The research is based on primary data from online public databasses and it can all be reproduced. NCBI (National Center for Biotechnology Information) to  collect relevant articles, papers, and datasets.
+The code file is called Simple.R and it is found in the github repository. Download multiple S. pyogenes genomes from NCBI, analyse emm gene diversity, create phylogenetic trees
 
 
 ### 1.4 Systematics of Writing 
 
-A brief description of the things in each chapter. 
+the things in each chapter are mentioned in the contents page. 
 
 This thesis is submitted in fulfilment of the requirements for a master’s degree in bioinformatics  and serves as a demonstration of advanced research competences. It aims to exhibit the ability to define a clear research question, conduct a comprehensive review of the literature and apply appropriate research methodologies. 
 
 The objective of this study is to critically evaluate existing academic work in the field and to contribute new insights or perspectives that may advance scholarly understanding or have practical relevance.
 
-The thesis presents an opportunity to dive deeply into a specific topic and enhance my expertise and understanding of that area. This process has also provided an opportunity for the development of academic communication skills, both written and oral, as a part of preparing, presenting and defending the thesis findings. 
+The thesis presents an opportunity to dive deeply into a specific topic in the the structure and function of the skin, and melanoma and bacteria and enhance my expertise and understanding of that area.
 
-Through the formulation of a coherent research narrative and the integration of evidence based conclusions, this thesis seeks to generate original contributions with the chosen area of inquiry. 
+The research is part of a bigger github portfolio which contains all code and images and reports which have been written over a period of time. 
 
-The master’s thesis contributes original knowledge or insights to a specific discipline which can be beneficial for academic and practical applications. 
+The references are made using Zotero [@zoterobib2025] and are listed in the references.bib file which was used to make the references below in the rmarkdown document. The thesis is written in RMarkdown and knitted to pdf. 
 
-The references are made using Zotero [@zoterobib2025]. 
+
+#  Theoretical Foundations and Previous Research 
+
+The theories supporting the hypothesis are said. The research problem has not been answered or solved satisfactorily. 
+
+The research context is looking at the skin, looking at dermatology, and intertwining this with bioinfomratics of cancer cells and also of bacteria which can attack the skin and cause infections. then how exactly do these bacteria attack the skin and cause infections. 
+
+
+When it comes to streptococcus, these researchers have looked at it before : Submitted (01-MAR-2010) Contact:Somay Yamagata Murayama Laboratory
+            of Molecular Cell Biology, School of Pharmacy, Nihon UNIVERSITY;
+            7-7-1 Narashinodai, Funabashi-shi, Chiba 274-8555, Japan
+            
+
+The research methods used to look at the problem are written in my research methods section. 
+
+I am not sure which other work complements this research. 
+
+
+## Hypotheses | Problem Statement | Research Question | Objective and Benefits of the Research 
+
+The aim of the research is to get high-quality genomic sequences of Streptococcus pyogenes (GAS) strains from diverse clinical and geographical sources and to understand the functional roles of the virulence genes and to see if there is a relationship between the strain and the genes. the aim is to identify which virulence genes are present in  Streptococcus pyogenes and which are the main virulence genes 
+The aim is thene to use the genetic information to find out the protein structure of the virulence factors. the aim is to get the virulence gene content and emm-type distribution across multiple GAS strains to uncover patterns of genomic diversity.a big aimis to identify and characterize virulence genes across multiple GAS strains.
+
+
+The aim for the melanoma is to find out which genes are upregulated in malignant melanoma samples in comparison to nevi samples and to see if there is a difference in the tumour purity levels to see which genes are repressed and over expressed and to see what the function of those genes is. 
+
+# Hyothesis
+
+Hypothesis Streptococcus pyogenes (GAS)
+
+The hypothesis is that Streptococcus pyogenes (GAS) strains share a conserved core of virulence factors, with additional strain-specific genes that correlate with clinical severity.
+
+The hypothesis is that analysing the genomic sequence of Streptococcus pyogenes (GAS) can reveal key virulence factors and their regulation mechanisms, providing insights into potential targets for vaccine development and therapeutic interventions. 
+
+The hypothesis is that the structure of the proteins encoded by at least one of the virulence genes can be determined.
+
+The hypothesis is that GAS strains will reveal conserved and strain-specific genetic features associated with virulence.
+
+he hypotheis is that Phylogenetic clustering of GAS strains will correlate with emm types and virulence gene profiles, reflecting evolutionary adaptations to host immune pressures.
+
+The hypotheis is that certain emm types are associated with the presence of unique virulence genes, which may contribute to tissue tropism or infection severity.
+
+Hypotheses:Structural variants of the M protein display differential binding affinities to human skin cell receptors.
+
+The hypothesis is that there are key amino acid residues in the M protein are conserved across strains which are essential for receptor binding, representing potential therapeutic targets.
+
+Download multiple S. pyogenes genomes from NCBI, analyse emm gene diversity, create phylogenetic trees
+
+
+Hypothesis Melanoma: 
+
+The hypothesis is that for the Melanoma sequences there are some genes that have enriched in GO terms related to the the immune system, adhesion, and protein activity, suggesting coordinated biological roles.
+
+The hypothesis is that one can  construct gene/protein interaction networks and analyze relationships between upregulated and downregulated genes related to melanoma skin cancer.
+look at gene expression usng gene expression levels using tools like LIMMA. 
+
+
+\newpage
+
 
 # Chapter II 
 
 # LITERATURE REVIEW 
-
-Reviews existing research related to the topic, highlighting gaps that your study aims to address. 
-
-The literature review contains the theoretical basis and discussion of the results of previous similar studies. A framework of thought and hypothesis can also be put forward. 
-
-# 2.1 Theoretical Foundations and Previous Research 
-
-The theories supporting the hypothesis are said. The research problem has not been answered or solved satisfactorily. 
-
-What is the research context and discipline the thesis fiits within? 
-
-Who has looked at this area before?
-
-What is the state of the art of methods and solution to the problem?
-
-What other work complements this research ?
-
-
-## 2.2 Framework 
-
-The problems to be studied are explained. There is a research hypothesis. This explanation is included in the form of a schematic to clarify the purpose of the study. This is a series of thought arrangements about what should happen so the intended hypothesis arises. 
-
-## 2.4 Hypotheses | Problem Statement | Research Question 
-
-The hypothesis is a short statement that is concluded from the literature review and it is a temporary answer to the problem under study. The hypothesis is supported by theories or references from previous studies. 
-
-This is a statement of the hypothesis and problems. The hypothesis is the highest level problem or goal you are going to to address. 
-
-The problems should be unambiguous. The importance of the problem should be mentioned if it was not already done so. You can develop a new approach for solving a well known problem or replicate a method in the literature. 
-
-
-**Hypothesis I:** Analysing the genomic sequence of Streptococcus pyogenes (GAS) can reveal key virulence factors and their regulation mechanisms, providing insights into potential targets for vaccine development and therapeutic interventions. 
-
-**Hypothesis II:** Determine the structure of the M Protein. 
-
-Hypothesis:High-quality genomic sequences of GAS strains will reveal conserved and strain-specific genetic features associated with virulence.
-
-Hypothesis: Virulence-associated genes in GAS are enriched in GO terms related to immune evasion, adhesion, and toxin activity, suggesting coordinated biological roles in host-pathogen interaction.
-
-Network Analysis: Construct gene/protein interaction networks and analyze relationships
-Hypotheses: Network analysis will reveal key hub proteins that coordinate multiple virulence pathways in GAS.
-Virulence factors form tightly connected modules in protein-protein interaction networks, indicating co-regulation or functional synergy.
-
-Hypothesis: Phylogenetic clustering of GAS strains will correlate with emm types and virulence gene profiles, reflecting evolutionary adaptations to host immune pressures.
-
-Hypotheses:emm gene diversity across GAS strains correlates with distinct virulence gene repertoires.
-Certain emm types are associated with the presence of unique virulence genes, which may contribute to tissue tropism or infection severity.
-
-Hypotheses:Structural variants of the M protein display differential binding affinities to human skin cell receptors.
-Key amino acid residues in the M protein are conserved across strains and are essential for receptor binding, representing potential therapeutic targets.
-
-
-# RESEARCH AIMS 
-
- - To collect and curate high-quality genomic sequences of Streptococcus pyogenes (GAS) strains from diverse clinical and geographical sources.
-To characterize the functional roles of identified virulence genes via GO enrichment analysis using tools such as DAVID and GSEA.
-
- - To construct gene and protein interaction networks to explore the regulatory relationships between virulence factors using Cytoscape.
-
- - To compare virulence gene content and emm-type distribution across multiple GAS strains to uncover patterns of genomic diversity.
-
- - To identify and characterize virulence genes across multiple GAS strains.
-Hypothesis: GAS strains share a conserved core of virulence factors, with additional strain-specific genes that correlate with clinical severity.
-
-\newpage
 
 # The Skin 
 
@@ -692,45 +692,40 @@ Normalization, filtering, preprocessing tools
 # Topic II: Streptococcus pyogenes — Virulence Gene & Protein Analysis
 
 ### Data Sources
- - Public databases (NCBI, etc.)
+
+ - Public databases (National Center for Biotechnology Information (NCBI) , AlphaFold)
  
- - Genomic Data Acquisition
+ - Genomic Data Acquisition (FASTA files)
  
- - Download of genomic and protein sequence data of multiple S. pyogenes strains from NCBI
+ - Download of genomic and protein sequence data of multiple S. pyogenes strains from NCBI.
    
  - Standardized file naming and merging into emm.fasta.
  
- - Include Table of emm genes and strains
+ - Include Table of emm genes and strains.
  
+The genomic sequence data for this study was obtained from the National Centre for Biotechnology Information (NCBI) GenBank database. The complete coding sequences of several emm genes encoding the M protein from *Streptococcus pyogenes* of various strains were downloaded. These DNA sequences were originally submitted to GenBank by Murayama et al. from the Laboratory of Molecular Cell Biology, School of Pharmacy, Nihon University, Japan and subsequently published in the database. 
+ 
+These sequences represent a linear bacterial DNA fragment. Each fragment contains the complete coding sequence for the M protein, a major virulence factor of *Streptococcus pyogenes* [@genbank_AB548438]. 
+
 ### Data Preparation
+
  - Renaming FASTA files
 
- - Merging into emm.fasta
+ - Merging into emm.fasta (unix commands)
 
 ### Analytical Methods
 
  - MUSCLE alignment of emm genes
 
- - WebLogo motif analysis
+ - WebLogo Motif Analysis
 
- - Phylogenetic Tree Construction or comparative genomics
+ - Phylogenetic Tree Construction
   - Use aligned sequences to infer phylogeny and strain relationships.
   - Evaluate whether emm-type clusters correlate with virulence gene presence.
 
-- Functional Enrichment (GO/KEGG)
- - Use DAVID or GSEA to perform enrichment analysis for virulence-related genes.
-
-- Gene/Protein Interaction Network
-   - Construct virulence gene networks using STRING or Cytoscape.
-   - Identify hub genes/modules.
-
--  Protein Structure and Docking
-   - Use Swiss-Model and PyMOL to model M protein structures.
-   -Perform docking simulations to assess receptor interactions.
-
-- Comparative Genomics and Analysis of Virulence Factors
-    - Create virulence factor heatmaps, assess emm-type distribution across strains
-
+-  Protein Structure Prediction
+   - Use Swiss-Model and PyMOL to model M protein structure
+   
 ***
 
 
@@ -1168,17 +1163,11 @@ knitr::include_graphics("Images/ESTIMATE.jpeg")
 
 \newpage 
 
-(***not this part yet 11.15 )
-
-
 # RESULTS – Topic II: Streptococcus pyogenes
-
 
 ### Sequence Dataset Overview
 
 Summary table of GAS strains and emm genes.
-
-Total number of strains, collection dates, accession numbers.
 
 Table: (Table of *Streptococcus pyogenes* genomes)
 
@@ -1187,7 +1176,6 @@ Table: (Table of *Streptococcus pyogenes* genomes)
 | S. Pyogenes | AE014074.1      | MGAS315  |   31-JAN-2014   |https://www.ncbi.nlm.nih.gov/nuccore/AE014074.1  |
 | S. Pyogenes | CP000017.2      | MGAS5005 |   01-APR-2014   |https://www.ncbi.nlm.nih.gov/nuccore/CP000017.2  |
 | S. Pyogenes | CP155740.1      | 1851/03  |   06-AUG-2024   |https://www.ncbi.nlm.nih.gov/nuccore/CP155740.1  |
-
 
 Table: (Table of *Streptococcus pyogenes* emm genes) *Streptococcus pyogenes* emm gene for M protein, complete cds of various strains – Collection Date: 15-JAN-2014
 
@@ -1214,132 +1202,129 @@ Table: (Table of *Streptococcus pyogenes* emm genes) *Streptococcus pyogenes* em
 |AB548516.1       | emm75 gene for M protein |  RE436     |https://www.ncbi.nlm.nih.gov/nuccore/AB548516.1 |
 |AB549960.1       | emm58 gene for M protein |  RE614     |https://www.ncbi.nlm.nih.gov/nuccore/AB549960.1 |
 
-
-Table: (Outgroup *Streptococcus pyogenes* emm50 type - emm gene for M protein, partial cds. of various strains – Collection Date: 26-JUN-2013
+Table: (Outgroup:  *Streptococcus pyogenes* emm50 type - emm gene for M protein, partial cds. of various strains – Collection Date: 26-JUN-2013
 
 |Accession Number |  Gene Name           |  Strain    | Link                                           |  
 |-----------------|----------------------|------------|------------------------------------------------|
 |JX028641.1       | emm gene, emm50 type |   GLS244   | https://www.ncbi.nlm.nih.gov/nuccore/JX028641  |
 
+\newpage
 
-###  Multiple Sequence Alignment and Motif Identification
+## Phylogenetic Analysis using PAUP 
 
-A multiple alignment of emm genes was constructed using MUSCLE software.
+The FASTA-formatted gene sequences were initially downloaded and subsequently renamed according to a standardised naming convention, incoporating the strain identifier, Genbank accession number, and gene name.
+This nomenclature facilitated consistency and traceability throughout the downstream analysis. 
+
+The individual FASTA files were concatenated into a single file using a Bash shell command as shown below:
+
+```{bash eval=FALSE}
+cat * > ../emm.fasta
+```
+
+The resulting emm.fasta file was then opened in AliView for inspection and manual verification. During this process sequence headers were further edited to ensure uniqueness and clarity. 
+
+To perform multiple sequence alignment , the software **MUSCLE** was employed using the following command:
 
 ```{bash eval=FALSE}
 muscle -in emm.fasta -out emm_aligned.fasta
 ```
 
-Alignment log (MUSCLE summary table).
+The aligned sequences (emm_aligned.fasta) were again viewed in AliView to assessalignment quality and make any necessary further adjustments [@larsson_aliview_2014]. 
 
-Table: (Summary of MUSCLE Alignment Log for emm Genes Isolated from Streptococcus pyogenes)
-
-MUSCLE v3.8.1551 by Robert C. Edgar | http://www.drive5.com/muscle
-This software is donated to the public domain.
-Please cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.
-
-| Time     | Memory     | Iteration | Progress  | Step               |
-|----------|------------|-----------|-----------|--------------------|
-| 00:00:00 | 1 MB(0%)   | 1         | 100.00%   | K-mer dist pass 1  |
-| 00:00:00 | 1 MB(0%)   | 1         | 100.00%   | K-mer dist pass 2  |
-| 00:00:00 | 22 MB(0%)  | 1         | 100.00%   | Align node         |
-| 00:00:00 | 22 MB(0%)  | 1         | 100.00%   | Root alignment     |
-| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Refine tree        |
-| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Root alignment     |
-| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Root alignment     |
-| 00:00:01 | 24 MB(0%)  | 3         | 100.00%   | Refine biparts     |
-| 00:00:03 | 24 MB(0%)  | 4         | 100.00%   | Refine biparts     |
-| 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
-| 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="AliView"}
+knitr::include_graphics("Images/AliView.png")
+```
 
 
-## WebLogo output — identify conserved and variable regions.
+Following alignment the file was converted into NEXUS format for phylogenetic analysis using a custom Python script `seqconverter.py` [@pedersen_seqconverter_2023] in conjuction with the `sequenclib.py` . 
 
-Interpretation: conserved motifs likely under selective pressure; variable ones may contribute to immune evasion.
+The phylogenetic analysis was carried out in PAUP* software [@swofford_paup_2003] using the sequence labelled as GLS244 as the designated outgroup. 
 
-### 4.2.3 Phylogenetic Analysis
-Phylogenetic tree showing clustering by emm type.
+```{bash  eval=FALSE}
+PAUP
+execute emm.nexus
+showmatrix
+outgroup  GLS244
+```
 
-Interpretation: Strain evolution reflects functional divergence.
+A consensus tree was subsequently generated and visualised using **FigTree** [@rambaut_figtree_2009], allowing for a clear interpretation of the evolutionary relationships among the sampled strains. 
 
-### 4.2.4 Virulence Gene Profiles and Comparative Genomics
-Heatmaps of virulence gene presence/absence.
+```{bash eval=FALSE}
+set root=outgroup outroot=monophyl
+contree all /strict=no majrule=yes percent=50
+savetrees from=1 to=1 file=consensus_tree.tre format=newick brlens=yes;
+figtree consensus_tree.tre
+```
 
-Association between emm type and gene content.
-
-### 4.2.5 Functional Enrichment (GO/KEGG)
-Tables and graphs of enriched pathways for virulence genes.
-
-Immune response and adhesion-related terms highlighted.
-
-### 4.2.6 Protein-Protein Interaction Networks
-Network plots from Cytoscape.
-
-Interpretation: central hubs as potential drug targets.
-
-### 4.2.7 M Protein Structure and Docking
-PyMOL screenshots and docking affinity results.
-
-Interpretation: key conserved residues in binding interfaces.
-
-# 4.3 Integrated Interpretations
-Comparative reflection on results:
-
-Immune evasion is a key mechanism in both melanoma and GAS.
-
-Multi-omic data can guide precision medicine or vaccine development.
-
-# 4.4 Implications and Future Directions
-Melanoma: prognostic gene sets, TME insights.
-
-GAS: M protein as vaccine candidate; deeper exploration of strain diversity.
-Summarise what you think is an important find or contribution.
-What you do about the problem you have identified.
-
-### Future work:
-experimental validation, longitudinal data, more strains/tumours.
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap=" Consensus Tree"}
+knitr::include_graphics("Images/FigTree_Consensus_Tree.png")
+```
 
 \newpage
 
+## WebLogo 
+
+To investigate patterns of sequence conservation and variability, a sequence logo was generated using the aligned sequences as input. This visualisation facilitated the identification of conserved motifs and regions of high sequence variability. The sequence logo revealed that the conservations was primarily limited to the N-terminal and C- terminal regions while the central portion of the alignment exhibited variation. 
+
+For clarity and relevance, only representative segments of the logo corresponding to the highly conserved and highly variable regions are presented herein, rather than displaying the full alignment. 
+
+These patterns support the interpretation that conserved regions may be subject to purifying selection and thus potentially involved in essential structural or functional roles. In contrast, variable regions may reflect positive selection pressures, possibly contributing to immune evasion mechanisms in the host-pathogen interaction.
+
+```{r echo=FALSE, fig.align='center', out.width='60%', fig.cap="Sequence Logo 1"}
+knitr::include_graphics("Images/WebLogo1.png")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='60%', fig.cap=" Sequence Logo 2"}
+knitr::include_graphics("Images/WebLogo2.png")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='60%', fig.cap=" Sequence Logo 3"}
+knitr::include_graphics("Images/WebLogo3.png")
+```
+
+\newpage
+
+## AlphaFold three-dimensional protein structure prediction
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="AlphaFold"}
+knitr::include_graphics("Images/Alpha.png")
+```
+
+Based on the amino acid sequence provided in the original FASTA file, the corresponding M protein sequence was retrieved in FASTA format.
+
+```{bash eval=FALSE, include=FALSE}
+
+>lcl|AB548438.1_prot_BAO37395.1_1 [gene=emm28] [protein=M protein]
+MARKDTNKQYSLRKLKTGTASVAVAVAVLGAGFANQTEVKAAESPKSTETSANGADKLADAYNTLLTEHE
+KLRDEYYTLIDAKEEEPRYKALRGENQDLREKEGKYQDKIKKLEEKEKNLEKKSEDVERHYLKKLDQEHK
+EQEERQKNLEELERQSQREIDKRYQEQLQKQQQLETEKQISEASRKSLSRDLEASRAAKKDLEAEHQKLK
+EEKQISDASRQGLSRDLEASRAAKKDLEAEHQKLKEEKQISDASRQGLSRDLEASREAKKKVEADLAEAN
+SKLQALEKLNKELEEGKKLSEKEKAELQARLEAEAKALKEQLAKQAEELAKLKGNQTPNAKVAPQANRSR
+SAMTQQKRTLPSTGEAANPFFTAAAATVMVSAGMLALKRKEEN
+```
+
+To predict the three-dimensional structure of the M protein, the amino acid sequence was submitted to AlphaFold, which uses deep learning to infer protein folding patterns.
+
+
+A BLASTP search was performed against the protein structure database to identify homologous structures. The search returned a 100% identity match with a known M protein sequence in UniProt (accession W0T1Y4).
+
+The predicted structure was examined using PyMOL, a molecular visualisation system. Screenshots of the structural model of the M Protein are provided below [@uniprot_W0T1Y4].
+
+The M protein is encoded by the emm28 gene from Streptococcus pyogenes, has a UniProt ID of W0T1Y4, consists of 393 amino acids in length, and is identified in the Protein Data Bank as AF-W0T1Y4-F1-v4. 
+
+\newpage
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="M Protein expressed from emm28 gene - Pymol"}
+knitr::include_graphics("Images/mprotein2.png")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="M Protein expressed from emm28 gene from UniProt"}
+knitr::include_graphics("Images/Uniprot_M_Protein.png")
+```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-***
+\newpage
 
 # CHAPTER V 
 
@@ -1358,9 +1343,74 @@ Suggestions for future research.
 \newpage 
 
 # Appendices
-Supplementary material, such as raw data, questionnaires or additional charts that are relevant to the thesis but not critical in the main sections. 
 
-# Bibliography 
-Lists all the sources cited in the thesis in a consistent format. 
+### Pymol Script to display M protein structure
+
+```{bash eval=FALSE}
+# PyMOL script to display structure
+
+# Hide everything first
+hide everything
+
+# Show the carbon backbone as thin wire
+show wire, name CA
+set stick_radius, 0.1, name CA
+
+# Alternatively, you can show the entire backbone as thin wire:
+show wire, backbone
+set stick_radius, 0.1, backbone
+
+# Select phenylalanine residues
+select phe_residues, resn PHE
+
+# Show phenylalanine residues as ball and stick
+show sticks, phe_residues
+show spheres, phe_residues
+
+# Color phenylalanine residues orange
+color orange, phe_residues
+
+# Turn on valence display for phenylalanine residues
+set valence, on, phe_residues
+
+# Optional: Adjust sphere and stick sizes for better visualization
+set sphere_scale, 0.3, phe_residues
+set stick_radius, 0.15, phe_residues
+```
+\newpage
+
+Table: (Summary of MUSCLE Alignment Log for emm Genes Isolated from Streptococcus pyogenes)
+
+MUSCLE v3.8.1551 by Robert C. Edgar | http://www.drive5.com/muscle [@edgar_muscle_2004]
+
+
+| Time     | Memory     | Iteration | Progress  | Step               |
+|----------|------------|-----------|-----------|--------------------|
+| 00:00:00 | 1 MB(0%)   | 1         | 100.00%   | K-mer dist pass 1  |
+| 00:00:00 | 1 MB(0%)   | 1         | 100.00%   | K-mer dist pass 2  |
+| 00:00:00 | 22 MB(0%)  | 1         | 100.00%   | Align node         |
+| 00:00:00 | 22 MB(0%)  | 1         | 100.00%   | Root alignment     |
+| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Refine tree        |
+| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Root alignment     |
+| 00:00:00 | 24 MB(0%)  | 2         | 100.00%   | Root alignment     |
+| 00:00:01 | 24 MB(0%)  | 3         | 100.00%   | Refine biparts     |
+| 00:00:03 | 24 MB(0%)  | 4         | 100.00%   | Refine biparts     |
+| 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
+| 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
+
+
+Table: ( Tree Statistics from the Consensus Tree)
+
+| Statistic                                | Value   |
+|------------------------------------------|---------|
+| Tree length                              | 1336    |
+| Consistency index (CI)                   | 0.8278  |
+| Homoplasy index (HI)                     | 0.1722  |
+| CI excluding uninformative characters    | 0.7941  |
+| HI excluding uninformative characters    | 0.2059  |
+| Retention index (RI)                     | 0.9095  |
+| Rescaled consistency index (RC)          | 0.7529  |
+
+\newpage
 
 # References
