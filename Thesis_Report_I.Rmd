@@ -1,6 +1,6 @@
 ---
-title: "Masters Thesis"
-subtitle: "SKIN "
+title: "MASTER'S THESIS"
+subtitle: "DECODING CUTANEOUS GENE SIGNATURES: A BIOINFORMATIC INVESTIGATION INTO MELANOMA, SKIN PATHOPHYSIOLOGY, AND THE M PROTEIN OF STREPTOCOCCUS PYOGENES"
 author: "Author: Miss Oriade Latifah Simpson (s172084)"
 date: |
   The Technical University of Denmark  
@@ -40,9 +40,6 @@ knitr::opts_chunk$set(echo = TRUE)
 knitr::include_graphics(c("Images/Whitespace.png"))
 ```
 
-Thesis Title: information on the main problem.
-
-Time: 27 June 2025 at 15:13pm 
 
 ```{r echo=FALSE, fig.align='center', out.width='15%'}
 # Include images and pictures using .png files in the Images folder..(only if you want to.. =))
@@ -60,7 +57,6 @@ Date of Submission: Friday 27th June 2025
 
 Thesis: 30 ECTS 
 
-Signature: 
 
 ```{r echo=FALSE, fig.align='right', out.width='17%'}
 # Include images and pictures..
@@ -81,7 +77,7 @@ Student Identification number: s172084
 knitr::include_graphics(c("Images/Whitespace.png"))
 ```
 
-Title of Thesis Research Proposal: 
+Title of Thesis Research Proposal: Decoding Cutaneous Gene Signatures: A Bioinformatic Investigation into Melanoma, Skin pathophysiology , and the M Protein of Streptococcus pyogenes.
 
 Thesis Approval Date: Friday 27th June 2025 
 
@@ -120,7 +116,7 @@ knitr::include_graphics(c('Images/math.png'))
 
 I, Miss Oriade Latifah Simpson, hereby declare that the present master's thesis is my own original work and has been written independently. This thesis has not been submitted, either in whole or in part, for the award of any academic degree or qualification at any other institution.
 
-All sources of information and ideas that are not my own have been appropriately acknowledged and referenced. I affirm that this work complies with the ethical and academic standards required for submission at the Technical University of Denmark.
+All sources of information and ideas that are not my own have been appropriately acknowledged and referenced, including AI tools [@openai2023chatgpt]. I affirm that this work complies with the ethical and academic standards required for submission at the Technical University of Denmark.
 
 This thesis is submitted in partial fulfilment of the requirements for the Master’s Programme at the Department of Health Technology, Technical University of Denmark.
 
@@ -286,6 +282,14 @@ The skin is the largest organ of the human body and is comprised of a diverse ar
 Furthermore, the skin facilitates the excretion of sweat, sebum, and metabolic waste products through its glandular structures [@noauthor_integumentary_nodate]. It possesses wound-healing capabilities, allowing for the repair of abrasions, lacerations and other forms of tissue injury [@noauthor_integumentary_nodate]. The subcutaneous fat layer functions as a mechanical cushion, providing shock absorption and an additional line of defence against infection [@noauthor_integumentary_nodate].
 
 The skin also contributes to endocrine function through its role in the synthesis of vitamin D upon exposure to UV radiation [@noauthor_integumentary_nodate]. Additionally, it plays a vital sensory role, continuously transmitting information to the central nervous system regarding the external environment [@healthline2018layers]. The skin is integrated with the nervous system to enable the perception of thermal stimuli, tactile sensations, and other sensory inputs essential for survival and interaction with the environment [@healthline2018layers, @noauthor_integumentary_nodate]. 
+
+```{r echo=FALSE, fig.align='center', out.width='70%', fig.cap="AI Image of the Skin (Source: Microsoft Designer , Stunning Designs in a Flash, Image Generator, https://designer.microsoft.com/ 2025)"}
+
+knitr::include_graphics("Images/AI Skin 2025-06-11.png")
+```
+Image created by Microsoft Designer[@microsoft_designer]. 
+
+\newpage
 
 
 ## The Structure of the Skin
@@ -1299,23 +1303,33 @@ knitr::include_graphics("Images/mprotein2.png")
 knitr::include_graphics("Images/Uniprot_M_Protein.png")
 ```
 
-
-
 \newpage
 
-# CHAPTER V 
+# CHAPTER V : CONCLUSION 
 
-# CONCLUSION 
+This bioinformatic investigation examined differential gene expression profiles between melanoma and nevus skin samples, using analytical approaches to reveal molecular signatures and pathways associated with Melanoma. The thesis contains various visualisation methods and uses computational tools to identify specific genes and characterise the underlying biological processes governing the transition from benign to malignant skin lesions.
 
-## 4.1 Conclusion 
-The conclusion is a brief presentation of what has been obtained from the discussion.
-Summarises the key findings and their importance offering final thoughts on the research. 
+The differential expression analysis revealed distinct molecular signatures distinguishing melanoma from nevus samples. Volcano plot visualisation demonstrated clear separation of significantly up-regulated and down-regulated genes, with log₁₀ p-values plotted against log₂ fold changes revealing robust statistical significance. Among the most prominently unregulated genes in melanoma samples were NTRK3, RASGRF1, SPP1, HEY1, GDF15, and BCL2A1, while genes including KRT15, SERPINB5, LY6D, HOPX, SFN, CHL1, and FLG exhibited significant down-regulation. These findings were corroborated by MA plot analysis, which confirmed the magnitude and significance of expression changes.
 
-## 4.2 Limitations 
-The limitations of the study describe the weaknesses and shortcomings found after analysis and interpretations of the results. 
+Principal Component Analysis revealed intriguing clustering patterns, with one melanoma sample demonstrating molecular similarity to nevus samples, suggesting potential transitional states or heterogeneity within the dataset. This observation was further supported by correlation heatmap analysis, where melanoma sample GSM71709 clustered with nevus samples GSM71680 and GSM71694, indicating shared expression profiles that may represent intermediate stages of transformation. UMAP dimensionality reduction analysis reinforced these findings, showing that nevus sample GSM71680 clustered proximal to multiple melanoma samples, implying potential early transformation characteristics or biological similarity.
 
-## 4.3 Suggestion 
-Suggestions for future research. 
+Gene Ontology enrichment analysis identified several key biological processes significantly associated with the differentially expressed genes. The analysis revealed enrichment of processes related to epidermis development, regulation of nervous system development, neuron projection development, and epithelial cell proliferation, while keratinocyte differentiation pathways showed reduced enrichment. These findings suggest that melanoma development involves dysregulation of fundamental keratinocyte differentiation.
+
+KEGG pathway analysis elucidated several crucial signalling cascades and biological processes altered in melanoma progression. Significantly enriched pathways included cornified envelope formation, PI3K-Akt signalling, focal adhesion, proteoglycans in cancer, axon guidance, and efferocytosis. Notably, genes associated with human papillomavirus infection were also enriched, which may have clinical relevance given the established relationship between HPV and various skin pathologies.
+
+Gene Set Enrichment Analysis provided additional validation of the differential expression patterns through examination of predefined gene signatures. The analysis of the top 20 up-regulated genes in melanoma demonstrated significant enrichment with a mean difference of 0.524 and adjusted p-value of 4.53×10⁻¹⁴, confirming a distinct melanoma-associated expression profile. 
+
+Tumour microenvironment analysis using the ESTIMATE algorithm provided insights into the cellular composition of the samples. Melanoma samples exhibited lower stromal scores, indicating reduced stromal cell infiltration, while demonstrating higher immune scores suggestive of increased immune cell presence. This pattern may reflect the inflammatory response associated with malignant transformation or immune surveillance mechanisms.
+
+ESTIMATE scores, which integrate both stromal and immune components, were marginally elevated in nevus samples. Tumour purity assessment revealed high values (approximately 0.8) in both sample types.
+
+The phylogenetic analysis revealed strain clustering based on emm gene types, with emm1 and emm12 strains forming distinct evolutionary clades, suggesting conservation of genetic features within specific emm classifications. Sequence alignment and WebLogo analysis of the M protein identified highly conserved regions at both N- and C-termini, which likely play crucial roles in structural stability and functional integrity. The identification of phenylalanine residues at terminal positions is particularly noteworthy, as these aromatic, hydrophobic amino acids are relatively uncommon and may contribute to important structural or binding functions. The hydrophobic nature of phenylalanine suggests potential roles in membrane anchoring, protein-protein interactions, or tertiary structure stabilisation.
+
+The presence of sulphur containing residues in the M protein , likely cysteines, indicates the potential for disulphide bond formation, which is known to confer mechanical stability and is particularly relevant in skin and hair-associated proteins. The conservation of phenylalanine residues across multiple protein homologs implies strong evolutionary pressure for their maintenance, suggesting critical functional roles in protein folding, membrane association, or binding specificity. PyMOL visualisation confirmed the distinct positioning of these residues, potentially highlighting important binding or anchoring sites within the protein structure.
+
+The molecular patterns observed in this study provide valuable insights into the complex biological processes underlying melanoma development and progression. However, several limitations must be acknowledged. The dataset contained only seven normal skin samples, which limited the statistical power for comprehensive comparisons with both nevus and melanoma tissues. Future investigations should incorporate larger, well-annotated cohorts including adequate numbers of normal skin samples to better delineate the molecular changes occurring during early-stage melanoma development.
+In conclusion, this comprehensive bioinformatic analysis has successfully identified distinct molecular signatures differentiating melanoma from nevus samples, revealed key pathways, and characterised the tumour microenvironment composition.
+
 
 \newpage 
 
@@ -1375,6 +1389,8 @@ MUSCLE v3.8.1551 by Robert C. Edgar | http://www.drive5.com/muscle [@edgar_muscl
 | 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
 | 00:00:03 | 24 MB(0%)  | 5         | 100.00%   | Refine biparts     |
 
+
+PAUP Tree statistics
 
 Table: ( Tree Statistics from the Consensus Tree)
 
