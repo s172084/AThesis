@@ -42,8 +42,7 @@ knitr::include_graphics(c("Images/Whitespace.png"))
 
 Thesis Title: information on the main problem.
 
-Time: 26 June 2025 at 22.53pm 
-
+Time: 27 June 2025 at 15:13pm 
 
 ```{r echo=FALSE, fig.align='center', out.width='15%'}
 # Include images and pictures using .png files in the Images folder..(only if you want to.. =))
@@ -171,134 +170,112 @@ I would also like to express gratitude to Frederik Clausen for hiring me as an A
 
 # Abstract
 
-This section provides a concise summary of the research, including the central research question, the methodology employed,  key findings and the main conclusions drawn from the analysis. The abstract does not exceed 500 words. It consists of 3 paragraphs each of which contains research problems and objectives research method and research results. The abstract is typed italicised. 
+*This thesis investigates the structural and functional aspects of the skin with a focus on two distinct but interrelated biological systems:*
 
+   - *1. Cutaneous Malignant Melanoma and Nevi samples*
+   
+   - *2. Streptococcus pyogenes, a pathogenic bacterium known for skin invasiveness*
 
-# Chapter I 
+*The primary aim is to explore how bioinformatics approaches can be leveraged to better understand skin pathology from both oncological and microbiological perspectives.*
 
-# INTRODUCTION 
+*For the melanoma analysis, high-throughput gene expression data were used to identify differentially expressed genes between melanoma and benign Nevi samples. Advanced computational methods including Linear Models for Microarray Data (LIMMA), Gene Set Variation Analysis(GSVA), and the ESTIMATE algorithm were applied to evaluate tumour purity and immune cell infiltration. Functional enrichment analyses and pathway mapping using KEGG were employed to understand the roles of key genes in tumour progression.*
 
-
-### 1.1 Background of the Problem 
-
-The rationale facts and observations that are important. 
-The research problem and why the research problem is important and needs to be researched. 
-Apply new knowledge from the program and present a piece of work that involves thinking.  The subject should relate to the program and specific specialisation. 
-
-Set the scene and motivate the problem being studied. It describes a domain and indicates a problem in general terms.
-
- - What is the general area being addressed?
-
- Gather existing literature on GAS, its virulence factors,
- 
-  -What is the motivation for studying a particular problem?
-
-
-
-- Is it a real problem in everyday life?
-There is a need to identify genomic biomarkers that can enable personalised treatment strategies for aggressive forms of skin cancer such as melanoma
-Precision oncology in dermatology in the intersection of :
-Genomic biomarker discovery in skin cancer
-Structural bioinformatics to understand the impacts of mutation.
-
-
-Is it a theoretical problem that is worth solving?
-There is a strong theoretical foundation as it may lead to advances in understanding cancer genomics. 
-It can test hypothesis about the structure-function relationships in cancer genes, 
-It contributes to precision medicine 
-There is a bridge with computational biology and clinical applications
-
-
- - Would anyone care if I solved this?
-skin cancer is the most common cancer in the world. The mortality level for Melanoma is high despite advances in treatment. A late stage diagnosis can worsen the prognosis. There is limited integration of structural biology with clinical genomics. It is worth understanding the molecular mechanisms of rare hereditary syndromes. 
-
- - What makes it worth the effort?
-An earlier more accurate diagnosis can save lives and improves treatment outcomes, personalised treatment may reduce unnecessary side effects. There is a reduction in the cost by selecting and using  targeted therapy and there is a better prognosis prediction when counselling patients. 
-
-
-### 1.2 Formulation of the problem
-
-The research is based on primary data from online public databasses and it can all be reproduced. NCBI (National Center for Biotechnology Information) to  collect relevant articles, papers, and datasets.
-The code file is called Simple.R and it is found in the github repository. Download multiple S. pyogenes genomes from NCBI, analyse emm gene diversity, create phylogenetic trees
-
-
-### 1.4 Systematics of Writing 
-
-the things in each chapter are mentioned in the contents page. 
-
-This thesis is submitted in fulfilment of the requirements for a master’s degree in bioinformatics  and serves as a demonstration of advanced research competences. It aims to exhibit the ability to define a clear research question, conduct a comprehensive review of the literature and apply appropriate research methodologies. 
-
-The objective of this study is to critically evaluate existing academic work in the field and to contribute new insights or perspectives that may advance scholarly understanding or have practical relevance.
-
-The thesis presents an opportunity to dive deeply into a specific topic in the the structure and function of the skin, and melanoma and bacteria and enhance my expertise and understanding of that area.
-
-The research is part of a bigger github portfolio which contains all code and images and reports which have been written over a period of time. 
-
-The references are made using Zotero [@zoterobib2025] and are listed in the references.bib file which was used to make the references below in the rmarkdown document. The thesis is written in RMarkdown and knitted to pdf. 
-
-
-#  Theoretical Foundations and Previous Research 
-
-The theories supporting the hypothesis are said. The research problem has not been answered or solved satisfactorily. 
-
-The research context is looking at the skin, looking at dermatology, and intertwining this with bioinfomratics of cancer cells and also of bacteria which can attack the skin and cause infections. then how exactly do these bacteria attack the skin and cause infections. 
-
-
-When it comes to streptococcus, these researchers have looked at it before : Submitted (01-MAR-2010) Contact:Somay Yamagata Murayama Laboratory
-            of Molecular Cell Biology, School of Pharmacy, Nihon UNIVERSITY;
-            7-7-1 Narashinodai, Funabashi-shi, Chiba 274-8555, Japan
-            
-
-The research methods used to look at the problem are written in my research methods section. 
-
-I am not sure which other work complements this research. 
-
-
-## Hypotheses | Problem Statement | Research Question | Objective and Benefits of the Research 
-
-The aim of the research is to get high-quality genomic sequences of Streptococcus pyogenes (GAS) strains from diverse clinical and geographical sources and to understand the functional roles of the virulence genes and to see if there is a relationship between the strain and the genes. the aim is to identify which virulence genes are present in  Streptococcus pyogenes and which are the main virulence genes 
-The aim is thene to use the genetic information to find out the protein structure of the virulence factors. the aim is to get the virulence gene content and emm-type distribution across multiple GAS strains to uncover patterns of genomic diversity.a big aimis to identify and characterize virulence genes across multiple GAS strains.
-
-
-The aim for the melanoma is to find out which genes are upregulated in malignant melanoma samples in comparison to nevi samples and to see if there is a difference in the tumour purity levels to see which genes are repressed and over expressed and to see what the function of those genes is. 
-
-# Hyothesis
-
-Hypothesis Streptococcus pyogenes (GAS)
-
-The hypothesis is that Streptococcus pyogenes (GAS) strains share a conserved core of virulence factors, with additional strain-specific genes that correlate with clinical severity.
-
-The hypothesis is that analysing the genomic sequence of Streptococcus pyogenes (GAS) can reveal key virulence factors and their regulation mechanisms, providing insights into potential targets for vaccine development and therapeutic interventions. 
-
-The hypothesis is that the structure of the proteins encoded by at least one of the virulence genes can be determined.
-
-The hypothesis is that GAS strains will reveal conserved and strain-specific genetic features associated with virulence.
-
-he hypotheis is that Phylogenetic clustering of GAS strains will correlate with emm types and virulence gene profiles, reflecting evolutionary adaptations to host immune pressures.
-
-The hypotheis is that certain emm types are associated with the presence of unique virulence genes, which may contribute to tissue tropism or infection severity.
-
-Hypotheses:Structural variants of the M protein display differential binding affinities to human skin cell receptors.
-
-The hypothesis is that there are key amino acid residues in the M protein are conserved across strains which are essential for receptor binding, representing potential therapeutic targets.
-
-Download multiple S. pyogenes genomes from NCBI, analyse emm gene diversity, create phylogenetic trees
-
-
-Hypothesis Melanoma: 
-
-The hypothesis is that for the Melanoma sequences there are some genes that have enriched in GO terms related to the the immune system, adhesion, and protein activity, suggesting coordinated biological roles.
-
-The hypothesis is that one can  construct gene/protein interaction networks and analyze relationships between upregulated and downregulated genes related to melanoma skin cancer.
-look at gene expression usng gene expression levels using tools like LIMMA. 
-
+*In parallel, genomic data from multiple clinical strains of Streptococcus pyogenes were retrieved from NCBI databases to look at the diversity of specific virulence genes. Phylogenetic analyses and emm-typing were conducted to explore evolutionary patterns. Structural Bioinformatics approaches were applied to investigate the protein structure encoded by virulence genes.The overarching goal is to contribute to genomic biomarker discovery, vaccine target identification and to the broader integration of bioinformatics in dermatology and infectious disease research.*
 
 \newpage
 
+# Chapter I: INTRODUCTION 
 
-# Chapter II 
+## Background & Motivation
 
-# LITERATURE REVIEW 
+The human skin is the largest organ of the body and it serves as the first line of defence against external environmental pathogens. It is a common site for a range of diseases, from bacterial infections to malignant cancers. 
+
+In dermatological research significant attention has been directed towards understanding the onset of Melanoma. It is also important to investigate how bacterial pathogens such as Streptococcus pyogenes breach the skin barrier. 
+
+Melanoma remains to be one of the most aggressive forms of skin cancer. The prognosis is poor if there is a late stage diagnosis. The identification of molecular biomarkers to guide early detection of Melanoma may provide a way to deliver personalised therapies. Precision oncology, through bioinformatics may offer tools to uncover the underlying genomic architecture of melanoma and assess tumour heterogeneity patterns. 
+
+Streptococcus pyogenes is a well-documented pathogen that causes a spectrum of skin infections. The virulence of this bacterium is attributed to various factors including the M protein, encoded by the emm gene, which aids in immune evasion and bacterial colonisation of human host tissues. Understanding the genomic diversity and the protein structure of these virulence factors may inform vaccine development and therapeutic interventions. 
+
+This thesis aims to explore the structure and function of the skin in health and disease using bioinformatic methods, contributing new insights into two distinct domains: cancer genomics and microbial pathogenesis. 
+
+
+## Research Problem and Objectives
+
+The research is grounded in the application of bioinformatics methodologies to address the following central problems: 
+
+ - **Melanoma Analysis**: To identify differentially expressed genes between melanoma and benign nevi, investgate tumour purity levels and map these findings onto biological pathways to elucidate cancer mechanisms. 
+ 
+ - **Streptococcus pyogenes Analysis** : To evaluate the genetic diversity of S. pyogenes virulence factors, particularly the *emm* gene family, and perform structural bioinformatics analysis on proteins such as the M protein to predict their interaction with the host skin cells. 
+ 
+These problems are addressed through computational analyses of publicly available genomic datasets and the development of reproducible code, documented in R and hosted in a Github repository. The research incorporates data retrieval from the NCBI, gene expression analysis using LIMMA, pathways and enrichment analysis and phylogenetic tree construction. 
+ 
+
+## Research Questions and Hypotheses
+
+### Research Questions
+
+ - 1. Which key genes are differentially expressed between melanoma and nevi, and how do they contribute to tumour development and immune response?
+
+ - 2. What is the genetic diversity of virulence factors, particularly the emm genes, across different S. pyogenes strains, and how does this correlate with infection severity?
+
+ - 3. Can structural bioinformatics reveal conserved residues in virulence proteins that serve as potential therapeutic targets?
+
+### Hypotheses
+
+### Melanoma Hypotheses:
+
+ - Certain genes are significantly upregulated or downregulated in melanoma compared to nevi, and these genes are enriched in immune system-related GO terms and pathways.
+
+ - Tumour samples exhibit variable immune infiltration and stromal content, which can be quantified using the ESTIMATE algorithm.
+
+ - Network analysis will reveal key genes and protein interactions involved in melanoma pathogenesis.
+ 
+
+### S. pyogenes Hypotheses:
+
+ - *S. pyogenes* strains share a conserved set of core virulence genes, with strain-specific variants contributing to clinical outcomes.
+
+  - Phylogenetic clustering of strains aligns with emm types and their associated virulence profiles.
+
+ - The M protein contains conserved structural motifs essential for binding to human skin receptors.
+
+ - Structural variants in virulence proteins correlate with host immune evasion strategies and tissue tropism.
+
+
+## Research Significance
+
+The integration of genomics, bioinformatics, and structural biology in this research holds practical relevance for both oncology and infectious diseases. By identifying biomarkers and understanding the molecular interactions of pathogens and tumors with skin tissue, this research may:
+
+ - Support the development of targeted therapies and vaccines.
+
+ - Advance precision medicine approaches tailored to individual genetic profiles.
+
+ - Enhance interdisciplinary collaboration between computational biology and clinical research.
+
+## Overview of the Method
+
+The research employs a multi-faceted computational pipeline:
+
+**Melanoma Analysis**: Differential gene expression (LIMMA), GSVA/ssGSEA, KEGG pathway analysis, ESTIMATE scoring.
+
+**S. pyogenes Analysis**: Genomic sequence download from NCBI, emm typing, phylogenetic tree construction, protein structure prediction.
+
+All code is written in R and stored in a public GitHub repository alongside the data and visualisations. The thesis document is written in RMarkdown and compiled to PDF, with reference management facilitated by Zotero.
+
+## Structure of the Thesis
+This thesis is submitted in fulfilment of the requirements for a master’s degree in bioinformatics and serves as a demonstration of advanced research competences. It aims to exhibit the ability to define a clear research question, conduct a comprehensive review of the literature and apply appropriate research methodologies. 
+
+The objective of this study is to critically evaluate existing academic work and to contribute new insights or perspectives that may advance scholarly understanding or have practical relevance.
+
+The thesis presents my only opportunity to dive deeply into specific topics related to the structure and function of the skin, Cutaneous Malignant Melanoma and **Streptococcus pyogenes** bacteria. 
+
+The research is part of a bigger github portfolio which contains all code and images and this thesis which has been written during the Spring Season of 2025. 
+
+The references are made using Zotero [@zoterobib2025] and are listed in the references.bib file which was used to make the references below in the rmarkdown document. The thesis is written in RMarkdown and knitted to pdf. 
+
+\newpage
+
+# Chapter II: LITERATURE REVIEW 
 
 # The Skin 
 
