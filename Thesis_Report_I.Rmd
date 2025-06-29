@@ -76,15 +76,15 @@ Student Identification number: s172084
 # Include images and pictures using .png files in the Images folder..(only if you want to.. =))
 knitr::include_graphics(c("Images/Whitespace.png"))
 ```
-
 Title of Thesis Research Proposal: Decoding Cutaneous Gene Signatures: A Bioinformatic Investigation into Melanoma, Skin pathophysiology , and the M Protein of Streptococcus pyogenes.
 
 Thesis Approval Date: Friday 27th June 2025 
 
+Github Repository : https://github.com/s172084/AThesis
+
 **Responsible Supervisor(s)**: Professor Edwin En Te Hwu
 
-
-```{r echo=FALSE, fig.align='center', out.width='10%'}
+```{r echo=FALSE, fig.align='center', out.width='8%'}
 # Include images and pictures using .png files in the Images folder..(only if you want to.. =))
 knitr::include_graphics(c("Images/Whitespace.png"))
 ```
@@ -94,8 +94,6 @@ knitr::include_graphics(c("Images/Whitespace.png"))
 
 knitr::include_graphics(c('Images/math.png'))
 ```
-
-
 **Technical University of Denmark**
 
 **DTU Health Tech**
@@ -107,6 +105,7 @@ knitr::include_graphics(c('Images/math.png'))
 **Kongens Lyngby 2800 DK**
 
 **Denmark**
+
 
 \newpage
 
@@ -203,7 +202,7 @@ The research is grounded in the application of bioinformatics methodologies to a
  
  - **Streptococcus pyogenes Analysis** : To evaluate the genetic diversity of S. pyogenes virulence factors, particularly the *emm* gene family, and perform structural bioinformatics analysis on proteins such as the M protein to predict their interaction with the host skin cells. 
  
-These problems are addressed through computational analyses of publicly available genomic datasets and the development of reproducible code, documented in R and hosted in a Github repository. The research incorporates data retrieval from the NCBI, gene expression analysis using LIMMA, pathways and enrichment analysis and phylogenetic tree construction. 
+These problems are addressed through computational analyses of publicly available genomic datasets and the development of reproducible code, documented in R and hosted in a Github repository called https://github.com/s172084/AThesis . The research incorporates data retrieval from the NCBI, gene expression analysis using LIMMA, pathways and enrichment analysis and phylogenetic tree construction. 
  
 
 ## Research Questions and Hypotheses
@@ -1309,7 +1308,7 @@ knitr::include_graphics("Images/Uniprot_M_Protein.png")
 
 This bioinformatic investigation examined differential gene expression profiles between melanoma and nevus skin samples, using analytical approaches to reveal molecular signatures and pathways associated with Melanoma. The thesis contains various visualisation methods and uses computational tools to identify specific genes and characterise the underlying biological processes governing the transition from benign to malignant skin lesions.
 
-The differential expression analysis revealed distinct molecular signatures distinguishing melanoma from nevus samples. Volcano plot visualisation demonstrated clear separation of significantly up-regulated and down-regulated genes, with log₁₀ p-values plotted against log₂ fold changes revealing robust statistical significance. Among the most prominently unregulated genes in melanoma samples were NTRK3, RASGRF1, SPP1, HEY1, GDF15, and BCL2A1, while genes including KRT15, SERPINB5, LY6D, HOPX, SFN, CHL1, and FLG exhibited significant down-regulation. These findings were corroborated by MA plot analysis, which confirmed the magnitude and significance of expression changes.
+The differential expression analysis revealed distinct molecular signatures distinguishing melanoma from nevus samples. Volcano plot visualisation demonstrated clear separation of significantly up-regulated and down-regulated genes, with $log_{10}$ p-values plotted against $log_{2}$ fold changes revealing robust statistical significance. Among the most prominently unregulated genes in melanoma samples were NTRK3, RASGRF1, SPP1, HEY1, GDF15, and BCL2A1, while genes including KRT15, SERPINB5, LY6D, HOPX, SFN, CHL1, and FLG exhibited significant down-regulation. These findings were corroborated by MA plot analysis, which confirmed the magnitude and significance of expression changes.
 
 Principal Component Analysis revealed intriguing clustering patterns, with one melanoma sample demonstrating molecular similarity to nevus samples, suggesting potential transitional states or heterogeneity within the dataset. This observation was further supported by correlation heatmap analysis, where melanoma sample GSM71709 clustered with nevus samples GSM71680 and GSM71694, indicating shared expression profiles that may represent intermediate stages of transformation. UMAP dimensionality reduction analysis reinforced these findings, showing that nevus sample GSM71680 clustered proximal to multiple melanoma samples, implying potential early transformation characteristics or biological similarity.
 
@@ -1317,7 +1316,7 @@ Gene Ontology enrichment analysis identified several key biological processes si
 
 KEGG pathway analysis elucidated several crucial signalling cascades and biological processes altered in melanoma progression. Significantly enriched pathways included cornified envelope formation, PI3K-Akt signalling, focal adhesion, proteoglycans in cancer, axon guidance, and efferocytosis. Notably, genes associated with human papillomavirus infection were also enriched, which may have clinical relevance given the established relationship between HPV and various skin pathologies.
 
-Gene Set Enrichment Analysis provided additional validation of the differential expression patterns through examination of predefined gene signatures. The analysis of the top 20 up-regulated genes in melanoma demonstrated significant enrichment with a mean difference of 0.524 and adjusted p-value of 4.53×10⁻¹⁴, confirming a distinct melanoma-associated expression profile. 
+Gene Set Enrichment Analysis provided additional validation of the differential expression patterns through examination of predefined gene signatures. The analysis of the top 20 up-regulated genes in melanoma demonstrated significant enrichment with a mean difference of 0.524 and adjusted p-value of $4.53×10^{-14}$,confirming a distinct melanoma-associated expression profile. 
 
 Tumour microenvironment analysis using the ESTIMATE algorithm provided insights into the cellular composition of the samples. Melanoma samples exhibited lower stromal scores, indicating reduced stromal cell infiltration, while demonstrating higher immune scores suggestive of increased immune cell presence. This pattern may reflect the inflammatory response associated with malignant transformation or immune surveillance mechanisms.
 
